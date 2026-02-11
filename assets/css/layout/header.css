@@ -1232,7 +1232,7 @@
 
 :root{
   --header-h: 72px;
-  --mega-h: clamp(420px, calc(100vh - var(--header-h, 72px) - 24px), 760px);
+  --mega-h: clamp(420px, calc(100vh - var(--header-h, 72px) - 24px), 600px);
   --sheet-bg: rgba(255,255,255,.92);
   --sheet-border: rgba(0,0,0,.08);
   --nav-open: rgba(0,0,0,.88);
@@ -1353,7 +1353,7 @@ body.mega-active{
   width: min(var(--container, 1200px), 92vw);
   margin: 0 auto;
   min-height: 0;
-  padding: 26px 0 34px;
+  padding: 18px 0 22px;
 }
 
 /* Force mega content readable (fix your Solutions "文字看不见") */
@@ -2401,7 +2401,7 @@ body{
    ========================================= */
 .nav-item.has-mega > .mega-menu{
   box-sizing: border-box;
-  padding-bottom: 22px;
+  padding-bottom: 12px;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -2465,12 +2465,10 @@ body{
   .nav-item.has-mega > .mega-menu{
     height: auto;
     min-height: unset;
-    max-height: 85vh;
+    max-height: var(--mega-h);
   }
 
   .nav-item.has-mega > .mega-menu .mega-inner{
-    padding-top: 48px;
-    padding-bottom: 48px;
     min-height: unset;
     align-items: flex-start;
   }
@@ -2479,9 +2477,8 @@ body{
     min-height: unset;
   }
 
-  /* Sheet only covers header so mega panel height is content-driven */
   .header.mega-open::before{
-    height: var(--header-h, 72px);
+    height: calc(var(--header-h, 72px) + var(--mega-h));
   }
 
   #mega-solutions{
