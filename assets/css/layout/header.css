@@ -2457,4 +2457,36 @@ body{
   margin-bottom: 14px;
 }
 
+/* =========================================================
+   Mega Menu – Desktop (≥1200px) height optimization
+   Remove excessive blank space; content-adaptive height only.
+   ========================================================= */
+@media (min-width: 1200px) {
+  .nav-item.has-mega > .mega-menu{
+    height: auto;
+    min-height: unset;
+    max-height: 85vh;
+  }
+
+  .nav-item.has-mega > .mega-menu .mega-inner{
+    padding-top: 48px;
+    padding-bottom: 48px;
+    min-height: unset;
+    align-items: flex-start;
+  }
+
+  .mega-right{
+    min-height: unset;
+  }
+
+  /* Sheet only covers header so mega panel height is content-driven */
+  .header.mega-open::before{
+    height: var(--header-h, 72px);
+  }
+
+  #mega-solutions{
+    min-height: unset;
+  }
+}
+
 
