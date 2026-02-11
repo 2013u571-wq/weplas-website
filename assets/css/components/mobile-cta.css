@@ -1,0 +1,171 @@
+/* =========================
+   Mobile Bottom CTA Bar (Lightweight)
+   - Only visible on mobile (<=768px)
+   - Shows after scrolling >= 200px
+   - Clean Apple-style design
+   ========================= */
+
+/* Base: Hidden by default */
+.mobcta-bar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 10px;
+  padding: 10px 14px;
+  padding-bottom: calc(10px + env(safe-area-inset-bottom));
+  background: rgba(255,255,255,.88);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-top: 0.5px solid rgba(0,0,0,.08);
+  box-shadow: 0 -2px 16px rgba(0,0,0,.08);
+  z-index: 998;
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform .28s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity .28s ease, 
+              visibility .28s ease;
+  pointer-events: none;
+}
+
+.mobcta-bar.is-visible{
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Hide when mobile menu is open */
+html.is-locked .mobcta-bar,
+body.is-locked .mobcta-bar{
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.mobcta-btn{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  transition: transform .16s ease, opacity .16s ease, background .16s ease;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.mobcta-btn:active{
+  transform: scale(0.97);
+  opacity: 0.85;
+}
+
+/* Primary: WhatsApp (Green) */
+.mobcta-btn-primary{
+  background: #25D366;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(37,211,102,.25);
+}
+
+.mobcta-btn-primary:active{
+  background: #20BA5A;
+  box-shadow: 0 1px 4px rgba(37,211,102,.35);
+}
+
+.mobcta-ico{
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wa-icon{
+  width: 22px;
+  height: 22px;
+  display: block;
+  fill: currentColor; /* 图标颜色跟随按钮文字颜色 */
+}
+
+.mobcta-btn-primary{
+  color: #fff; /* 确保图标是白色 */
+}
+
+.mobcta-text{
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Secondary: Get Quote (White with border) */
+.mobcta-btn-secondary{
+  background: #fff;
+  color: rgba(0,0,0,.88);
+  border: 1px solid rgba(0,0,0,.12);
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+
+.mobcta-btn-secondary:active{
+  background: rgba(0,0,0,.02);
+  border-color: rgba(0,0,0,.18);
+}
+
+.mobcta-btn-secondary span{
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+/* Mobile only (<=768px) */
+@media (max-width: 768px){
+  .mobcta-bar{
+    display: flex;
+  }
+
+  /* Add padding to body to prevent content overlap */
+  body{
+    padding-bottom: calc(64px + env(safe-area-inset-bottom));
+  }
+}
+
+/* Hide on desktop */
+@media (min-width: 769px){
+  .mobcta-bar{
+    display: none !important;
+  }
+
+  body{
+    padding-bottom: 0;
+  }
+}
+
+/* Screen reader only text */
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>HDPE/PP Rigid Plastic Washing Line | Gangsu Machinery – Plastic Recycling</title>
+  <meta name="description" content="Intensive rigid plastic washing line for HDPE containers, oil pots, buckets, crates and hard plastic waste. Complete cleaning system for recycling." />
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css" />  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css" />
+  
+  <!-- Page Specific Styles -->
+  <style>
+    /* ========== Rigid Plastic Washing Line Page Styles ========== */
+    
+    /* Hero Section */
+    .rw-hero {
+      padding: 100px 0 60px;
+      background: #fff;
+    }
+    .rw-hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .rw-hero-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .rw-hero-main {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #f8f9fa;
+      aspect-ratio: 4/3;
+    }
+    .rw-hero-main img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .rw-hero-main img.active {
+      opacity: 1;
+    }
+    .rw-hero-main img:first-child {
+      position: relative;
+    }
+    .rw-hero-dots {
+      display: none;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .rw-hero-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #cbd5e1;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .rw-hero-dot.active {
+      background: var(--brand);
+      width: 24px;
+      border-radius: 4px;
+    }
+    .rw-hero-thumbs {
+      display: flex;
+      gap: 10px;
+    }
+    .rw-hero-thumb {
+      width: 80px;
+      height: 60px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .rw-hero-thumb:hover,
+    .rw-hero-thumb.active {
+      border-color: var(--brand);
+    }
+    .rw-hero-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .rw-hero-content {
+      padding-top: 10px;
+    }
+    .rw-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 12px;
+    }
+    .rw-breadcrumb a {
+      color: #64748b;
+      text-decoration: none;
+    }
+    .rw-breadcrumb a:hover {
+      color: var(--brand);
+    }
+    .rw-title {
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 800;
+      line-height: 1.2;
+      color: #0f172a;
+      margin: 0 0 16px;
+      letter-spacing: -0.02em;
+    }
+    .rw-desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #475569;
+      margin: 0 0 20px;
+    }
+    .rw-features {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .rw-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: #334155;
+    }
+    .rw-feature svg {
+      width: 18px;
+      height: 18px;
+      color: var(--brand);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .rw-cta-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .rw-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+    .rw-cta-primary {
+      background: var(--brand);
+      color: #fff;
+    }
+    .rw-cta-primary:hover {
+      background: var(--brand-dark);
+    }
+    .rw-cta-secondary {
+      background: #fff;
+      color: var(--brand);
+      border: 1.5px solid var(--brand);
+    }
+    .rw-cta-secondary:hover {
+      background: rgba(10,132,255,0.06);
+    }
+    .rw-hero-video-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      color: #64748b;
+      transition: color 0.2s;
+    }
+    .rw-hero-video-link:hover {
+      color: var(--brand);
+    }
+    .rw-hero-video-link:hover .rw-hero-video-icon {
+      background: var(--brand);
+      color: #fff;
+    }
+    .rw-hero-video-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: #e2e8f0;
+      border-radius: 50%;
+      font-size: 10px;
+      color: #475569;
+      transition: all 0.2s;
+    }
+    .rw-hero-video-text { color: inherit; }
+    .rw-hero-video-badge {
+      display: inline-block;
+      padding: 2px 7px;
+      background: #f1f5f9;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #64748b;
+    }
+
+    /* WhatsApp Chat Card (Desktop only, hidden on mobile) */
+    .wa-card {
+      display: flex;
+      align-items: center;
+      position: fixed;
+      right: 18px;
+      bottom: 120px;
+      z-index: 100;
+      width: 280px;
+      min-height: 76px;
+      text-decoration: none;
+      color: inherit;
+      background: #fff;
+      border: 1px solid #eef2f7;
+      border-radius: 20px;
+      box-shadow: 0 2px 12px rgba(15,23,42,0.06);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .wa-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(15,23,42,0.1);
+    }
+    .wa-card:focus-visible {
+      outline: 2px solid var(--brand);
+      outline-offset: 2px;
+    }
+    .wa-card-icon {
+      flex-shrink: 0;
+      width: 46px;
+      height: 46px;
+      margin-left: -12px;
+      margin-right: 2px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #25d366 0%, #1da851 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 2px 6px rgba(37,211,102,0.25);
+    }
+    .wa-card-icon svg {
+      width: 24px;
+      height: 24px;
+      color: #fff;
+    }
+    .wa-card-body {
+      flex: 1;
+      padding: 12px 10px 12px 14px;
+      min-width: 0;
+    }
+    .wa-card-title {
+      font-weight: 700;
+      font-size: 16px;
+      color: #0f172a;
+      margin: 0 0 2px;
+      line-height: 1.3;
+    }
+    .wa-card-subtitle {
+      font-size: 14px;
+      color: #6b7280;
+      margin: 0 0 8px;
+      line-height: 1.3;
+    }
+    .wa-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px 3px 8px;
+      background: #f9fafb;
+      border-radius: 999px;
+      font-size: 12px;
+      color: #6b7280;
+      border: 1px solid #e5e7eb;
+    }
+    .wa-card-badge svg {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      color: #25d366;
+    }
+    .wa-card-badge-sep {
+      color: #9ca3af;
+      font-weight: 400;
+    }
+    .wa-card-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #22c55e;
+      margin-right: 2px;
+    }
+    .wa-card-arrow {
+      flex-shrink: 0;
+      width: 38px;
+      height: 38px;
+      margin: 0 12px 0 4px;
+      background: #f3f4f6;
+      border-radius: 50%;
+      color: #64748b;
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .wa-card:hover .wa-card-arrow {
+      background: #e5e7eb;
+      transform: translateY(-1px);
+    }
+
+    /* Materials Section */
+    .rw-materials-section {
+      padding: 60px 0;
+      background: #f8fafc;
+    }
+    .rw-section-title {
+      text-align: center;
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 40px;
+    }
+    .rw-materials-flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .rw-material-card {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border-radius: 16px;
+      padding: 0;
+      overflow: hidden;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+      width: 220px;
+      max-width: 100%;
+      min-height: 0;
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .rw-material-card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      border-color: #cbd5e1;
+    }
+    .rw-material-card-img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      padding: 0;
+      overflow: hidden;
+      border-radius: 16px 16px 0 0;
+      background: linear-gradient(180deg, #f0f1f3 0%, #e8eaee 100%);
+      display: block;
+      position: relative;
+    }
+    .rw-material-card img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      margin: 0;
+    }
+    .rw-material-card span {
+      flex: 0 0 auto;
+      display: block;
+      padding: 8px 10px 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .rw-output-card {
+      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+      border-color: #a5d6a7;
+      box-shadow: 0 4px 16px rgba(76,175,80,0.15);
+    }
+    .rw-output-card .rw-material-card-img {
+      background: linear-gradient(180deg, #e8f0e9 0%, #dce8dd 100%);
+    }
+    .rw-output-card span {
+      color: #1b5e20;
+      font-weight: 700;
+    }
+    .rw-flow-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: var(--brand);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    /* Parameter Section */
+    .rw-params-section {
+      padding: 60px 0;
+      background: #fff;
+    }
+    .rw-params-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .rw-param-tab {
+      padding: 10px 20px;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      color: #64748b;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .rw-param-tab:hover,
+    .rw-param-tab.active {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: #fff;
+    }
+    .rw-params-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .rw-params-table thead {
+      background: var(--brand);
+      color: #fff;
+    }
+    .rw-params-table th {
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .rw-params-table td {
+      padding: 12px 16px;
+      font-size: 13px;
+      color: #334155;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .rw-params-table tbody tr:hover {
+      background: #f8fafc;
+    }
+    .rw-params-note {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 12px;
+      color: #64748b;
+    }
+    .rw-params-cta {
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    /* Process Section */
+    .rw-process-section {
+      padding: 60px 0;
+      background: #f8fafc;
+    }
+    .rw-tag-flow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px 10px;
+      max-width: 1000px;
+      margin: 0 auto 20px;
+    }
+    .rw-tag-item {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 28px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #1e293b;
+      white-space: nowrap;
+      transition: all 0.25s ease;
+      cursor: default;
+    }
+    .rw-tag-item:hover {
+      background: #f8fafc;
+      border-color: var(--brand);
+      color: var(--brand);
+      box-shadow: 0 4px 12px rgba(31, 120, 180, 0.15);
+      transform: translateY(-2px);
+    }
+    .rw-tag-item::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%) scale(0.9);
+      padding: 8px 14px;
+      background: #1e293b;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: normal;
+      max-width: 220px;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.2s ease;
+      z-index: 10;
+      line-height: 1.4;
+      text-align: center;
+    }
+    .rw-tag-item::before {
+      content: '';
+      position: absolute;
+      bottom: calc(100% + 2px);
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-top-color: #1e293b;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      z-index: 10;
+    }
+    .rw-tag-item:hover::after,
+    .rw-tag-item:hover::before {
+      opacity: 1;
+      transform: translateX(-50%) scale(1);
+    }
+    .rw-tag-arrow {
+      display: flex;
+      align-items: center;
+      color: #64748b;
+      font-size: 18px;
+      font-weight: 600;
+      user-select: none;
+    }
+    .rw-tag-note {
+      display: flex;
+      justify-content: center;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px dashed #cbd5e1;
+    }
+    .rw-tag-control {
+      background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+      border-color: #93c5fd;
+      color: #1e40af;
+    }
+    .rw-tag-control:hover {
+      background: linear-gradient(135deg, #bfdbfe 0%, #dbeafe 100%);
+      border-color: #3b82f6;
+      color: #1e3a8a;
+    }
+    .rw-tag-item[data-active="true"] {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(31, 120, 180, 0.25);
+    }
+    .rw-tag-item[data-active="true"]:hover {
+      background: #1a6fb8;
+      border-color: #1a6fb8;
+    }
+
+    /* Machine Modules Section */
+    .rw-modules-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+      color: #fff;
+    }
+    .rw-modules-section .rw-section-title {
+      color: #fff;
+    }
+    .rw-modules-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .rw-module-tab {
+      padding: 8px 16px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .rw-module-tab:hover,
+    .rw-module-tab.active {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: #fff;
+    }
+    .rw-modules-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .rw-module-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: all 0.2s;
+    }
+    .rw-module-card:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-4px);
+    }
+    .rw-module-img {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+    .rw-module-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .rw-module-body {
+      padding: 16px;
+    }
+    .rw-module-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 6px;
+    }
+    .rw-module-desc {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Video Section */
+    .rw-video-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #1e293b 0%, #334155 100%);
+    }
+    .rw-video-wrapper {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .rw-video-frame {
+      position: relative;
+      aspect-ratio: 16/9;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #0f172a;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+    }
+    .rw-video-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .rw-video-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 70px;
+      padding: 0;
+      background: rgba(255,255,255,0.95);
+      border-radius: 50%;
+      border: 4px solid #ef4444;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      font: inherit;
+    }
+    .rw-video-play:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    .rw-video-play svg {
+      width: 28px;
+      height: 28px;
+      color: #ef4444;
+      margin-left: 4px;
+    }
+    .rw-video-content {
+      color: #fff;
+    }
+    .rw-video-label {
+      display: inline-block;
+      padding: 5px 10px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+    .rw-video-title {
+      font-size: clamp(22px, 2.5vw, 32px);
+      font-weight: 800;
+      line-height: 1.25;
+      margin: 0 0 14px;
+    }
+    .rw-video-desc {
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.75);
+      margin: 0 0 20px;
+    }
+
+    /* Quote Form Section */
+    .rw-quote-section {
+      padding: 80px 0;
+      background: #fff;
+    }
+    .rw-quote-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .rw-quote-info h2 {
+      font-size: clamp(26px, 3vw, 36px);
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 12px;
+    }
+    .rw-quote-info > p {
+      font-size: 15px;
+      color: #64748b;
+      margin: 0 0 24px;
+      line-height: 1.6;
+    }
+    .rw-quote-features {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .rw-quote-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .rw-quote-feature-icon {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e3f2fd;
+      border-radius: 10px;
+      color: var(--brand);
+      flex-shrink: 0;
+    }
+    .rw-quote-feature-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+    .rw-quote-feature-text h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 2px;
+    }
+    .rw-quote-feature-text p {
+      font-size: 13px;
+      color: #64748b;
+      margin: 0;
+    }
+    .rw-quote-form-card {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 32px;
+      border: 1px solid #e2e8f0;
+    }
+    .rw-quote-form-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 6px;
+    }
+    .rw-quote-form-card > p {
+      font-size: 14px;
+      color: #64748b;
+      margin: 0 0 24px;
+    }
+    .rw-quote-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .rw-form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .rw-form-group.full-width {
+      grid-column: 1 / -1;
+    }
+    .rw-form-group label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .rw-form-group input,
+    .rw-form-group select,
+    .rw-form-group textarea {
+      padding: 12px 14px;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #0f172a;
+      background: #fff;
+      transition: all 0.2s;
+    }
+    .rw-form-group input:focus,
+    .rw-form-group select:focus,
+    .rw-form-group textarea:focus {
+      outline: none;
+      border-color: var(--brand);
+      box-shadow: 0 0 0 3px rgba(10,132,255,0.1);
+    }
+    .rw-form-group textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    .rw-form-submit {
+      grid-column: 1 / -1;
+      margin-top: 8px;
+    }
+    .rw-form-submit button {
+      width: 100%;
+      padding: 14px 24px;
+      background: var(--brand);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .rw-form-submit button:hover {
+      background: var(--brand-dark);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .rw-hero .container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .rw-modules-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .rw-video-wrapper {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .rw-quote-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+    @media (max-width: 768px) {
+      .wa-card {
+        display: none !important;
+      }
+      .rw-hero {
+        padding: 90px 0 40px;
+      }
+      .rw-hero-thumbs {
+        display: none;
+      }
+      .rw-hero-dots {
+        display: flex;
+      }
+      .rw-materials-flow {
+        flex-direction: column;
+      }
+      .rw-material-card {
+        width: 100%;
+        max-width: 280px;
+        padding: 0;
+      }
+      .rw-material-card-img {
+        aspect-ratio: 4 / 3.15;
+      }
+      .rw-material-card span {
+        padding: 6px 10px 10px;
+      }
+      .rw-flow-arrow {
+        transform: rotate(90deg);
+      }
+      .rw-modules-grid {
+        grid-template-columns: 1fr;
+      }
+      .rw-quote-form {
+        grid-template-columns: 1fr;
+      }
+      .rw-tag-flow {
+        gap: 10px 6px;
+        justify-content: flex-start;
+      }
+      .rw-tag-item {
+        font-size: 12px;
+        padding: 8px 16px;
+        border-radius: 24px;
+      }
+      .rw-tag-item::after {
+        max-width: 180px;
+        font-size: 11px;
+        padding: 6px 10px;
+      }
+      .rw-tag-arrow {
+        font-size: 14px;
+      }
+      .rw-tag-note {
+        margin-top: 18px;
+        padding-top: 16px;
+      }
+    }
+
+    /* Video Modal */
+    .rw-vmodal[hidden] { display: none !important; }
+    .rw-vmodal {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .rw-vmodal__backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(15,23,42,0.75);
+      backdrop-filter: blur(6px);
+      cursor: pointer;
+    }
+    .rw-vmodal__panel {
+      position: relative;
+      width: min(860px, 100%);
+      border-radius: 16px;
+      background: #0b1220;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+      overflow: hidden;
+    }
+    .rw-vmodal__close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 1;
+      z-index: 2;
+      transition: background 0.2s;
+    }
+    .rw-vmodal__close:hover { background: rgba(255,255,255,0.15); }
+    .rw-vmodal__frame {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+    .rw-vmodal__frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+    </head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header" id="site-header">
+  <div class="container nav">
+    <a href="/" class="logo" aria-label="WEPLAS Home">
+      <div class="logo-mark"></div>
+      <span>WEPLAS</span>
+    </a>
+    <nav class="nav-links">
+      <div class="nav-item has-mega" data-mega="products">
+        <a class="nav-link nav-mega-trigger" href="/products/" aria-expanded="false">Products</a>
+        <div class="mega-menu" id="mega-products" role="region" aria-label="Products Mega Menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <button class="mega-tab active" data-target="shredding"><span class="mega-tab-title">Shredding &amp; Crushing</span><span class="mega-tab-desc">Primary size reduction for rigid and soft plastics</span></button>
+              <button class="mega-tab" data-target="washing"><span class="mega-tab-title">Washing Lines</span><span class="mega-tab-desc">High-efficiency cleaning and separation systems</span></button>
+              <button class="mega-tab" data-target="pelletizing"><span class="mega-tab-title">Pelletizing Lines</span><span class="mega-tab-desc">Stable granulation for downstream processing</span></button>
+            </div>
+            <div class="mega-right">
+              <div class="mega-panel active" data-panel="shredding">
+                <div class="mega-intro"><h3 class="mega-intro-title"><a href="/products/shredding-crushing.html" class="mega-intro-title-link"><span>Shredding&Crushing Solutions</span><svg class="mega-intro-title-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></h3><p class="mega-intro-desc">From waste plastics to reusable industrial value</p></div>
+                <a href="/products/double-shaft-shredder.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/products/shredding-crushing/hero/double-shaft shredder1.webp" alt="Double Shaft Shredder"></div><div class="mega-card-body"><div class="mega-card-title">Double Shaft Shredder</div><div class="mega-card-desc">Heavy-duty shredding for bulky and rigid plastics</div></div></a>
+                <a href="/products/single-shaft-shredder.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/products/shredding-crushing/single-shaft shredder/hero/single-shaft shredder.webp" alt="Single Shaft Shredder"></div><div class="mega-card-body"><div class="mega-card-title">Single Shaft Shredder</div><div class="mega-card-desc">Flexible size reduction with precise control</div></div></a>
+                <a href="/products/pipe-shredder.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/products/shredding-crushing/pipe-shredder/hero/52281770363058_.pic_hd.webp" alt="Pipe & Profile Shredder"></div><div class="mega-card-body"><div class="mega-card-title">Pipe &amp; Profile Shredder</div><div class="mega-card-desc">Specialized shredding for long-length plastics</div></div></a>
+              </div>
+              <div class="mega-panel" data-panel="washing">
+                <div class="mega-intro"><h3 class="mega-intro-title"><a href="/products/washing-lines.html" class="mega-intro-title-link"><span>Plastic Washing Lines</span><svg class="mega-intro-title-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></h3><p class="mega-intro-desc">From waste plastics to reusable industrial value</p></div>
+                <a href="/products/pet-bottle-washing-line.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/mega-menu/PET-bottle-washing-line.jpg" alt="PET Bottle Washing Line"></div><div class="mega-card-body"><div class="mega-card-title">PET Bottle Washing Line</div><div class="mega-card-desc">Complete cleaning and label removal for PET recycling</div></div></a>
+                <a href="/products/pe-pp-film-washing-line.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/mega-menu/PE-film-washing-line.jpg" alt="PP PE Film Washing Line"></div><div class="mega-card-body"><div class="mega-card-title">PP / PE Film Washing Line</div><div class="mega-card-desc">Efficient washing for post-consumer films</div></div></a>
+                <a href="/products/hdpe-hard-plastic-washing-line.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/mega-menu/Rigid-PP-washing-line.jpg" alt="Rigid Plastic Washing Line"></div><div class="mega-card-body"><div class="mega-card-title">Rigid Plastic Washing Line</div><div class="mega-card-desc">Intensive cleaning for hard plastic waste</div></div></a>
+              </div>
+              <div class="mega-panel mega-panel--pelletizing" data-panel="pelletizing">
+                <div class="mega-intro"><h3 class="mega-intro-title"><a href="/products/pelletizing-lines.html" class="mega-intro-title-link"><span>Plastic Pelletizing Lines</span><svg class="mega-intro-title-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></h3><p class="mega-intro-desc">From waste plastics to reusable industrial value</p></div>
+                <div class="mega-cards mega-cards--pelletizing">
+                  <a href="/products/cutter-compactor-single-stage-pelletizing-line.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/products/pelletizing%20line/Cutter%20compactor%20single-stage%20pelletizing%20line/hero/Cutter%20compactor%20single-stage%20pelletizing%20line.webp" alt="Cutter-Compactor Single-Stage Pelletizing Line"></div><div class="mega-card-body"><div class="mega-card-title">Cutter-Compactor Single-Stage Pelletizing Line</div><div class="mega-card-desc">For plastic film recycling (e.g., PE/PP)</div></div></a>
+                  <a href="/products/cutter-compactor-double-stage-pelletizing-line.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/products/pelletizing%20line/Double-Stage%20Cutter-Compactor%20Pelletizing%20Line/hero/Double%20stage%20Cutter%20compactor%20%20pelletizing%20line.webp" alt="Cutter-Compactor Double-Stage Pelletizing Line"></div><div class="mega-card-body"><div class="mega-card-title">Cutter-Compactor Double-Stage Pelletizing Line</div><div class="mega-card-desc">Specifically for Polyethylene Terephthalate</div></div></a>
+                  <a href="/products/rigid-plastic-single-stage-pelletizing-line.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/products/pelletizing%20line/Rigid%20Plastic%20Single-Stage%20Pelletizing%20Line/hero/Rigid%20plastic%20single%20stage%20pelletizing%20line.webp" alt="Rigid Plastic Single-Stage Pelletizing Line"></div><div class="mega-card-body"><div class="mega-card-title">Rigid Plastic Single-Stage Pelletizing Line</div><div class="mega-card-desc">For bulk rigid plastics</div></div></a>
+                  <a href="/products/rigid-plastic-double-stage-pelletizing-line.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/products/pelletizing%20line/Rigid%20Plastic%20Double-Stage%20Pelletizing%20Line/hero/Rigid%20plastic%20double%20stage%20pelletizing%20line.webp" alt="Rigid Plastic Double-Stage Pelletizing Line"></div><div class="mega-card-body"><div class="mega-card-title">Rigid Plastic Double-Stage Pelletizing Line</div><div class="mega-card-desc">For challenging &amp; mixed plastics (PVC, ABS, PS) or materials with fillers/impurities/high moisture</div></div></a>
+                  <a href="/products/shredding-in-plant-recycling-pelletizing-line.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/products/pelletizing%20line/Shredding%20%26%20In-Plant%20Recycling%20Pelletizing%20Line/hero/shredding%26In-plant%20recycling%20pelletizing%20line.webp" alt="Shredding & In-Plant Recycling Pelletizing Line"></div><div class="mega-card-body"><div class="mega-card-title">Shredding &amp; In-Plant Recycling Pelletizing Line</div><div class="mega-card-desc">Strand cutting for clean, uniform pellets</div></div></a>
+                  <a href="/products/pet-flakes-dedicated-pelletizing-line.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/products/pelletizing%20line/PET%20Flakes%20Dedicated%20Pelletizing%20Line/hero/PET%20pelletizing%20line.webp" alt="PET Flakes Dedicated Pelletizing Line"></div><div class="mega-card-body"><div class="mega-card-title">PET Flakes Dedicated Pelletizing Line</div><div class="mega-card-desc">Underwater die-face cutting, high-output granulation</div></div></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item has-mega" data-mega="solutions">
+        <a class="nav-link nav-mega-trigger" href="/solutions/" aria-expanded="false">Solutions</a>
+        <div class="mega-menu" id="mega-solutions" role="region" aria-label="Solutions Mega Menu">
+          <div class="mega-inner mega-solutions-inner">
+            <div class="mega-solutions-table">
+              <div class="mega-map-head"><div class="mega-map-head-cell">Waste Material</div><div class="mega-map-head-cell">Process Solution</div><div class="mega-map-head-cell">Target Output</div><div class="mega-map-head-cell"></div></div>
+              <div class="mega-solutions-rows">
+                <div class="mega-row"><div class="mega-row-cell"><div class="mega-waste"><a href="/solutions/pet-bottle-recycling.html" class="mega-waste-name">Plastic Bottles</a></div></div><div class="mega-row-cell cell-line"><div class="mega-process"><span class="mega-chip">De-label</span><span class="mega-chip">Hot Wash</span><span class="mega-chip">Flake Purify</span></div></div><div class="mega-row-cell cell-out"><div class="mega-out"><span class="mega-out-name">Food-grade rPET</span></div></div><div class="mega-row-cta"><a href="/solutions/pet-bottle-recycling.html" class="mega-cta">View Solution</a></div></div>
+                <div class="mega-row"><div class="mega-row-cell"><div class="mega-waste"><a href="/solutions/film-to-granules.html" class="mega-waste-name">Plastic Films</a></div></div><div class="mega-row-cell cell-line"><div class="mega-process"><span class="mega-chip">Shred</span><span class="mega-chip">Wash</span><span class="mega-chip">Pelletize</span></div></div><div class="mega-row-cell cell-out"><div class="mega-out"><span class="mega-out-name">Stable PE/PP Pellets</span></div></div><div class="mega-row-cta"><a href="/solutions/film-to-granules.html" class="mega-cta">View Solution</a></div></div>
+                <div class="mega-row"><div class="mega-row-cell"><div class="mega-waste"><a href="/solutions/hdpe-container-recycling.html" class="mega-waste-name">Rigid Plastics</a></div></div><div class="mega-row-cell cell-line"><div class="mega-process"><span class="mega-chip">Crush</span><span class="mega-chip">Wash</span><span class="mega-chip">Pelletize</span></div></div><div class="mega-row-cell cell-out"><div class="mega-out"><span class="mega-out-name">Regranulates</span></div></div><div class="mega-row-cta"><a href="/solutions/hdpe-container-recycling.html" class="mega-cta">View Solution</a></div></div>
+                <div class="mega-row"><div class="mega-row-cell"><div class="mega-waste"><a href="/solutions/mixed-plastic-recycling.html" class="mega-waste-name">Mixed Plastic Waste</a></div></div><div class="mega-row-cell cell-line"><div class="mega-process"><span class="mega-chip">Sort</span><span class="mega-chip">Wash</span><span class="mega-chip">Pelletize</span></div></div><div class="mega-row-cell cell-out"><div class="mega-out"><span class="mega-out-name">Customized Output</span></div></div><div class="mega-row-cta"><a href="/solutions/mixed-plastic-recycling.html" class="mega-cta">View Solution</a></div></div>
+              </div>
+            </div>
+            </div>
+        </div>
+      </div>
+      <a href="/projects/" class="nav-link">Projects</a>
+      <a href="/about-us/" class="nav-link">About</a>
+      <a href="/contact/" class="nav-cta">Contact Sales</a>
+    </nav>
+    <button class="mnav-toggle" aria-label="Toggle menu" aria-controls="mnav" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <main>
+  <!-- Hero Section -->
+  <section class="rw-hero">
+    <div class="container">
+      <div class="rw-hero-gallery">
+        <div class="rw-hero-main" id="rwHeroCarousel">
+          <img class="active" src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/hero/Rigid%20PP%20washing%20line.webp" alt="Rigid Plastic Washing Line 1" loading="eager">
+          <img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/hero/Rigid%20PP%20washing%20line2.webp" alt="Rigid Plastic Washing Line 2" loading="lazy">
+          <img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/hero/Rigid%20PP%20washing%20line3.webp" alt="Rigid Plastic Washing Line 3" loading="lazy">
+          <img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/hero/Rigid%20PP%20washing%20line4.webp" alt="Rigid Plastic Washing Line 4" loading="lazy">
+        </div>
+        <div class="rw-hero-thumbs">
+          <div class="rw-hero-thumb active" data-rw-index="0">
+            <img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/hero/Rigid%20PP%20washing%20line.webp" alt="Rigid Plastic Washing Line 1">
+          </div>
+          <div class="rw-hero-thumb" data-rw-index="1">
+            <img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/hero/Rigid%20PP%20washing%20line2.webp" alt="Rigid Plastic Washing Line 2">
+          </div>
+          <div class="rw-hero-thumb" data-rw-index="2">
+            <img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/hero/Rigid%20PP%20washing%20line3.webp" alt="Rigid Plastic Washing Line 3">
+          </div>
+          <div class="rw-hero-thumb" data-rw-index="3">
+            <img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/hero/Rigid%20PP%20washing%20line4.webp" alt="Rigid Plastic Washing Line 4">
+          </div>
+        </div>
+        <div class="rw-hero-dots">
+          <span class="rw-hero-dot active" data-rw-index="0"></span>
+          <span class="rw-hero-dot" data-rw-index="1"></span>
+          <span class="rw-hero-dot" data-rw-index="2"></span>
+          <span class="rw-hero-dot" data-rw-index="3"></span>
+        </div>
+      </div>
+      <div class="rw-hero-content">
+        <nav class="rw-breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <a href="/products/">Products</a>
+          <span>/</span>
+          <span>HDPE/PP Rigid Plastic Washing Line</span>
+        </nav>
+        <h1 class="rw-title">Waste Rigid Plastic Washing Line</h1>
+        <p class="rw-desc">
+          Our rigid plastic washing line is specifically designed for cleaning heavily contaminated HDPE containers, oil pots, buckets, crates and drums. The complete system handles all critical stages from shredding to final drying, producing clean flakes ready for pelletizing or direct use.
+        </p>
+        <div class="rw-features">
+          <div class="rw-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>
+            <span>Capacity range: 300–2000 kg/h for different scale operations</span>
+          </div>
+          <div class="rw-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>
+            <span>Advanced friction washers and hot wash tanks for deep cleaning</span>
+          </div>
+          <div class="rw-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>
+            <span>Effective oil and grease removal system</span>
+          </div>
+          <div class="rw-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>
+            <span>Output purity ≥98% for high-quality recycling</span>
+          </div>
+        </div>
+        <div class="rw-cta-group">
+          <a href="#quote-form" class="rw-cta rw-cta-primary">Get Free Quote</a>
+          <a href="https://wa.me/8618913609266?text=Hello%2C%20I%27m%20interested%20in%20your%20rigid%20plastic%20washing%20line." class="rw-cta rw-cta-secondary" target="_blank" rel="noopener">WhatsApp Us</a>
+        </div>
+        <button type="button" class="rw-hero-video-link" id="rwHeroVideoTrigger" data-video="https://www.youtube.com/embed/rSAwxlUvMH8?autoplay=1&start=6&rel=0&modestbranding=1" aria-label="Watch Process Video">
+          <span class="rw-hero-video-icon">▶</span>
+          <span class="rw-hero-video-text">Watch Process Video</span>
+          <span class="rw-hero-video-badge">1:48</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Chat Card (Desktop only, hidden on mobile) -->
+  <a href="https://wa.me/8618913609266?text=Hello%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20your%20rigid%20plastic%20washing%20line.%20Please%20contact%20me." class="wa-card" target="_blank" rel="noopener" aria-label="Chat with an Engineer via WhatsApp - Reply in minutes">
+    <span class="wa-card-icon" aria-hidden="true">
+      <svg viewBox="0 0 32 32" fill="currentColor"><path d="M19.11 17.53c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35z"/><path d="M26.67 5.33C24 2.66 20.45 1.2 16.67 1.2 8.9 1.2 2.6 7.5 2.6 15.27c0 2.48.65 4.91 1.88 7.05L2.4 30.8l8.67-2.02c2.08 1.14 4.42 1.74 5.6 1.74h.01c7.77 0 14.07-6.3 14.07-14.07 0-3.78-1.46-7.33-4.08-10.02z"/></svg>
+    </span>
+    <div class="wa-card-body">
+      <div class="wa-card-title">Chat with an Engineer</div>
+      <div class="wa-card-subtitle">Reply in minutes</div>
+      <span class="wa-card-badge">
+        <svg viewBox="0 0 32 32" fill="currentColor"><path d="M19.11 17.53c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35z"/><path d="M26.67 5.33C24 2.66 20.45 1.2 16.67 1.2 8.9 1.2 2.6 7.5 2.6 15.27c0 2.48.65 4.91 1.88 7.05L2.4 30.8l8.67-2.02c2.08 1.14 4.42 1.74 5.6 1.74h.01c7.77 0 14.07-6.3 14.07-14.07 0-3.78-1.46-7.33-4.08-10.02z"/></svg>
+        <span>WhatsApp</span>
+        <span class="wa-card-badge-sep">•</span>
+        <span class="wa-card-badge-dot"></span>
+        <span>Online</span>
+      </span>
+    </div>
+    <span class="wa-card-arrow" aria-hidden="true">→</span>
+  </a>
+
+  <!-- Materials Section -->
+  <section class="rw-materials-section">
+    <div class="container">
+      <h2 class="rw-section-title">Materials Available for Processing</h2>
+      <div class="rw-materials-flow">
+        <div class="rw-material-card">
+          <div class="rw-material-card-img"><img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/Processing/HDPE%20bottles.webp" alt="HDPE Bottles" loading="lazy"></div>
+          <span>HDPE Bottles</span>
+        </div>
+        <div class="rw-material-card">
+          <div class="rw-material-card-img"><img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/Processing/HDPE%20pallets.webp" alt="HDPE Pallets" loading="lazy"></div>
+          <span>HDPE Pallets</span>
+        </div>
+        <div class="rw-material-card">
+          <div class="rw-material-card-img"><img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/Processing/Oil%20drum.webp" alt="Oil Drum" loading="lazy"></div>
+          <span>Oil Drum</span>
+        </div>
+        <div class="rw-flow-arrow">→</div>
+        <div class="rw-material-card rw-output-card">
+          <div class="rw-material-card-img"><img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/Processing/HDPE%20flakes.webp" alt="HDPE Flakes" loading="lazy"></div>
+          <span>HDPE Flakes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parameter Section -->
+  <section class="rw-params-section">
+    <div class="container">
+      <h2 class="rw-section-title">Parameter Overview</h2>
+      <div class="rw-params-tabs">
+        <button class="rw-param-tab active">Washing line 300 kg/h</button>
+        <button class="rw-param-tab">Washing line 500 kg/h</button>
+        <button class="rw-param-tab">Washing line 1000 kg/h</button>
+        <button class="rw-param-tab">Customized ≥1500 kg/h</button>
+      </div>
+      <table class="rw-params-table">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Capacity</th>
+            <th>Power</th>
+            <th>Water</th>
+            <th>Manpower</th>
+            <th>Area</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>RW-300</td>
+            <td>300 kg/h</td>
+            <td>90 kW</td>
+            <td>6 t/h</td>
+            <td>3–4 persons</td>
+            <td>400 m²</td>
+          </tr>
+          <tr>
+            <td>RW-500</td>
+            <td>500 kg/h</td>
+            <td>140 kW</td>
+            <td>10 t/h</td>
+            <td>4–5 persons</td>
+            <td>600 m²</td>
+          </tr>
+          <tr>
+            <td>RW-1000</td>
+            <td>1000 kg/h</td>
+            <td>220 kW</td>
+            <td>18 t/h</td>
+            <td>6–8 persons</td>
+            <td>900 m²</td>
+          </tr>
+          <tr>
+            <td>RW-1500</td>
+            <td>1500 kg/h</td>
+            <td>300 kW</td>
+            <td>25 t/h</td>
+            <td>8–10 persons</td>
+            <td>1200 m²</td>
+          </tr>
+          <tr>
+            <td>RW-2000</td>
+            <td>2000 kg/h</td>
+            <td>380 kW</td>
+            <td>32 t/h</td>
+            <td>10–12 persons</td>
+            <td>1500 m²</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="rw-params-note">* Specifications may vary based on raw material condition and customer requirements.</p>
+      <div class="rw-params-cta">
+        <a href="#quote-form" class="rw-cta rw-cta-primary">Get Detailed Quotation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="rw-process-section">
+    <div class="container">
+      <h2 class="rw-section-title">Brief Description of Cleaning Process</h2>
+      <div class="rw-tag-flow">
+        <span class="rw-tag-item" data-tooltip="Transports material through the production line efficiently">Belt Conveyor</span>
+        <span class="rw-tag-arrow">→</span>
+        <span class="rw-tag-item" data-tooltip="Feeds material into the washing line at a controlled rate">Screw Feeder</span>
+        <span class="rw-tag-arrow">→</span>
+        <span class="rw-tag-item" data-tooltip="Crushes material into uniform flakes with water">Crusher</span>
+        <span class="rw-tag-arrow">→</span>
+        <span class="rw-tag-item" data-tooltip="Hot wash and rinsing for deep cleaning">Washing Tank</span>
+        <span class="rw-tag-arrow">→</span>
+        <span class="rw-tag-item" data-tooltip="High-speed friction cleaning for stubborn contaminants">Friction Washer</span>
+        <span class="rw-tag-arrow">→</span>
+        <span class="rw-tag-item" data-tooltip="Mechanical moisture removal for rigid flakes">De-watering Machine</span>
+        <span class="rw-tag-arrow">→</span>
+        <span class="rw-tag-item" data-tooltip="Hot air drying for final moisture reduction">Dryer System</span>
+        <span class="rw-tag-arrow">→</span>
+        <span class="rw-tag-item" data-tooltip="Storage and buffer for washed material">Silo</span>
+      </div>
+      <div class="rw-tag-note">
+        <span class="rw-tag-item rw-tag-control" data-tooltip="PLC-based automation with touchscreen HMI">
+          <svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14" style="margin-right: 6px;"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM5.5 7.5A1.5 1.5 0 0 0 4 9v4a1.5 1.5 0 0 0 3 0V9a1.5 1.5 0 0 0-1.5-1.5zm5 0A1.5 1.5 0 0 0 9 9v4a1.5 1.5 0 0 0 3 0V9a1.5 1.5 0 0 0-1.5-1.5zM5 4.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm6 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
+          Control Cabinet
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Machine Modules Section -->
+  <section class="rw-modules-section">
+    <div class="container">
+      <h2 class="rw-section-title">Cleaning Line Detail Photos</h2>
+      <div class="rw-modules-tabs">
+        <button class="rw-module-tab active">Show All</button>
+      </div>
+      <div class="rw-modules-grid">
+        <div class="rw-module-card">
+          <div class="rw-module-img">
+            <img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/Detail%20Photos/Belt%20conveyor.webp" alt="Belt Conveyor" loading="lazy">
+          </div>
+          <div class="rw-module-body">
+            <h4 class="rw-module-title">Belt Conveyor</h4>
+            <p class="rw-module-desc">Transports material through the production line efficiently</p>
+          </div>
+        </div>
+        <div class="rw-module-card">
+          <div class="rw-module-img">
+            <img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/Detail%20Photos/screw%20feeder.webp" alt="Screw Feeder" loading="lazy">
+          </div>
+          <div class="rw-module-body">
+            <h4 class="rw-module-title">Screw Feeder</h4>
+            <p class="rw-module-desc">Feeds material into the washing line at a controlled rate</p>
+          </div>
+        </div>
+        <div class="rw-module-card">
+          <div class="rw-module-img">
+            <img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/Detail%20Photos/crusher.webp" alt="Crusher" loading="lazy">
+          </div>
+          <div class="rw-module-body">
+            <h4 class="rw-module-title">Crusher</h4>
+            <p class="rw-module-desc">Crushes material into uniform flakes with water</p>
+          </div>
+        </div>
+        <div class="rw-module-card">
+          <div class="rw-module-img">
+            <img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/Detail%20Photos/Friction%20washer.webp" alt="Friction Washer" loading="lazy">
+          </div>
+          <div class="rw-module-body">
+            <h4 class="rw-module-title">Friction Washer</h4>
+            <p class="rw-module-desc">High-speed friction cleaning for stubborn contaminants</p>
+          </div>
+        </div>
+        <div class="rw-module-card">
+          <div class="rw-module-img">
+            <img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/Detail%20Photos/washing%20tank.webp" alt="Washing Tank" loading="lazy">
+          </div>
+          <div class="rw-module-body">
+            <h4 class="rw-module-title">Washing Tank</h4>
+            <p class="rw-module-desc">Hot wash and rinsing for deep cleaning</p>
+          </div>
+        </div>
+        <div class="rw-module-card">
+          <div class="rw-module-img">
+            <img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/Detail%20Photos/silo.webp" alt="Silo" loading="lazy">
+          </div>
+          <div class="rw-module-body">
+            <h4 class="rw-module-title">Silo</h4>
+            <p class="rw-module-desc">Storage and buffer for washed material</p>
+          </div>
+        </div>
+        <div class="rw-module-card">
+          <div class="rw-module-img">
+            <img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/Detail%20Photos/De-watering%20machine.webp" alt="De-watering Machine" loading="lazy">
+          </div>
+          <div class="rw-module-body">
+            <h4 class="rw-module-title">De-watering Machine</h4>
+            <p class="rw-module-desc">Mechanical moisture removal for rigid flakes</p>
+          </div>
+        </div>
+        <div class="rw-module-card">
+          <div class="rw-module-img">
+            <img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/Detail%20Photos/Dryer%20system.webp" alt="Dryer System" loading="lazy">
+          </div>
+          <div class="rw-module-body">
+            <h4 class="rw-module-title">Dryer System</h4>
+            <p class="rw-module-desc">Hot air drying for final moisture reduction</p>
+          </div>
+        </div>
+        <div class="rw-module-card">
+          <div class="rw-module-img">
+            <img src="/assets/images/products/washing%20line/Rigid%20Plastic%20Washing%20Line/Detail%20Photos/Control%20cabinet.webp" alt="Control Cabinet" loading="lazy">
+          </div>
+          <div class="rw-module-body">
+            <h4 class="rw-module-title">Control Cabinet</h4>
+            <p class="rw-module-desc">PLC-based automation with touchscreen HMI</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="rw-video-section">
+    <div class="container">
+      <div class="rw-video-wrapper">
+        <div class="rw-video-frame">
+          <img src="/assets/images/mega-menu/Rigid-PP-washing-line.jpg" alt="Rigid Plastic Washing Line Video">
+          <button type="button" class="rw-video-play" id="rwVideoTrigger" data-video="https://www.youtube.com/embed/rSAwxlUvMH8?autoplay=1&start=6&rel=0&modestbranding=1" aria-label="Play video">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+          </button>
+        </div>
+        <div class="rw-video-content">
+          <span class="rw-video-label">Factory Tour</span>
+          <h3 class="rw-video-title">Complete HDPE/PP Rigid Plastic Washing Line</h3>
+          <p class="rw-video-desc">
+            Watch our rigid plastic washing line running at full capacity. See how we process heavily contaminated HDPE containers and oil pots into clean, high-quality flakes ready for pelletizing or direct use in manufacturing.
+          </p>
+          <a href="https://wa.me/8618913609266?text=Hello%2C%20I%27d%20like%20to%20discuss%20rigid%20plastic%20washing%20line%20specifications." class="rw-cta rw-cta-primary" target="_blank" rel="noopener">Talk to Engineer</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section class="rw-quote-section" id="quote-form">
+    <div class="container">
+      <div class="rw-quote-wrapper">
+        <div class="rw-quote-info">
+          <h2>Request A Free Quote</h2>
+          <p>We'd Like To Work With You. Get a customized solution for your rigid plastic recycling project.</p>
+          <div class="rw-quote-features">
+            <div class="rw-quote-feature">
+              <div class="rw-quote-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>
+              </div>
+              <div class="rw-quote-feature-text">
+                <h4>15+ Years Experience</h4>
+                <p>Professional plastic recycling solutions</p>
+              </div>
+            </div>
+            <div class="rw-quote-feature">
+              <div class="rw-quote-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>
+              </div>
+              <div class="rw-quote-feature-text">
+                <h4>50+ Countries Served</h4>
+                <p>Global installation and support</p>
+              </div>
+            </div>
+            <div class="rw-quote-feature">
+              <div class="rw-quote-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <div class="rw-quote-feature-text">
+                <h4>24–48h Response</h4>
+                <p>Fast engineering support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rw-quote-form-card">
+          <h3>Get Your Free Quote</h3>
+          <p>Fill in the form below and we'll get back to you soon.</p>
+          <form class="rw-quote-form" action="#" method="post" onsubmit="return handleQuoteSubmit(event)">
+            <div class="rw-form-group">
+              <label>Name *</label>
+              <input type="text" name="name" placeholder="Your name" required>
+            </div>
+            <div class="rw-form-group">
+              <label>Email *</label>
+              <input type="email" name="email" placeholder="Your email" required>
+            </div>
+            <div class="rw-form-group">
+              <label>Phone / WhatsApp</label>
+              <input type="tel" name="phone" placeholder="Phone number">
+            </div>
+            <div class="rw-form-group">
+              <label>Target Capacity</label>
+              <select name="capacity">
+                <option value="">Select capacity</option>
+                <option value="300">300 kg/h</option>
+                <option value="500">500 kg/h</option>
+                <option value="1000">1000 kg/h</option>
+                <option value="1500+">1500+ kg/h</option>
+              </select>
+            </div>
+            <div class="rw-form-group full-width">
+              <label>Project Details</label>
+              <textarea name="message" placeholder="Tell us about your project..."></textarea>
+            </div>
+            <div class="rw-form-submit">
+              <button type="submit">Submit Request</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+        </section>
+    </main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><h4>Gangsu Machinery</h4><p>Professional plastic recycling machinery manufacturer.<br />Designing and delivering complete recycling lines for PET, PP and PE materials.</p></div>
+      <div><h4>Products</h4><a href="/products/shredding-crushing.html">Shredding &amp; Crushing</a><br /><a href="/products/washing-lines.html">Washing Lines</a><br /><a href="/products/pelletizing-lines.html">Pelletizing Lines</a></div>
+      <div><h4>Solutions</h4><a href="/solutions/pet-bottle-recycling.html">PET Recycling</a><br /><a href="/solutions/film-to-granules.html">Film Recycling</a><br /><a href="/solutions/hdpe-container-recycling.html">Rigid Plastic Recycling</a><br /><a href="/solutions/mixed-plastic-recycling.html">Mixed Plastic Recycling</a></div>
+      <div><h4>Company</h4><a href="/projects/">Projects</a><br /><a href="/about-us/">About Us</a><br /><a href="/news/">News</a></div>
+      <div><h4>Contact</h4><a href="javascript:void(0)" data-open-form>Get Solution</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 Gangsu Machinery. All rights reserved.</span><span><a href="/legal/">Privacy &amp; Legal</a></span></div>
+  </div>
+        </footer>
+
+<!-- Contact Form Modal -->
+<div class="form-modal" id="contactForm"><div class="form-modal-overlay"></div><div class="form-modal-box"><button class="form-close" aria-label="Close">&times;</button><h3>Get Engineering Proposal</h3><p class="form-modal-desc">Tell us your material, capacity and project needs.</p><form id="contactFormElement"><input type="text" name="name" placeholder="Name *" required><input type="text" name="company" placeholder="Company"><input type="email" name="email" placeholder="Email *" required><div class="phone-field"><input type="tel" id="phone" name="phone" placeholder="WhatsApp / Phone"></div><select name="material" required><option value="">Material Type *</option><option value="PET">PET</option><option value="PP">PP</option><option value="PE">PE</option><option value="Other">Other</option></select><select name="capacity" required><option value="">Target Capacity *</option><option value="<500">Less than 500 kg/h</option><option value="500-1000">500 - 1000 kg/h</option><option value="1000-2000">1000 - 2000 kg/h</option><option value="2000-5000">2000 - 5000 kg/h</option><option value=">5000">More than 5000 kg/h</option></select><textarea name="message" placeholder="Message / Project Description" rows="4"></textarea><button type="submit">Submit Request</button></form></div></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/assets/js/thankyou-redirect.js"></script>
+
+<script>
+// Quote Form Handler
+function handleQuoteSubmit(e) {
+  e.preventDefault();
+  var form = e.target;
+  alert('Thank you! Your inquiry has been submitted. We will contact you shortly.');
+  form.reset();
+  if (typeof gsRedirectToThankYou === 'function') gsRedirectToThankYou(form);
+  return false;
+}
+
+// Image Gallery (Simple)
+// Hero Carousel
+(function(){
+  var carousel = document.getElementById('rwHeroCarousel');
+  if(!carousel) return;
+  var images = carousel.querySelectorAll('img');
+  var thumbs = document.querySelectorAll('.rw-hero-thumb');
+  var dots = document.querySelectorAll('.rw-hero-dot');
+  var currentIndex = 0;
+  var autoplayInterval = null;
+  var isPaused = false;
+
+  function goToSlide(index){
+    if(index < 0) index = images.length - 1;
+    if(index >= images.length) index = 0;
+    images.forEach(function(img, i){ img.classList.toggle('active', i === index); });
+    thumbs.forEach(function(t, i){ t.classList.toggle('active', i === index); });
+    dots.forEach(function(d, i){ d.classList.toggle('active', i === index); });
+    currentIndex = index;
+  }
+  function nextSlide(){ goToSlide(currentIndex + 1); }
+  function startAutoplay(){
+    if(autoplayInterval) clearInterval(autoplayInterval);
+    autoplayInterval = setInterval(function(){ if(!isPaused) nextSlide(); }, 3500);
+  }
+  function stopAutoplay(){
+    if(autoplayInterval){ clearInterval(autoplayInterval); autoplayInterval = null; }
+  }
+
+  thumbs.forEach(function(thumb){
+    thumb.addEventListener('click', function(){
+      goToSlide(parseInt(this.getAttribute('data-rw-index'), 10));
+      stopAutoplay();
+      setTimeout(startAutoplay, 5000);
+    });
+  });
+  dots.forEach(function(dot){
+    dot.addEventListener('click', function(){
+      goToSlide(parseInt(this.getAttribute('data-rw-index'), 10));
+      stopAutoplay();
+      setTimeout(startAutoplay, 5000);
+    });
+  });
+
+  carousel.addEventListener('mouseenter', function(){ isPaused = true; });
+  carousel.addEventListener('mouseleave', function(){ isPaused = false; });
+
+  startAutoplay();
+})();
+
+// Video Modal (must run after DOM ready - modal HTML is below script)
+// Supports multiple triggers: rwHeroVideoTrigger (Hero), rwVideoTrigger (Factory Tour section)
+function initVideoModal(){
+  var modal = document.getElementById('rwVideoModal');
+  var frame = document.getElementById('rwVideoFrame');
+  var triggers = document.querySelectorAll('#rwHeroVideoTrigger, #rwVideoTrigger');
+  if(!modal || !frame || triggers.length === 0) return;
+  var lastFocus = null;
+  function openModal(e){
+    var src = (e && e.currentTarget) ? e.currentTarget.getAttribute('data-video') : (triggers[0] && triggers[0].getAttribute('data-video'));
+    lastFocus = document.activeElement;
+    if(src){ frame.src = src; }
+    modal.hidden = false;
+    modal.removeAttribute('hidden');
+    document.documentElement.style.overflow = 'hidden';
+    var closeBtn = modal.querySelector('[data-close]');
+    if(closeBtn) closeBtn.focus();
+  }
+  function closeModal(){
+    modal.hidden = true;
+    modal.setAttribute('hidden', '');
+    frame.src = '';
+    document.documentElement.style.overflow = '';
+    if(lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+  }
+  triggers.forEach(function(t){ t.addEventListener('click', openModal); });
+  modal.addEventListener('click', function(e){
+    if(e.target.hasAttribute('data-close') || e.target.classList.contains('rw-vmodal__backdrop')) closeModal();
+  });
+  window.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+}
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', initVideoModal);
+} else {
+  initVideoModal();
+}
+</script>
+
+<!-- Video Modal -->
+<div class="rw-vmodal" id="rwVideoModal" role="dialog" aria-modal="true" aria-label="Video player" hidden>
+  <div class="rw-vmodal__backdrop" data-close></div>
+  <div class="rw-vmodal__panel">
+    <button class="rw-vmodal__close" type="button" data-close aria-label="Close video">✕</button>
+    <div class="rw-vmodal__frame">
+      <iframe id="rwVideoFrame" title="Complete HDPE/PP Rigid Plastic Washing Line Video" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- Thank You Modal -->
+<div id="thankYouModal" class="thankyou-modal"><div class="thankyou-box"><h2>Thank You!</h2><p>Your inquiry has been sent successfully.<br>Our engineering team will contact you shortly.</p><button id="thankYouClose">OK</button></div></div>
+
+<!-- Mobile Drawer Navigation -->
+<div class="mnav-backdrop" aria-hidden="true"></div>
+<aside id="mnav" class="mnav" aria-hidden="true" aria-label="Mobile navigation"><div class="mnav-shell" role="dialog" aria-modal="true"><div class="mnav-topbar"><a class="mnav-brand" href="/"><span class="mnav-brand-mark"></span><span class="mnav-brand-text">WEPLAS</span></a><button class="mnav-close" type="button" aria-label="Close menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div><nav class="mnav-views"><div class="mnav-view is-active" data-view="root"><ul class="mnav-list"><li><button class="mnav-item-btn" type="button" data-mnav-go="products"><span>Products</span><span class="mnav-arrow">›</span></button></li><li><button class="mnav-item-btn" type="button" data-mnav-go="solutions"><span>Solutions</span><span class="mnav-arrow">›</span></button></li><li><a class="mnav-item-link" href="/projects/">Projects</a></li><li><a class="mnav-item-link" href="/about-us/">About</a></li><li><a class="mnav-item-link" href="/contact/">Contact</a></li></ul></div><div class="mnav-view" data-view="products" aria-hidden="true"><div class="mnav-subhead"><button class="mnav-back" type="button" data-mnav-back><span class="mnav-back-arrow">‹</span> Back</button><div class="mnav-subtitle">Products</div></div><ul class="mnav-sublist"><li><a class="mnav-sub-link mnav-sub-strong" href="/products/">View All Products</a></li><li class="mnav-sub-sep"></li><li><a class="mnav-sub-link" href="/products/shredding-crushing.html">Shredding &amp; Crushing</a></li><li><a class="mnav-sub-link" href="/products/washing-lines.html">Washing Lines</a></li><li><a class="mnav-sub-link" href="/products/pelletizing-lines.html">Pelletizing Lines</a></li></ul></div><div class="mnav-view" data-view="solutions" aria-hidden="true"><div class="mnav-subhead"><button class="mnav-back" type="button" data-mnav-back><span class="mnav-back-arrow">‹</span> Back</button><div class="mnav-subtitle">Solutions</div></div><ul class="mnav-sublist"><li><a class="mnav-sub-link mnav-sub-strong" href="/solutions/">View All Solutions</a></li><li class="mnav-sub-sep"></li><li><a class="mnav-sub-link" href="/solutions/pet-bottle-recycling.html">PET Bottle Recycling</a></li><li><a class="mnav-sub-link" href="/solutions/film-to-granules.html">Film to Granules</a></li><li><a class="mnav-sub-link" href="/solutions/hdpe-container-recycling.html">HDPE Container Recycling</a></li><li><a class="mnav-sub-link" href="/solutions/mixed-plastic-recycling.html">Mixed Plastic Recycling</a></li></ul></div></nav><div class="mnav-bottom"><a class="mnav-cta mnav-cta-primary" href="/contact/">Contact Sales</a><a class="mnav-cta mnav-cta-secondary" href="javascript:void(0)" data-open-form>Get Proposal</a></div></div></aside>
+
+<!-- Mobile Bottom CTA Bar (same structure as homepage for consistent styling) -->
+<div class="mobcta-bar" id="mobcta-bar" aria-hidden="false">
+  <a href="https://wa.me/8618913609266?text=Hello%2C%20I%27m%20interested%20in%20your%20rigid%20plastic%20washing%20line." 
+     class="mobcta-btn mobcta-btn-primary" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     aria-label="Contact us on WhatsApp">
+    <span class="mobcta-ico" aria-hidden="true">
+      <svg class="wa-icon" viewBox="0 0 32 32" focusable="false" aria-hidden="true">
+        <path d="M19.11 17.53c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35z"/>
+        <path d="M26.67 5.33C24 2.66 20.45 1.2 16.67 1.2 8.9 1.2 2.6 7.5 2.6 15.27c0 2.48.65 4.91 1.88 7.05L2.4 30.8l8.67-2.02c2.08 1.14 4.42 1.74 5.6 1.74h.01c7.77 0 14.07-6.3 14.07-14.07 0-3.78-1.46-7.33-4.08-10.02zM16.67 28.05h-.01c-2.03 0-4.03-.55-5.79-1.58l-.41-.24-5.14 1.2 1.14-5.01-.27-.43c-1.14-1.81-1.74-3.9-1.74-6.05 0-6.39 5.2-11.59 11.6-11.59 3.09 0 5.99 1.2 8.17 3.39 2.19 2.19 3.39 5.1 3.39 8.2 0 6.39-5.2 11.59-11.54 11.59z"/>
+      </svg>
+    </span>
+    <span class="mobcta-text">WhatsApp</span>
+  </a>
+  <button type="button" class="mobcta-btn mobcta-btn-secondary" data-mobcta-quote aria-label="Get a quote">
+    <span>Get Quote</span>
+  </button>
+</div>
+
+</body>
+</html>

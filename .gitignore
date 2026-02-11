@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.bak.*
+
+# Optional: uncomment if you use Node and don't want to commit dependencies
+# node_modules/

@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy &amp; Legal | Gangsu Machinery</title>
+  <meta name="description" content="Privacy Policy, Terms of Use, and Cookie Notice for Gangsu Machinery. How we handle inquiries, WhatsApp messages, and website usage." />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css" />
+  <style>
+    /* Legal page only – .legal-* prefix */
+    .legal-page { padding: calc(var(--header-h, 72px) + 24px) 20px 48px; min-height: 100vh; background: linear-gradient(180deg, #f5f5f7 0%, #eef0f3 100%); }
+    .legal-wrap { max-width: 1200px; margin: 0 auto; }
+    .legal-hero { background: #fff; border-radius: 22px; box-shadow: 0 4px 24px rgba(0,0,0,.06); padding: 40px 32px; margin-bottom: 32px; }
+    .legal-hero h1 { margin: 0 0 12px; font-size: clamp(28px, 4vw, 36px); font-weight: 800; color: #1a1a1a; }
+    .legal-hero-sub { margin: 0 0 16px; font-size: 16px; line-height: 1.65; color: #555; max-width: 640px; }
+    .legal-hero-meta { font-size: 13px; color: #888; margin-bottom: 24px; }
+    .legal-hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+    .legal-hero-cta a { display: inline-flex; align-items: center; padding: 12px 24px; border-radius: 10px; font-weight: 600; font-size: 14px; text-decoration: none; transition: transform .2s, box-shadow .2s; }
+    .legal-hero-cta .legal-cta-primary { background: #1a73e8; color: #fff; }
+    .legal-hero-cta .legal-cta-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(26,115,232,.35); }
+    .legal-hero-cta .legal-cta-secondary { background: #fff; color: #1a1a1a; border: 1px solid #ddd; }
+    .legal-hero-cta .legal-cta-secondary:hover { border-color: #1a73e8; color: #1a73e8; }
+    .legal-body { display: grid; grid-template-columns: 240px 1fr; gap: 40px; align-items: start; }
+    @media (max-width: 900px) { .legal-body { grid-template-columns: 1fr; } }
+    .legal-toc { position: sticky; top: calc(var(--header-h, 72px) + 24px); }
+    .legal-toc-nav { list-style: none; margin: 0; padding: 0; }
+    .legal-toc-nav li { margin: 0 0 6px; }
+    .legal-toc-nav a { display: block; padding: 8px 12px; border-radius: 8px; font-size: 14px; color: #444; text-decoration: none; transition: background .15s, color .15s; }
+    .legal-toc-nav a:hover { background: #eee; color: #1a73e8; }
+    .legal-toc-nav a.legal-toc-active { background: #e8f0fe; color: #1a73e8; font-weight: 600; }
+    .legal-toc-filter { width: 100%; padding: 10px 14px; margin-bottom: 12px; border: 1px solid #ddd; border-radius: 10px; font-size: 14px; }
+    .legal-toc details { margin-bottom: 0; }
+    .legal-toc summary { padding: 12px 14px; font-weight: 600; cursor: pointer; border-radius: 10px; background: #fff; border: 1px solid #e0e0e0; }
+    .legal-toc summary:hover { background: #f8f9fa; }
+    @media (min-width: 901px) { .legal-toc details summary { display: none; } .legal-toc .legal-toc-nav { display: block !important; } }
+    @media (max-width: 900px) { .legal-toc .legal-toc-nav { display: none; margin-top: 12px; } .legal-toc details[open] .legal-toc-nav { display: block !important; } }
+    .legal-content { max-width: 720px; }
+    .legal-card { background: #fff; border-radius: 20px; box-shadow: 0 2px 16px rgba(0,0,0,.05); padding: 28px 32px; margin-bottom: 24px; }
+    .legal-card h2 { margin: 0 0 16px; font-size: 22px; font-weight: 700; color: #1a1a1a; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .legal-card h2 .legal-copy { flex-shrink: 0; padding: 6px 12px; font-size: 12px; border-radius: 8px; border: 1px solid #ddd; background: #fafafa; cursor: pointer; color: #555; }
+    .legal-card h2 .legal-copy:hover { background: #eee; color: #1a73e8; }
+    .legal-card h3 { margin: 24px 0 10px; font-size: 17px; font-weight: 600; color: #333; }
+    .legal-card p, .legal-card li { font-size: 15px; line-height: 1.65; color: #444; margin: 0 0 12px; }
+    .legal-card ul { margin: 0 0 16px; padding-left: 1.4em; }
+    .legal-card .legal-contact-note { font-size: 13px; color: #888; margin-top: 8px; }
+    .legal-toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); padding: 12px 24px; background: #333; color: #fff; border-radius: 10px; font-size: 14px; z-index: 9999; opacity: 0; transition: opacity .25s; pointer-events: none; }
+    .legal-toast.legal-toast-show { opacity: 1; }
+    .legal-faq details { margin-bottom: 12px; border: 1px solid #e8eaed; border-radius: 12px; overflow: hidden; }
+    .legal-faq summary { padding: 14px 18px; font-weight: 600; cursor: pointer; background: #fafafa; }
+    .legal-faq summary:hover { background: #f0f0f0; }
+    .legal-faq .legal-faq-answer { padding: 14px 18px; border-top: 1px solid #eee; font-size: 15px; line-height: 1.65; color: #444; }
+  </style>
+</head>
+<body>
+
+     ====================== -->
+     <header class="header" id="site-header">
+      <div class="container nav">
+    
+        <!-- Logo -->
+        <a href="/" class="logo" aria-label="WEPLAS Home">
+          <div class="logo-mark"></div>
+          <span>WEPLAS</span>
+        </a>
+    
+        <!-- Main Navigation -->
+        <nav class="nav-links">
+    
+          <!-- ======================
+               PRODUCTS (MEGA MENU)
+               ====================== -->
+          <div class="nav-item has-mega" data-mega="products">
+            <a class="nav-link nav-mega-trigger" href="/products/" aria-expanded="false">Products</a>
+    
+            <!-- Mega Menu -->
+            <div class="mega-menu" id="mega-products" role="region" aria-label="Products Mega Menu">
+              <div class="mega-inner">
+    
+                <!-- LEFT: Categories -->
+                <div class="mega-left">
+                  <button class="mega-tab active" data-target="shredding">
+                    <span class="mega-tab-title">Shredding &amp; Crushing</span>
+                    <span class="mega-tab-desc">
+                      Primary size reduction for rigid and soft plastics
+                    </span>
+                  </button>
+                  <button class="mega-tab" data-target="washing">
+                    <span class="mega-tab-title">Washing Lines</span>
+                    <span class="mega-tab-desc">
+                      High-efficiency cleaning and separation systems
+                    </span>
+                  </button>
+                  <button class="mega-tab" data-target="pelletizing">
+                    <span class="mega-tab-title">Pelletizing Lines</span>
+                    <span class="mega-tab-desc">
+                      Stable granulation for downstream processing
+                    </span>
+                  </button>
+                </div>
+    
+                <!-- RIGHT: Products -->
+                <div class="mega-right">
+    
+                  <!-- Shredding -->
+                  <div class="mega-panel active" data-panel="shredding">
+                    <div class="mega-intro">
+                      <h3 class="mega-intro-title">
+                        <a href="/products/shredding-crushing.html" class="mega-intro-title-link">
+                          <span>Shredding&Crushing Solutions</span>
+                          <svg class="mega-intro-title-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </a>
+                      </h3>
+                      <p class="mega-intro-desc">
+                        From waste plastics to reusable industrial value
+                      </p>
+                    </div>
+                    <a href="/products/double-shaft-shredder.html" class="mega-card">
+                      <div class="mega-card-img">
+                        <img src="/assets/images/products/shredding-crushing/hero/double-shaft shredder1.webp" alt="Double Shaft Shredder">
+                      </div>
+
+                      <div class="mega-card-body">
+                        <div class="mega-card-title">Double Shaft Shredder</div>
+                        <div class="mega-card-desc">
+                          Heavy-duty shredding for bulky and rigid plastics
+                        </div>
+                      </div>
+                    </a>
+    
+                    <a href="/products/single-shaft-shredder.html" class="mega-card">
+                      <div class="mega-card-img">
+                        <img src="/assets/images/products/shredding-crushing/single-shaft shredder/hero/single-shaft shredder.webp" alt="Single Shaft Shredder">
+                      </div>
+
+                      <div class="mega-card-body">
+                        <div class="mega-card-title">Single Shaft Shredder</div>
+                        <div class="mega-card-desc">
+                          Flexible size reduction with precise control
+                        </div>
+                      </div>
+                    </a>
+    
+                    <a href="/products/pipe-shredder.html" class="mega-card">
+                      <div class="mega-card-img">
+                        <img src="/assets/images/products/shredding-crushing/pipe-shredder/hero/52281770363058_.pic_hd.webp" alt="Pipe & Profile Shredder">
+                      </div>
+
+                      <div class="mega-card-body">
+                        <div class="mega-card-title">Pipe &amp; Profile Shredder</div>
+                        <div class="mega-card-desc">
+                          Specialized shredding for long-length plastics
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+    
+                  <!-- Washing -->
+                  <div class="mega-panel" data-panel="washing">
+                    <div class="mega-intro">
+                      <h3 class="mega-intro-title">
+                        <a href="/products/washing-lines.html" class="mega-intro-title-link">
+                          <span>Plastic Washing Lines</span>
+                          <svg class="mega-intro-title-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </a>
+                      </h3>
+                      <p class="mega-intro-desc">
+                        From waste plastics to reusable industrial value
+                      </p>
+                    </div>
+                    <a href="/products/pet-bottle-washing-line.html" class="mega-card">
+                      <div class="mega-card-img">
+                        <img src="/assets/images/mega-menu/PET-bottle-washing-line.jpg" alt="PET Bottle Washing Line">
+                      </div>
+
+                      <div class="mega-card-body">
+                        <div class="mega-card-title">PET Bottle Washing Line</div>
+                        <div class="mega-card-desc">
+                          Complete cleaning and label removal for PET recycling
+                        </div>
+                      </div>
+                    </a>
+    
+                    <a href="/products/pe-pp-film-washing-line.html" class="mega-card">
+                      <div class="mega-card-img">
+                        <img src="/assets/images/mega-menu/PE-film-washing-line.jpg" alt="PP PE Film Washing Line">
+                      </div>
+
+                      <div class="mega-card-body">
+                        <div class="mega-card-title">PP / PE Film Washing Line</div>
+                        <div class="mega-card-desc">
+                          Efficient washing for post-consumer films
+                        </div>
+                      </div>
+                    </a>
+    
+                    <a href="/products/hdpe-hard-plastic-washing-line.html" class="mega-card">
+                      <div class="mega-card-img">
+                        <img src="/assets/images/mega-menu/Rigid-PP-washing-line.jpg" alt="Rigid Plastic Washing Line">
+                      </div>
+
+                      <div class="mega-card-body">
+                        <div class="mega-card-title">Rigid Plastic Washing Line</div>
+                        <div class="mega-card-desc">
+                          Intensive cleaning for hard plastic waste
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+    
+                  <!-- Pelletizing -->
+                  <div class="mega-panel mega-panel--pelletizing" data-panel="pelletizing">
+                    <div class="mega-intro">
+                      <h3 class="mega-intro-title">
+                        <a href="/products/pelletizing-lines.html" class="mega-intro-title-link">
+                          <span>Plastic Pelletizing Lines</span>
+                          <svg class="mega-intro-title-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </a>
+                      </h3>
+                      <p class="mega-intro-desc">
+                        From waste plastics to reusable industrial value
+                      </p>
+                    </div>
+                    <div class="mega-cards mega-cards--pelletizing">
+                      <a href="/products/cutter-compactor-single-stage-pelletizing-line.html" class="mega-card">
+                        <div class="mega-card-img">
+                          <img src="/assets/images/products/pelletizing%20line/Cutter%20compactor%20single-stage%20pelletizing%20line/hero/Cutter%20compactor%20single-stage%20pelletizing%20line.webp" alt="Cutter-Compactor Single-Stage Pelletizing Line" onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
+                        </div>
+
+                        <div class="mega-card-body">
+                          <div class="mega-card-title">Cutter-Compactor Single-Stage Pelletizing Line</div>
+                          <div class="mega-card-desc">
+                            For plastic film recycling (e.g., PE/PP)
+                          </div>
+                        </div>
+                      </a>
+      
+                      <a href="/products/cutter-compactor-double-stage-pelletizing-line.html" class="mega-card">
+                        <div class="mega-card-img">
+                          <img src="/assets/images/products/pelletizing%20line/Double-Stage%20Cutter-Compactor%20Pelletizing%20Line/hero/Double%20stage%20Cutter%20compactor%20%20pelletizing%20line.webp" alt="Cutter-Compactor Double-Stage Pelletizing Line" onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
+                        </div>
+
+                        <div class="mega-card-body">
+                          <div class="mega-card-title">Cutter-Compactor Double-Stage Pelletizing Line</div>
+                          <div class="mega-card-desc">
+                            Specifically for Polyethylene Terephthalate
+                          </div>
+                        </div>
+                      </a>
+      
+                      <a href="/products/rigid-plastic-single-stage-pelletizing-line.html" class="mega-card">
+                        <div class="mega-card-img">
+                          <img src="/assets/images/products/pelletizing%20line/Rigid%20Plastic%20Single-Stage%20Pelletizing%20Line/hero/Rigid%20plastic%20single%20stage%20pelletizing%20line.webp" alt="Rigid Plastic Single-Stage Pelletizing Line" onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
+                        </div>
+
+                        <div class="mega-card-body">
+                          <div class="mega-card-title">Rigid Plastic Single-Stage Pelletizing Line</div>
+                          <div class="mega-card-desc">
+                            For bulk rigid plastics
+                          </div>
+                        </div>
+                      </a>
+      
+                      <a href="/products/rigid-plastic-double-stage-pelletizing-line.html" class="mega-card">
+                        <div class="mega-card-img">
+                          <img src="/assets/images/products/pelletizing%20line/Rigid%20Plastic%20Double-Stage%20Pelletizing%20Line/hero/Rigid%20plastic%20double%20stage%20pelletizing%20line.webp" alt="Rigid Plastic Double-Stage Pelletizing Line" onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
+                        </div>
+
+                        <div class="mega-card-body">
+                          <div class="mega-card-title">Rigid Plastic Double-Stage Pelletizing Line</div>
+                          <div class="mega-card-desc">
+                            For challenging &amp; mixed plastics (PVC, ABS, PS) or materials with fillers/impurities/high moisture
+                          </div>
+                        </div>
+                      </a>
+
+                      <a href="/products/shredding-in-plant-recycling-pelletizing-line.html" class="mega-card">
+                        <div class="mega-card-img">
+                          <img src="/assets/images/products/pelletizing%20line/Shredding%20%26%20In-Plant%20Recycling%20Pelletizing%20Line/hero/shredding%26In-plant%20recycling%20pelletizing%20line.webp" alt="Shredding & In-Plant Recycling Pelletizing Line" onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
+                        </div>
+
+                        <div class="mega-card-body">
+                          <div class="mega-card-title">Shredding &amp; In-Plant Recycling Pelletizing Line</div>
+                          <div class="mega-card-desc">
+                            Strand cutting for clean, uniform pellets
+                          </div>
+                        </div>
+                      </a>
+
+                      <a href="/products/pet-flakes-dedicated-pelletizing-line.html" class="mega-card">
+                        <div class="mega-card-img">
+                          <img src="/assets/images/products/pelletizing%20line/PET%20Flakes%20Dedicated%20Pelletizing%20Line/hero/PET%20pelletizing%20line.webp" alt="PET Flakes Dedicated Pelletizing Line" onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
+                        </div>
+
+                        <div class="mega-card-body">
+                          <div class="mega-card-title">PET Flakes Dedicated Pelletizing Line</div>
+                          <div class="mega-card-desc">
+                            Underwater die-face cutting, high-output granulation
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+    
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- ======================
+               SOLUTIONS (MEGA MENU)
+               ====================== -->
+          <div class="nav-item has-mega" data-mega="solutions">
+            <a class="nav-link nav-mega-trigger" href="/solutions/" aria-expanded="false">Solutions</a>
+    
+            <!-- Mega Menu -->
+            <div class="mega-menu" id="mega-solutions" role="region" aria-label="Solutions Mega Menu">
+              <div class="mega-inner mega-solutions-inner">
+    
+                <!-- Solutions Process Flow Table -->
+                <div class="mega-solutions-table">
+                  <!-- Table Header -->
+                  <div class="mega-map-head">
+                    <div class="mega-map-head-cell">Waste Material</div>
+                    <div class="mega-map-head-cell">Process Solution</div>
+                    <div class="mega-map-head-cell">Target Output</div>
+                    <div class="mega-map-head-cell"></div>
+                  </div>
+    
+                  <!-- Table Rows -->
+                  <div class="mega-solutions-rows">
+                    <!-- Row 1: Plastic Bottles -->
+                    <div class="mega-row">
+                      <div class="mega-row-cell">
+                        <div class="mega-waste">
+                          <span class="mega-ic" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                              <path d="M10 3h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                              <path d="M9 6h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                              <path d="M9 6v3c0 .6-.3 1.1-.8 1.4C6.7 11.2 6 12.6 6 14.2V18c0 1.7 1.3 3 3 3h6c1.7 0 3-1.3 3-3v-3.8c0-1.6-.7-3-2.2-3.8-.5-.3-.8-.8-.8-1.4V6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                            </svg>
+                          </span>
+                          <a href="/solutions/pet-bottle-recycling.html" class="mega-waste-name">Plastic Bottles</a>
+                        </div>
+                      </div>
+                      <div class="mega-row-cell cell-line">
+                        <div class="mega-process">
+                          <span class="mega-chip">De-label</span>
+                          <span class="mega-chip">Hot Wash</span>
+                          <span class="mega-chip">Flake Purify</span>
+                        </div>
+                      </div>
+                      <div class="mega-row-cell cell-out">
+                        <div class="mega-out">
+                          <span class="mega-ic" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                              <path d="M12 3l7 4v6c0 5-3.5 8.4-7 9-3.5-.6-7-4-7-9V7l7-4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                              <path d="M9.5 12l1.7 1.7L14.8 10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </span>
+                          <span class="mega-out-name">Food-grade rPET</span>
+                        </div>
+                      </div>
+                      <div class="mega-row-cta">
+                        <a href="/solutions/pet-bottle-recycling.html" class="mega-cta">View Solution</a>
+                        <span class="mega-cta-hint">Recommended configuration &amp; equipment layout</span>
+                      </div>
+                    </div>
+    
+                    <!-- Row 2: Plastic Films -->
+                    <div class="mega-row">
+                      <div class="mega-row-cell">
+                        <div class="mega-waste">
+                          <span class="mega-ic" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                              <path d="M7 7h10a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-4a3 3 0 0 1 3-3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                              <path d="M8 12h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                              <path d="M9 9.5h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".7"/>
+                            </svg>
+                          </span>
+                          <a href="/solutions/film-to-granules.html" class="mega-waste-name">Plastic Films</a>
+                        </div>
+                      </div>
+                      <div class="mega-row-cell cell-line">
+                        <div class="mega-process">
+                          <span class="mega-chip">Shred</span>
+                          <span class="mega-chip">Wash</span>
+                          <span class="mega-chip">Dewater</span>
+                          <span class="mega-chip">Pelletize</span>
+                        </div>
+                      </div>
+                      <div class="mega-row-cell cell-out">
+                        <div class="mega-out">
+                          <span class="mega-ic" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                              <circle cx="9" cy="9" r="1.5" stroke="currentColor" stroke-width="1.6"/>
+                              <circle cx="15" cy="9" r="1.5" stroke="currentColor" stroke-width="1.6"/>
+                              <circle cx="9" cy="15" r="1.5" stroke="currentColor" stroke-width="1.6"/>
+                              <circle cx="15" cy="15" r="1.5" stroke="currentColor" stroke-width="1.6"/>
+                            </svg>
+                          </span>
+                          <span class="mega-out-name">Stable PE/PP Pellets</span>
+                        </div>
+                      </div>
+                      <div class="mega-row-cta">
+                        <a href="/solutions/film-to-granules.html" class="mega-cta">View Solution</a>
+                        <span class="mega-cta-hint">Recommended configuration &amp; equipment layout</span>
+                      </div>
+                    </div>
+    
+                    <!-- Row 3: Rigid Plastics -->
+                    <div class="mega-row">
+                      <div class="mega-row-cell">
+                        <div class="mega-waste">
+                          <span class="mega-ic" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                              <path d="M8 8h8v8H8V8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                              <path d="M8 12h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".7"/>
+                              <path d="M12 8v8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".7"/>
+                            </svg>
+                          </span>
+                          <a href="/solutions/hdpe-container-recycling.html" class="mega-waste-name">Rigid Plastics</a>
+                        </div>
+                      </div>
+                      <div class="mega-row-cell cell-line">
+                        <div class="mega-process">
+                          <span class="mega-chip">Crush</span>
+                          <span class="mega-chip">Wash</span>
+                          <span class="mega-chip">Separate</span>
+                          <span class="mega-chip">Pelletize</span>
+                        </div>
+                      </div>
+                      <div class="mega-row-cell cell-out">
+                        <div class="mega-out">
+                          <span class="mega-ic" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                              <path d="M12 4l8 4-8 4-8-4 8-4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                              <path d="M4 12l8 4 8-4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" opacity=".8"/>
+                              <path d="M4 16l8 4 8-4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" opacity=".6"/>
+                            </svg>
+                          </span>
+                          <span class="mega-out-name">Regranulates</span>
+                        </div>
+                      </div>
+                      <div class="mega-row-cta">
+                        <a href="/solutions/hdpe-container-recycling.html" class="mega-cta">View Solution</a>
+                        <span class="mega-cta-hint">Recommended configuration &amp; equipment layout</span>
+                      </div>
+                    </div>
+    
+                    <!-- Row 4: Mixed Plastic Waste -->
+                    <div class="mega-row">
+                      <div class="mega-row-cell">
+                        <div class="mega-waste">
+                          <span class="mega-ic" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                              <path d="M8 7h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                              <path d="M9 7l.8 14h4.4L15 7" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                              <path d="M10 4h4l1 3H9l1-3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                            </svg>
+                          </span>
+                          <a href="/solutions/mixed-plastic-recycling.html" class="mega-waste-name">Mixed Plastic Waste</a>
+                        </div>
+                      </div>
+                      <div class="mega-row-cell cell-line">
+                        <div class="mega-process">
+                          <span class="mega-chip">Sort</span>
+                          <span class="mega-chip">Wash</span>
+                          <span class="mega-chip">Pelletize</span>
+                          <span class="mega-chip">Project-based</span>
+                        </div>
+                      </div>
+                      <div class="mega-row-cell cell-out">
+                        <div class="mega-out">
+                          <span class="mega-ic" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                              <path d="M5 7h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                              <path d="M5 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                              <path d="M5 17h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                              <path d="M9 7v0" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+                              <path d="M15 12v0" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+                              <path d="M11 17v0" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+                            </svg>
+                          </span>
+                          <span class="mega-out-name">Customized Output</span>
+                        </div>
+                      </div>
+                      <div class="mega-row-cta">
+                        <a href="/solutions/mixed-plastic-recycling.html" class="mega-cta">View Solution</a>
+                        <span class="mega-cta-hint">Recommended configuration &amp; equipment layout</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
+            </div>
+          </div>
+    
+          <!-- Other Nav Links -->
+          <a href="/projects/" class="nav-link">Projects</a>
+          <a href="/about-us/" class="nav-link">About</a>
+    
+          <a href="/contact" class="nav-cta">
+            Contact Sales
+          </a>
+        </nav>
+    
+        <!-- Mobile Toggle (ONLY ONE) -->
+        <button class="mnav-toggle" aria-label="Toggle menu" aria-controls="mnav" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>    
+
+<main class="legal-page">
+  <div class="legal-wrap">
+    <section class="legal-hero">
+      <h1>Privacy &amp; Legal</h1>
+      <p class="legal-hero-sub">This page explains how we handle inquiries, WhatsApp messages, and website usage for Gangsu Machinery.</p>
+      <p class="legal-hero-meta">Last updated: 2026-02-10</p>
+      <div class="legal-hero-cta">
+        <a href="/" class="legal-cta-primary">Back to Homepage</a>
+        <a href="/contact/" class="legal-cta-secondary">Contact</a>
+      </div>
+    </section>
+
+    <div class="legal-body">
+      <aside class="legal-toc" aria-label="Table of contents">
+        <details>
+          <summary>Table of contents</summary>
+          <input type="text" class="legal-toc-filter" placeholder="Filter sections…" aria-label="Filter table of contents">
+          <nav>
+            <ul class="legal-toc-nav">
+              <li><a href="#overview">1. Overview</a></li>
+              <li><a href="#privacy-collect">2.1 Information we collect</a></li>
+              <li><a href="#privacy-use">2.2 How we use information</a></li>
+              <li><a href="#privacy-cookies">2.3 Cookies &amp; analytics</a></li>
+              <li><a href="#privacy-sharing">2.4 Sharing &amp; processors</a></li>
+              <li><a href="#privacy-retention">2.5 Data retention</a></li>
+              <li><a href="#privacy-choices">2.6 Your choices</a></li>
+              <li><a href="#privacy-security">2.7 Security</a></li>
+              <li><a href="#privacy-contact">2.8 Contact (Privacy)</a></li>
+              <li><a href="#terms-acceptance">3.1 Acceptance</a></li>
+              <li><a href="#terms-use">3.2 Use of site</a></li>
+              <li><a href="#terms-disclaimer">3.3 Product/spec disclaimer</a></li>
+              <li><a href="#terms-ip">3.4 Intellectual property</a></li>
+              <li><a href="#terms-links">3.5 Third-party links</a></li>
+              <li><a href="#terms-liability">3.6 Limitation of liability</a></li>
+              <li><a href="#terms-law">3.7 Governing &amp; disputes</a></li>
+              <li><a href="#terms-contact">3.8 Contact (Terms)</a></li>
+              <li><a href="#cookie-notice">4. Cookie Notice</a></li>
+              <li><a href="#faq">5. FAQ</a></li>
+            </ul>
+          </nav>
+        </details>
+      </aside>
+
+      <div class="legal-content">
+        <section id="overview" class="legal-card">
+          <h2>1. Overview <button type="button" class="legal-copy" aria-label="Copy link">Copy link</button></h2>
+          <p>This page combines our Privacy Policy, Terms of Use, and Cookie Notice. Gangsu Machinery (“we”) operates a B2B website for plastic recycling equipment. We process inquiry and contact data to provide quotes, engineering proposals, and after-sales support. We do not sell personal information.</p>
+        </section>
+
+        <section id="privacy-collect" class="legal-card">
+          <h2>2. Privacy Policy <button type="button" class="legal-copy" aria-label="Copy link">Copy link</button></h2>
+          <h3>2.1 Information we collect</h3>
+          <p>We collect (1) data you submit via our website forms (name, company, email, phone, material, capacity, message), (2) information you send us via WhatsApp or other channels when you contact us, and (3) basic access and usage data such as IP address, browser type, and pages visited. We do not collect sensitive categories of personal data unless you voluntarily provide them in a message.</p>
+          <h3 id="privacy-use">2.2 How we use information</h3>
+          <p>We use your data to respond to inquiries, prepare quotes and engineering proposals, communicate about projects and after-sales support, and improve our website and services. We do not use your information for automated decision-making that significantly affects you. We do not sell your personal information.</p>
+          <h3 id="privacy-cookies">2.3 Cookies &amp; analytics</h3>
+          <p>We may use cookies and similar technologies for essential site operation and, where applicable, analytics (e.g. to understand how the site is used). Our site may use analytics services in the future; we will describe them here when in use. You can control cookies via your browser settings.</p>
+          <h3 id="privacy-sharing">2.4 Sharing &amp; processors</h3>
+          <p>We do not sell or rent your data. We may share data with service providers that help us operate the website or handle communications (e.g. hosting, email, or form-backend services). Such processors are bound by confidentiality and data-processing obligations. We may disclose data where required by law.</p>
+          <h3 id="privacy-retention">2.5 Data retention</h3>
+          <p>We retain inquiry and contact data for as long as needed to fulfil the purpose (e.g. ongoing projects and support) and to comply with legal obligations. You may ask us to delete or restrict your data subject to applicable law.</p>
+          <h3 id="privacy-choices">2.6 Your choices</h3>
+          <p>You can choose not to submit forms or not to contact us via WhatsApp. You can use browser settings to limit cookies. In some jurisdictions you have rights to access, correct, delete, or port your data or to object to processing; contact us to exercise them.</p>
+          <h3 id="privacy-security">2.7 Security</h3>
+          <p>We take reasonable technical and organisational measures to protect your data against unauthorised access, loss, or misuse. No system is completely secure; we do not guarantee absolute security.</p>
+          <h3 id="privacy-contact">2.8 Contact (Privacy)</h3>
+          <p>For privacy-related requests or questions:</p>
+          <p><strong>Email:</strong> sale@plasticrecyclingmachine.cn<br><strong>WhatsApp:</strong> +86 189 1360 9266<br><strong>Location:</strong> Zhangjiagang, Jiangsu, China</p>
+          <p class="legal-contact-note"><!-- TODO: replace with your official contact if different --></p>
+        </section>
+
+        <section id="terms-acceptance" class="legal-card">
+          <h2>3. Terms of Use <button type="button" class="legal-copy" aria-label="Copy link">Copy link</button></h2>
+          <h3>3.1 Acceptance</h3>
+          <p>By using this website you agree to these Terms of Use. If you do not agree, please do not use the site.</p>
+          <h3 id="terms-use">3.2 Use of site</h3>
+          <p>You may use the site for lawful purposes and in accordance with these terms. You must not misuse the site (e.g. attempt to gain unauthorised access, transmit malware, or scrape content in a way that harms our systems).</p>
+          <h3 id="terms-disclaimer">3.3 Product/spec disclaimer</h3>
+          <p>Product descriptions, specifications, and capacity figures are for general information and may vary by configuration and application. Final specifications and performance depend on your material, contamination, and site conditions. We do not guarantee specific outputs; engineering proposals and contracts govern project-specific terms.</p>
+          <h3 id="terms-ip">3.4 Intellectual property</h3>
+          <p>Content on this site (text, images, logos, layout) is owned by Gangsu Machinery or its licensors. You may not copy, modify, or distribute it without our prior written consent, except for limited personal or internal reference.</p>
+          <h3 id="terms-links">3.5 Third-party links</h3>
+          <p>We may link to third-party sites. We are not responsible for their content or privacy practices. Use them at your own risk.</p>
+          <h3 id="terms-liability">3.6 Limitation of liability</h3>
+          <p>To the extent permitted by law, we are not liable for indirect, incidental, or consequential damages arising from your use of the site or reliance on its content. Our total liability shall not exceed the amount you paid us in the twelve months preceding the claim, if any.</p>
+          <h3 id="terms-law">3.7 Governing law &amp; disputes</h3>
+          <p>These terms are governed by the laws of the People’s Republic of China. Disputes shall be resolved in the courts of our place of business unless otherwise agreed.</p>
+          <h3 id="terms-contact">3.8 Contact (Terms)</h3>
+          <p>For terms-related questions: Email: sale@plasticrecyclingmachine.cn; WhatsApp: +86 189 1360 9266; Location: Zhangjiagang, Jiangsu, China. <!-- TODO: replace if different --></p>
+        </section>
+
+        <section id="cookie-notice" class="legal-card">
+          <h2>4. Cookie Notice <button type="button" class="legal-copy" aria-label="Copy link">Copy link</button></h2>
+          <p>We may use cookies and similar technologies for essential operation (e.g. session, preferences) and, where applicable, for analytics to understand how the site is used. We do not use cookies for advertising profiling. You can manage or block cookies via your browser. If you disable essential cookies, some features may not work.</p>
+        </section>
+
+        <section id="faq" class="legal-card legal-faq">
+          <h2>5. FAQ <button type="button" class="legal-copy" aria-label="Copy link">Copy link</button></h2>
+          <details>
+            <summary>What data do you collect when I submit a form?</summary>
+            <div class="legal-faq-answer">We collect the fields you fill in (name, company, email, phone, material, capacity, message) and use them to respond and prepare proposals. We may also receive basic technical data (e.g. IP) with the submission.</div>
+          </details>
+          <details>
+            <summary>Do you sell my personal information?</summary>
+            <div class="legal-faq-answer">No. We do not sell or rent your personal information to third parties.</div>
+          </details>
+          <details>
+            <summary>How long do you keep my data?</summary>
+            <div class="legal-faq-answer">We keep inquiry and contact data for as long as needed for the business relationship and to comply with legal obligations. You can ask us to delete or restrict your data.</div>
+          </details>
+          <details>
+            <summary>Do you use cookies for advertising?</summary>
+            <div class="legal-faq-answer">We do not use cookies for advertising or profiling. We may use analytics cookies to understand site usage; you can control cookies in your browser.</div>
+          </details>
+          <details>
+            <summary>Who can I contact for privacy or terms?</summary>
+            <div class="legal-faq-answer">Email: sale@plasticrecyclingmachine.cn; WhatsApp: +86 189 1360 9266. Location: Zhangjiagang, Jiangsu, China.</div>
+          </details>
+          <details>
+            <summary>Are product specs on the website binding?</summary>
+            <div class="legal-faq-answer">Product descriptions and specs are for general information. Binding specifications and performance are agreed in engineering proposals and contracts for your project.</div>
+          </details>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="legal-toast" class="legal-toast" role="status" aria-live="polite">Link copied</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>Gangsu Machinery</h4>
+        <p>Engineering and manufacturing complete plastic recycling lines. Turnkey solutions for shredding, washing, separation, and pelletizing processes.</p>
+        <div class="footer-brand-info">
+          <div class="footer-brand-info-item">
+            <strong>Location:</strong>
+            <span>Zhangjiagang, Jiangsu, China</span>
+          </div>
+          <div class="footer-brand-info-item">
+            <strong>Established:</strong>
+            <span>2010</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Products</h4>
+        <ul class="footer-nav-list">
+          <li><a href="/products/shredding-crushing.html">Shredding &amp; Crushing</a></li>
+          <li><a href="/products/washing-lines.html">Washing Lines</a></li>
+          <li><a href="/products/pelletizing-lines.html">Pelletizing Lines</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Solutions</h4>
+        <ul class="footer-nav-list">
+          <li><a href="/solutions/pet-bottle-recycling.html">PET Bottle Recycling</a></li>
+          <li><a href="/solutions/film-to-granules.html">Film to Granules</a></li>
+          <li><a href="/solutions/hdpe-container-recycling.html">HDPE Container Recycling</a></li>
+          <li><a href="/solutions/mixed-plastic-recycling.html">Mixed Plastic Recycling</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Company</h4>
+        <ul class="footer-nav-list">
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 Gangsu Machinery. All rights reserved.</span>
+      <span><a href="/legal/">Privacy &amp; Legal</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Contact Form Modal -->
+<div class="modal" id="leadModal" aria-hidden="true" role="dialog" aria-labelledby="leadModalTitle">
+  <div class="modal__overlay" data-modal-close></div>
+
+  <div class="modal__dialog">
+    <button class="modal__close" data-modal-close aria-label="Close">&times;</button>
+
+    <h3 id="leadModalTitle">Get Engineering Proposal</h3>
+    <p class="form-modal-desc">
+      Tell us your material, capacity and project needs.
+    </p>
+
+    <form id="contactFormElement">
+      <input type="text" name="name" placeholder="Name *" required>
+
+      <input type="text" name="company" placeholder="Company">
+
+      <input type="email" name="email" placeholder="Email *" required>
+
+      <div class="phone-field">
+        <input type="tel" id="phone" name="phone" placeholder="WhatsApp / Phone">
+      </div>
+
+      <select name="material" required>
+        <option value="">Material Type *</option>
+        <option value="PET">PET</option>
+        <option value="PP">PP</option>
+        <option value="PE">PE</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <select name="capacity" required>
+        <option value="">Target Capacity *</option>
+        <option value="<500">Less than 500 kg/h</option>
+        <option value="500-1000">500 - 1000 kg/h</option>
+        <option value="1000-2000">1000 - 2000 kg/h</option>
+        <option value="2000-5000">2000 - 5000 kg/h</option>
+        <option value=">5000">More than 5000 kg/h</option>
+      </select>
+
+      <textarea
+        name="message"
+        placeholder="Message / Project Description"
+        rows="4"
+      ></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+<script src="/js/main.js"></script>
+  <script src="/assets/js/thankyou-redirect.js"></script>
+
+<!-- Thank You Modal -->
+<div id="thankYouModal" class="thankyou-modal">
+  <div class="thankyou-box">
+    <h2>Thank You!</h2>
+    <p>
+      Your inquiry has been sent successfully.<br>
+      Our engineering team will contact you shortly.
+    </p>
+    <button id="thankYouClose">OK</button>
+  </div>
+</div>
+
+<!-- Mobile Drawer Navigation -->
+<div class="mnav-backdrop" aria-hidden="true"></div>
+
+<aside id="mnav" class="mnav" aria-hidden="true" aria-label="Mobile navigation">
+  <div class="mnav-shell" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <!-- Top bar -->
+    <div class="mnav-topbar">
+      <a class="mnav-brand" href="/" aria-label="Gangsu Home">
+        <span class="mnav-brand-mark"></span>
+        <span class="mnav-brand-text">WEPLAS</span>
+      </a>
+      <button class="mnav-close" type="button" aria-label="Close menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Views -->
+    <nav class="mnav-views" aria-label="Mobile menu">
+      <!-- ROOT VIEW -->
+      <div class="mnav-view is-active" data-view="root">
+        <ul class="mnav-list">
+          <li>
+            <button class="mnav-item-btn" type="button" data-mnav-go="products" aria-label="Open Products">
+              <span>Products</span>
+              <span class="mnav-arrow" aria-hidden="true">›</span>
+            </button>
+          </li>
+          <li>
+            <button class="mnav-item-btn" type="button" data-mnav-go="solutions" aria-label="Open Solutions">
+              <span>Solutions</span>
+              <span class="mnav-arrow" aria-hidden="true">›</span>
+            </button>
+          </li>
+
+          <li><a class="mnav-item-link" href="/projects/index.html">Projects</a></li>
+          <li><a class="mnav-item-link" href="/about-us/index.html">About</a></li>
+          <li><a class="mnav-item-link" href="/contact/index.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- PRODUCTS VIEW -->
+      <div class="mnav-view" data-view="products" aria-hidden="true">
+        <div class="mnav-subhead">
+          <button class="mnav-back" type="button" data-mnav-back aria-label="Back">
+            <span class="mnav-back-arrow" aria-hidden="true">‹</span> Back
+          </button>
+          <div class="mnav-subtitle">Products</div>
+        </div>
+
+        <ul class="mnav-sublist">
+          <li><a class="mnav-sub-link mnav-sub-strong" href="/products/index.html">View All Products</a></li>
+          <li class="mnav-sub-sep"></li>
+          <li><a class="mnav-sub-link" href="/products/shredding-crushing.html">Shredders & Crushing</a></li>
+          <li><a class="mnav-sub-link" href="/products/washing-lines/index.html">Washing Lines</a></li>
+          <li><a class="mnav-sub-link" href="/products/pelletizing-lines/index.html">Pelletizing Lines</a></li>
+        </ul>
+      </div>
+
+      <!-- SOLUTIONS VIEW -->
+      <div class="mnav-view" data-view="solutions" aria-hidden="true">
+        <div class="mnav-subhead">
+          <button class="mnav-back" type="button" data-mnav-back aria-label="Back">
+            <span class="mnav-back-arrow" aria-hidden="true">‹</span> Back
+          </button>
+          <div class="mnav-subtitle">Solutions</div>
+        </div>
+
+        <ul class="mnav-sublist">
+          <li><a class="mnav-sub-link mnav-sub-strong" href="/solutions/index.html">View All Solutions</a></li>
+          <li class="mnav-sub-sep"></li>
+          <li><a class="mnav-sub-link" href="/solutions/pet-bottle-recycling.html">PET Bottle Recycling</a></li>
+          <li><a class="mnav-sub-link" href="/solutions/film-to-granules.html">Film to Granules</a></li>
+          <li><a class="mnav-sub-link" href="/solutions/hdpe-container-recycling.html">HDPE Container Recycling</a></li>
+          <li><a class="mnav-sub-link" href="/solutions/mixed-plastic-recycling.html">Mixed Plastic Recycling</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Bottom CTA -->
+    <div class="mnav-bottom">
+      <a class="mnav-cta mnav-cta-primary" href="/contact/index.html">Contact Sales</a>
+      <a class="mnav-cta mnav-cta-secondary" href="/contact/index.html#form">Get Proposal</a>
+    </div>
+  </div>
+</aside>
+
+<!-- Mobile Bottom CTA Bar (Lightweight - WhatsApp + Get Quote) -->
+<!-- Only visible on mobile (<=768px), shows after scrolling >= 200px -->
+<div class="mobcta-bar" id="mobcta-bar" aria-hidden="false">
+  <a href="https://wa.me/8618913609266?text=Hello%2C%20I%27m%20interested%20in%20your%20plastic%20recycling%20solutions." 
+     class="mobcta-btn mobcta-btn-primary" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     aria-label="Contact us on WhatsApp">
+    <span class="mobcta-ico" aria-hidden="true">
+      <svg class="wa-icon" viewBox="0 0 32 32" focusable="false" aria-hidden="true">
+        <path d="M19.11 17.53c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35z"/>
+        <path d="M26.67 5.33C24 2.66 20.45 1.2 16.67 1.2 8.9 1.2 2.6 7.5 2.6 15.27c0 2.48.65 4.91 1.88 7.05L2.4 30.8l8.67-2.02c2.08 1.14 4.42 1.74 5.6 1.74h.01c7.77 0 14.07-6.3 14.07-14.07 0-3.78-1.46-7.33-4.08-10.02zM16.67 28.05h-.01c-2.03 0-4.03-.55-5.79-1.58l-.41-.24-5.14 1.2 1.14-5.01-.27-.43c-1.14-1.81-1.74-3.9-1.74-6.05 0-6.39 5.2-11.59 11.6-11.59 3.09 0 5.99 1.2 8.17 3.39 2.19 2.19 3.39 5.1 3.39 8.2 0 6.39-5.2 11.59-11.54 11.59z"/>
+      </svg>
+    </span>
+    <span class="mobcta-text">WhatsApp</span>
+  </a>
+  <button type="button" class="mobcta-btn mobcta-btn-secondary" data-mobcta-quote aria-label="Get a quote">
+    <span>Get Quote</span>
+  </button>
+</div>
+
+<!-- PC WhatsApp Floating Button (Desktop only) -->
+<a
+  class="wa-fab"
+  href="https://wa.me/8618913609266?text=Hello%20Gangsu%20Machinery%2C%20I%27m%20interested%20in%20plastic%20recycling%20lines.%20Please%20advise%20a%20recommended%20solution%20and%20budget."
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat on WhatsApp"
+>
+  <svg class="wa-fab__icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+    <path fill="currentColor" d="M19.11 17.35c-.27-.14-1.6-.79-1.84-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.18-1.33-.81-.72-1.36-1.6-1.52-1.87-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.44-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.97 2.64 1.11 2.82c.14.18 1.91 2.92 4.63 4.09.65.28 1.16.45 1.55.58.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32zM16.02 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.25.59 4.45 1.72 6.39L3 29l6.79-1.78c1.88 1.03 4.01 1.57 6.23 1.57h.01c7.06 0 12.8-5.74 12.8-12.8S23.08 3.2 16.02 3.2zm0 23.3h-.01c-1.98 0-3.92-.53-5.61-1.52l-.4-.23-4.03 1.06 1.08-3.93-.26-.41c-1.08-1.73-1.66-3.73-1.66-5.78 0-6.05 4.92-10.98 10.98-10.98 2.93 0 5.69 1.14 7.76 3.21 2.07 2.07 3.22 4.83 3.22 7.77 0 6.05-4.92 10.98-10.98 10.98z"/>
+  </svg>
+  <span class="sr-only">WhatsApp</span>
+</a>
+
+<script>
+(function() {
+  var tocNav = document.querySelector('.legal-toc-nav');
+  var filterInput = document.querySelector('.legal-toc-filter');
+  var cards = document.querySelectorAll('.legal-card');
+  var toast = document.getElementById('legal-toast');
+
+  function scrollToSection(e) {
+    e.preventDefault();
+    var id = e.target.getAttribute('href').slice(1);
+    var el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  if (tocNav) {
+    tocNav.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A') scrollToSection(e);
+    });
+  }
+
+  if (filterInput && tocNav) {
+    filterInput.addEventListener('input', function() {
+      var q = this.value.trim().toLowerCase();
+      var items = tocNav.querySelectorAll('li');
+      items.forEach(function(li) {
+        var a = li.querySelector('a');
+        var text = a ? a.textContent.toLowerCase() : '';
+        li.style.display = q === '' || text.indexOf(q) !== -1 ? '' : 'none';
+      });
+    });
+  }
+
+  var observer = typeof IntersectionObserver !== 'undefined' ? new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      var id = entry.target.id;
+      if (!id) return;
+      var active = tocNav && tocNav.querySelector('a[href="#' + id + '"]');
+      if (tocNav) tocNav.querySelectorAll('a.legal-toc-active').forEach(function(a) { a.classList.remove('legal-toc-active'); });
+      if (active) active.classList.add('legal-toc-active');
+    });
+  }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 }) : null;
+
+  if (observer && tocNav) {
+    cards.forEach(function(card) {
+      if (card.id) observer.observe(card);
+    });
+  }
+
+  function showToast() {
+    if (!toast) return;
+    toast.textContent = 'Link copied';
+    toast.classList.add('legal-toast-show');
+    setTimeout(function() { toast.classList.remove('legal-toast-show'); }, 2000);
+  }
+
+  function copyLink(btn) {
+    var card = btn.closest('.legal-card');
+    if (!card || !card.id) return;
+    var url = location.origin + location.pathname + '#' + card.id;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(showToast);
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = url;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      showToast();
+    }
+  }
+
+  document.querySelectorAll('.legal-copy').forEach(function(btn) {
+    btn.addEventListener('click', function() { copyLink(btn); });
+  });
+})();
+</script>
+
+</body>
+</html>

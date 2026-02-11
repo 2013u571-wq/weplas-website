@@ -1,0 +1,448 @@
+/* =========================
+   10) MODAL (form modal)
+   ========================= */
+
+/* New reusable modal system */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.modal[aria-hidden="false"] {
+  display: flex;
+}
+
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+}
+
+.modal__dialog {
+  position: relative;
+  max-width: 440px;
+  width: 100%;
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal__close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-soft, #5b5f66);
+  padding: 4px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.modal__close:hover {
+  color: var(--text, #0b0c0f);
+  background: var(--bg-soft, #f6f7f8);
+}
+
+.modal__dialog h3 {
+  margin: 0 0 8px;
+  font-weight: 900;
+  font-size: 24px;
+  color: var(--text, #0b0c0f);
+}
+
+.modal__dialog .form-modal-desc {
+  margin: 0 0 24px;
+  color: var(--text-soft, #5b5f66);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Form grid for responsive layout */
+.modal__dialog form {
+  display: grid;
+  gap: 12px;
+}
+
+.modal__dialog input:not(.iti__input),
+.modal__dialog select,
+.modal__dialog textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.modal__dialog input:focus,
+.modal__dialog select:focus,
+.modal__dialog textarea:focus {
+  border-color: var(--brand, #0a84ff);
+}
+
+.modal__dialog select {
+  background: #fff;
+  cursor: pointer;
+}
+
+.modal__dialog textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.modal__dialog button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background: var(--brand, #0a84ff);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 4px;
+}
+
+.modal__dialog button[type="submit"]:hover {
+  background: var(--btn-primary-hover, #1668d8);
+}
+
+/* Phone field in modal */
+.modal__dialog .phone-field {
+  margin-bottom: 0;
+}
+
+.modal__dialog .phone-field .iti {
+  width: 100%;
+}
+
+.modal__dialog .phone-field .iti__input {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px 0 64px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.modal__dialog .phone-field .iti__input:focus {
+  border-color: var(--brand, #0a84ff);
+}
+
+/* Body lock when modal is open */
+body.modal-lock {
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal {
+    padding: 16px;
+  }
+  
+  .modal__dialog {
+    max-width: 100%;
+    padding: 24px 20px;
+    max-height: 95vh;
+  }
+  
+  .modal__dialog h3 {
+    font-size: 20px;
+  }
+}
+
+/* Legacy form-modal styles (backward compatibility) */
+
+   .form-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    z-index: 2000;
+  }
+  
+  .form-modal.active {
+    display: block;
+  }
+  
+  .form-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.55);
+  }
+  
+  .form-modal-box {
+    position: relative;
+    max-width: 420px;
+    margin: 8vh auto;
+    background: #fff;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  }
+  
+  .form-modal-box h3 {
+    margin: 0 0 8px;
+    font-weight: 900;
+    font-size: 24px;
+  }
+  
+  .form-modal-desc {
+    margin: 0 0 24px;
+    color: var(--text-soft);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  /* =========
+     NORMAL INPUTS
+     ========= */
+  .form-modal-box input:not(.iti__input),
+  .form-modal-box select,
+  .form-modal-box textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    font-family: inherit;
+    box-sizing: border-box;
+  }
+  
+  .form-modal-box input:focus,
+  .form-modal-box select:focus,
+  .form-modal-box textarea:focus {
+    border-color: var(--brand);
+  }
+  
+  .form-modal-box select {
+    background: #fff;
+    cursor: pointer;
+  }
+  
+  .form-modal-box textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  /* =========================
+     PHONE FIELD (intl-tel-input)
+     ========================= */
+  
+  .phone-field {
+    margin-bottom: 12px;
+  }
+  
+  /* intl-tel-input wrapper */
+  .phone-field .iti {
+    width: 100%;
+    position: relative;
+  }
+  
+  /* the real input */
+  .phone-field .iti__input {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px 0 64px; /* leave space for flag + dial code */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: inherit;
+    line-height: 44px;
+    box-sizing: border-box;
+    background: #fff;
+  }
+  
+  .phone-field .iti__input:focus {
+    border-color: var(--brand);
+  }
+  
+  /* flag container */
+  .phone-field .iti__flag-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+  /* selected flag area */
+  .phone-field .iti__selected-flag {
+    height: 44px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .phone-field .iti__dial-code {
+    font-size: 14px;
+    color: var(--text-soft);
+  }
+  
+  /* country dropdown */
+  .iti__country-list {
+    z-index: 2001;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .iti__country {
+    padding: 8px 12px;
+  }
+  
+  .iti__country:hover,
+  .iti__country.iti__highlight {
+    background-color: rgba(30,120,255,.08);
+  }
+  
+  /* =========
+     SUBMIT BUTTON
+     ========= */
+  .form-modal-box button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background: #2f6fed;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    font-weight: 900;
+    cursor: pointer;
+  }
+  
+  /* close button */
+  .form-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: var(--text-soft);
+  }
+  
+  .form-close:hover {
+    color: var(--text);
+  }
+  
+  /* =========
+     MOBILE
+     ========= */
+  @media (max-width: 768px) {
+    .form-modal-box {
+      max-width: 92vw;
+      margin: 4vh auto;
+      padding: 24px 20px;
+    }
+  
+    .form-modal-box h3 {
+      font-size: 20px;
+    }
+  }
+  #thankYouModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .modal-box {
+    background: #fff;
+    padding: 32px;
+    border-radius: 12px;
+    max-width: 420px;
+    text-align: center;
+  }
+  /* ================================
+   Thank You Modal
+================================ */
+
+#thankYouModal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: none;             
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* only show when active */
+#thankYouModal.active {
+  display: flex;
+}
+
+.thankyou-box {
+  background: #ffffff;
+  padding: 32px 36px;
+  border-radius: 14px;
+  max-width: 420px;
+  width: calc(100% - 32px);
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+}
+
+.thankyou-box h2 {
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.thankyou-box p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.thankyou-box button {
+  margin-top: 20px;
+  padding: 10px 26px;
+  border-radius: 8px;
+  background: #00c26e;
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.thankyou-box button:hover {
+  background: #00a85f;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .thankyou-box {
+    padding: 26px 22px;
+  }
+}

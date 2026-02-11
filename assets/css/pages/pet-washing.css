@@ -1,0 +1,552 @@
+/* ===========================
+   Gangsu Machinery LP – PET Washing (scoped)
+   Only applies to <body class="lp-pet">
+   =========================== */
+
+.lp-pet .topbar-inner { padding: 10px 0; }
+.lp-pet .brand-text span { display: none; } /* LP header更收敛 */
+
+@media (max-width: 899px){
+  .lp-pet .nav { display: none !important; }
+  .lp-pet .pill { display:none; }
+  .lp-pet .top-actions .btn-ghost { display:none; } /* Layout + Quote 移动端隐藏 */
+  .lp-pet .top-actions .btn-primary { padding: 10px 12px; border-radius: 12px; }
+}
+
+/* Hero 文案更紧凑 */
+.lp-pet h1 { max-width: 22ch; }
+.lp-pet .sub { margin-bottom: 10px; }
+.lp-pet .chips { margin: 10px 0 12px; }
+
+/* Hero bullets */
+.lp-pet .lp-bullets{
+  margin: 10px 0 14px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+.lp-pet .lp-bullets li{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.lp-pet .lp-bullets li::before{
+  content:"";
+  width:10px;height:10px;border-radius:50%;
+  margin-top:6px;
+  background: var(--brand);
+  box-shadow: 0 0 0 6px rgba(56,210,122,.12);
+  flex: 0 0 auto;
+}
+
+/* Materials 卡片：移动端减少高度 */
+@media (max-width: 899px){
+  .lp-pet .card .body p{
+    display:-webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow:hidden;
+  }
+}
+
+/* Process：移动端默认隐藏 more steps */
+@media (max-width: 899px){
+  .lp-pet .lp-step--more{ display:none; }
+  .lp-pet .lp-process-open .lp-step--more{ display:flex; }
+}
+.lp-pet .lp-more-btn{
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+  font-weight: 650;
+  cursor:pointer;
+}
+.lp-pet .lp-more-btn:hover{ background: rgba(255,255,255,.10); transform: translateY(-1px); }
+
+/* Specs：移动端用卡片替代表格 */
+.lp-pet .lp-spec-cards{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.lp-pet .lp-spec-card{
+  padding: 14px;
+  border-radius: var(--radius);
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+}
+.lp-pet .lp-spec-card strong{ display:block; font-size:14px; margin-bottom:6px; }
+.lp-pet .lp-spec-card .meta{
+  display:flex; flex-wrap:wrap; gap:8px;
+  color: var(--muted); font-size:12px;
+}
+.lp-pet .lp-spec-card .meta span{
+  padding:7px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.05);
+}
+
+/* details 视觉 */
+.lp-pet .lp-spec-details{
+  border-radius: var(--radius);
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
+  overflow:hidden;
+}
+.lp-pet .lp-spec-details summary{
+  list-style:none;
+  cursor:pointer;
+  padding: 14px;
+  color: var(--text);
+  font-weight: 650;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.lp-pet .lp-spec-details summary::-webkit-details-marker{ display:none; }
+.lp-pet .lp-spec-details[open] summary{ background: rgba(255,255,255,.04); }
+
+/* 桌面端：表格默认展示，卡片可以保留也行（你也可以隐藏卡片） */
+@media (min-width: 900px){
+  .lp-pet .lp-spec-cards{ grid-template-columns: repeat(3, 1fr); }
+  /* 如果你想桌面只看表格，把下一行取消注释 */
+  /* .lp-pet .lp-spec-cards{ display:none; } */
+}
+
+/* ===== Short form micro line ===== */
+.lp-pet .lp-form-micro{
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.lp-pet .lp-more-link{
+  border-color: rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+}
+
+/* ===== Modal (LP) ===== */
+.lp-pet .lp-modal{
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: none;
+}
+.lp-pet .lp-modal[aria-hidden="false"]{ display:block; }
+
+.lp-pet .lp-modal__overlay{
+  position:absolute; inset:0;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(6px);
+}
+
+.lp-pet .lp-modal__dialog{
+  position: relative;
+  width: min(560px, calc(100% - 28px));
+  margin: 7vh auto;
+  border-radius: 22px;
+  background: #ffffff;
+  color: #111;
+  box-shadow: 0 30px 90px rgba(0,0,0,.45);
+  overflow:hidden;
+}
+
+.lp-pet .lp-modal__close{
+  position:absolute;
+  right: 14px;
+  top: 12px;
+  width: 38px; height: 38px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(0,0,0,.04);
+  cursor:pointer;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.lp-pet .lp-modal__head{
+  padding: 22px 22px 10px;
+}
+.lp-pet .lp-modal__head h3{
+  margin:0 0 8px;
+  font-size: 34px;
+  letter-spacing:-.02em;
+}
+.lp-pet .lp-modal__head p{
+  margin:0;
+  color: rgba(0,0,0,.60);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.lp-pet .lp-modal__form{
+  padding: 10px 22px 22px;
+  display:grid;
+  gap: 12px;
+}
+.lp-pet .lp-i{
+  width:100%;
+  padding: 14px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.12);
+  background: #fff;
+  color:#111;
+  font-size: 16px;
+  outline:none;
+}
+.lp-pet .lp-ta{
+  min-height: 110px;
+  resize: vertical;
+}
+.lp-pet .lp-i:focus{
+  border-color: rgba(48,112,255,.45);
+  box-shadow: 0 0 0 6px rgba(48,112,255,.14);
+}
+
+.lp-pet .lp-submit{
+  padding: 14px 16px;
+  border-radius: 999px;
+  border: 0;
+  background: #3f6ff2;
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px;
+  cursor:pointer;
+}
+.lp-pet .lp-submit:hover{ filter: brightness(1.03); }
+
+.lp-pet .lp-note{
+  color: rgba(0,0,0,.55);
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: -2px;
+}
+
+@media (max-width: 899px){
+  .lp-pet .lp-modal__dialog{ margin: 4vh auto; }
+  .lp-pet .lp-modal__head h3{ font-size: 28px; }
+}
+
+/* ===== Modal close fix (clickable) ===== */
+.lp-pet .lp-modal{ z-index: 9999; }
+
+.lp-pet .lp-modal__overlay{
+  z-index: 0;
+  cursor: pointer;
+}
+
+.lp-pet .lp-modal__dialog{
+  position: relative;
+  z-index: 2; /* 必须高于 overlay */
+}
+
+.lp-pet .lp-modal__close{
+  position: absolute;
+  z-index: 3; /* 最高，保证可点 */
+  pointer-events: auto;
+}
+
+/* ===== LP video embed ===== */
+.lp-pet .lp-video{ position: relative; }
+.lp-pet .lp-video-el{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display:block;
+}
+.lp-pet .lp-video-fallback{
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.38));
+  pointer-events:none;
+}
+.lp-pet .lp-video-badge{
+  position:absolute;
+  left: 12px; bottom: 12px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.28);
+  backdrop-filter: blur(6px);
+  color: rgba(255,255,255,.92);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+/* ===== Hero left balance ===== */
+.lp-pet .hero-title{
+  max-width: 18ch;
+  font-size: 48px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+@media (max-width: 899px){
+  .lp-pet .hero-title{ font-size: 34px; max-width: 22ch; }
+}
+
+.lp-pet .lp-bullets{ margin: 10px 0 14px; }
+.lp-pet .lp-bullets li{
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.lp-pet .chips{ margin: 12px 0 14px; gap: 10px; }
+.lp-pet .chip{ white-space: nowrap; }
+@media (max-width: 899px){
+  .lp-pet .chip{ white-space: normal; }
+}
+
+/* Deliverables mini card (matches right cards) */
+.lp-pet .lp-deliver-card{
+  margin: 10px 0 16px;
+  padding: 14px 14px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+}
+.lp-pet .lp-deliver-title{
+  font-weight: 750;
+  font-size: 13px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.72);
+  margin-bottom: 10px;
+}
+.lp-pet .lp-deliver-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 8px;
+}
+.lp-pet .lp-deliver-list span{
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.05);
+  font-size: 12px;
+  color: rgba(255,255,255,.86);
+}
+
+/* Buttons align nicer */
+.lp-pet .hero-actions{
+  display:flex;
+  gap: 12px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+/* ===== intl-tel-input dark theme fit ===== */
+.lp-pet .iti { width: 100%; }
+.lp-pet .iti__flag-container { border-radius: 14px 0 0 14px; }
+.lp-pet .iti__selected-flag{
+  border-radius: 14px 0 0 14px;
+  background: rgba(255,255,255,.04);
+  border-right: 1px solid rgba(255,255,255,.08);
+}
+.lp-pet input[type="tel"]{
+  width: 100%;
+}
+
+/* 让tel输入框看起来与其他input一致（如果你已有 input 样式，这段能更稳） */
+.lp-pet .iti input{
+  padding-left: 110px !important; /* 给国旗+区号留空间 */
+}
+
+/* Grid1 for single column layout */
+.lp-pet .grid1{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:10px;
+}
+
+/* ===== Hero left spacing boost (match right height) ===== */
+.lp-pet .hero-left{
+  padding-right: 10px;
+}
+
+/* 让标题下面呼吸感更强 */
+.lp-pet .hero-left .hero-title{
+  margin-bottom: 18px;
+}
+
+/* Bullets：行距更大，条目之间更开 */
+.lp-pet .hero-left .lp-bullets{
+  margin: 14px 0 18px;
+  gap: 12px;                 /* 原来如果是 8px，会显得太紧 */
+}
+.lp-pet .hero-left .lp-bullets li{
+  line-height: 1.72;         /* 原来 1.5 左右 */
+  font-size: 15px;           /* 略增一点更舒服 */
+}
+
+/* Chips：上下空间拉开一点 */
+.lp-pet .hero-left .chips{
+  margin: 16px 0 18px;
+  gap: 12px;
+}
+.lp-pet .hero-left .chip{
+  padding: 10px 12px;
+}
+
+/* What you'll get：卡片更厚一点，标签更松 */
+.lp-pet .hero-left .lp-deliver-card{
+  padding: 18px 18px;
+  margin: 14px 0 20px;
+}
+.lp-pet .hero-left .lp-deliver-title{
+  margin-bottom: 12px;
+}
+.lp-pet .hero-left .lp-deliver-list{
+  gap: 10px;
+}
+.lp-pet .hero-left .lp-deliver-list span{
+  padding: 9px 12px;
+}
+
+/* CTA：按钮区和上方拉开，按钮更"有呼吸" */
+.lp-pet .hero-left .hero-actions{
+  margin-top: 8px;
+  gap: 14px;
+}
+.lp-pet .hero-left .hero-actions .btn{
+  padding: 12px 16px;
+}
+
+/* 桌面端更明显；移动端不要太松 */
+@media (max-width: 899px){
+  .lp-pet .hero-left .hero-title{ margin-bottom: 14px; }
+  .lp-pet .hero-left .lp-bullets{ margin: 10px 0 14px; gap: 10px; }
+  .lp-pet .hero-left .lp-bullets li{ line-height: 1.6; font-size: 14px; }
+  .lp-pet .hero-left .lp-deliver-card{ padding: 16px; margin: 12px 0 16px; }
+}
+
+/* ===== Make form card more prominent ===== */
+.lp-pet .form-card{
+  border: 1px solid rgba(69, 220, 145, .28);           /* 绿色强调边 */
+  box-shadow: 0 18px 60px rgba(0,0,0,.55);             /* 更强层级 */
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+}
+
+.lp-pet .form-card .card-head{
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.lp-pet .form-card .btn.btn-primary{
+  padding: 12px 18px;
+  font-weight: 800;
+  box-shadow: 0 10px 26px rgba(69, 220, 145, .18);
+}
+
+/* 让右侧"行动区"更强：桌面端 sticky */
+@media (min-width: 900px){
+  .lp-pet .form-card{
+    position: sticky;
+    top: 92px; /* 如果你的 header 更高，调到 110px */
+    z-index: 5;
+  }
+}
+
+
+
+/* ================================
+   Anchor offset for sticky header
+   ================================ */
+#top,
+#materials,
+#process,
+#modules,
+#specs,
+#lead-form{
+  scroll-margin-top: 110px;
+}
+
+/* Optional: small button helper (avoid inline styles) */
+.btn-small{
+  padding: 9px 12px;
+  font-size: 13px;
+}
+
+/* ===== Sticky Lead Form Fix (use real DOM selectors) ===== */
+@media (min-width: 1024px) {
+  /* sticky 失效最常见原因：祖先 overflow 非 visible 或存在 transform/filter */
+  body.lp-pet .hero,
+  body.lp-pet .hero .container,
+  body.lp-pet .hero-grid,
+  body.lp-pet .hero-aside {
+    overflow: visible !important;
+    transform: none !important;
+    filter: none !important;
+    perspective: none !important;
+  }
+
+  /* grid 情况下 sticky 更稳定：不要让 grid 垂直居中 */
+  body.lp-pet .hero-grid {
+    align-items: start !important;
+  }
+
+  body.lp-pet .hero-aside{
+    display: grid;
+    gap: 12px;
+    align-content: start;
+  }
+
+  body.lp-pet #lead-card{
+    position: sticky;
+    top: 92px;          /* 如 header 高度不同，可微调 80~120 */
+    z-index: 30;
+    align-self: start;
+  }
+}
+
+/* Mobile: disable sticky */
+@media (max-width: 1023.98px) {
+  body.lp-pet #lead-card{ position: static !important; top: auto !important; }
+}
+
+/* ===== Disable sticky lead form (scroll normally, no overlay video) ===== */
+@media (min-width: 1024px) {
+  body.lp-pet #lead-card{
+    position: static !important;   /* 覆盖 sticky/fixed */
+    top: auto !important;
+    z-index: auto !important;
+  }
+
+  /* 保险：避免任何层叠压住视频 */
+  body.lp-pet .video-card{
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* ===== intl-tel-input (WhatsApp) ===== */
+.iti{ width:100%; }
+.iti input{ width:100%; }
+.iti__flag-container{ z-index: 5; }
+.iti__dropdown-content, .iti__country-list{ z-index: 99999; }
+
+/* 防止父容器 overflow:hidden 裁掉下拉/旗帜 */
+.form-card,
+.hero-aside,
+.hero-grid { overflow: visible !important; }
+
+/* ===== Mobile Bottom CTA Bar ===== */
+@media (max-width: 768px) {
+  body.lp-pet {
+    padding-bottom: 72px;
+  }
+
+  .mobcta-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+}

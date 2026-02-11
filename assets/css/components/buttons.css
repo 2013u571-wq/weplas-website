@@ -1,0 +1,109 @@
+/* =========================
+   GLOBAL BUTTON STYLES
+   Consistent CTA design across site
+   ========================= */
+
+/* Base Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+/* Primary CTA - Solid, consistent brand color */
+.btn-primary {
+  background-color: var(--brand, #0a84ff);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(10, 132, 255, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-primary-hover, #1668d8);
+  box-shadow: 0 4px 12px rgba(10, 132, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(10, 132, 255, 0.25);
+}
+
+/* Secondary CTA - Outlined, low emphasis */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text, #0b0c0f);
+  border: 1.5px solid var(--border, #e6e8eb);
+  box-shadow: none;
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-soft, #f6f7f8);
+  border-color: var(--text-soft, #5b5f66);
+  color: var(--text, #0b0c0f);
+  transform: translateY(-1px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+  background-color: var(--border, #e6e8eb);
+}
+
+/* Ghost/Text Button - Minimal emphasis */
+.btn-ghost {
+  background-color: transparent;
+  color: var(--text-soft, #5b5f66);
+  border: none;
+  box-shadow: none;
+  padding: 12px 20px;
+}
+
+.btn-ghost:hover {
+  color: var(--text, #0b0c0f);
+  background-color: var(--bg-soft, #f6f7f8);
+}
+
+/* Button Sizes */
+.btn-small {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.btn-large {
+  padding: 16px 32px;
+  font-size: 16px;
+}
+
+/* Button States */
+.btn:disabled,
+.btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+  
+  .btn-large {
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+}

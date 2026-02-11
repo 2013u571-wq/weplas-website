@@ -1,0 +1,288 @@
+/* =========================================================
+   Solutions Inner Pages (Google Ads Landing)
+   ========================================================= */
+
+/* Hero Section - 2 column */
+.slv-hero {
+  padding: 100px 0 60px;
+  background: #fff;
+}
+.slv-hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.slv-hero-media {
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--bg-soft, #f8f9fa);
+}
+.slv-hero-main {
+  aspect-ratio: 4/3;
+  background: var(--bg-soft, #f8f9fa);
+}
+.slv-hero-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.slv-hero-content { padding-top: 20px; }
+.slv-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+.slv-breadcrumb a { color: #64748b; text-decoration: none; }
+.slv-breadcrumb a:hover { color: var(--brand); }
+.slv-breadcrumb span { color: #94a3b8; }
+.slv-title {
+  font-size: clamp(26px, 3.5vw, 38px);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text, #0b0c0f);
+  margin: 0 0 16px;
+}
+.slv-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-soft, #5b5f66);
+  margin: 0 0 20px;
+}
+.slv-benefits {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+}
+.slv-benefits li {
+  padding: 8px 0 8px 24px;
+  position: relative;
+  font-size: 15px;
+  color: var(--text-soft, #5b5f66);
+  line-height: 1.5;
+}
+.slv-benefits li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 6px;
+  height: 6px;
+  background: var(--brand);
+  border-radius: 50%;
+}
+.slv-cta-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.slv-cta-hint {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Section common */
+.slv-section {
+  padding: 60px 0;
+}
+.slv-section:nth-child(even) { background: #f8fafc; }
+.slv-section-title {
+  font-size: clamp(22px, 2.8vw, 30px);
+  font-weight: 800;
+  color: var(--text, #0b0c0f);
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+/* Best For - cards */
+.slv-bestfor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+.slv-bestfor-card {
+  background: #fff;
+  border: 1px solid var(--border, #e6e8eb);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.2s;
+}
+.slv-bestfor-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  border-color: var(--brand);
+}
+.slv-bestfor-card strong {
+  font-size: 15px;
+  color: var(--text, #0b0c0f);
+}
+
+/* Typical Process Flow - tags */
+.slv-process-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+  justify-content: center;
+}
+.slv-process-tag {
+  display: inline-flex;
+  padding: 10px 16px;
+  background: #f1f5f9;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+}
+.slv-process-desc {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text-soft, #5b5f66);
+  line-height: 1.7;
+  font-size: 15px;
+}
+.slv-process-desc p { margin: 0 0 12px; }
+
+/* Key Outputs */
+.slv-outputs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.slv-output-card {
+  background: #fff;
+  border: 1px solid var(--border, #e6e8eb);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.2s;
+}
+.slv-output-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+.slv-output-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: var(--text, #0b0c0f);
+}
+.slv-output-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-soft, #5b5f66);
+  line-height: 1.6;
+}
+
+/* Standard Line Configuration */
+.slv-config-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+.slv-config-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #fff;
+  border: 1px solid var(--border, #e6e8eb);
+  border-radius: 12px;
+}
+.slv-config-item strong {
+  font-size: 15px;
+  color: var(--text, #0b0c0f);
+  flex-shrink: 0;
+}
+.slv-config-item span {
+  font-size: 14px;
+  color: var(--text-soft, #5b5f66);
+  line-height: 1.5;
+}
+
+/* Engineering Notes / FAQ */
+.slv-faq-list {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.slv-faq-item {
+  border-bottom: 1px solid var(--border, #e6e8eb);
+  padding: 20px 0;
+}
+.slv-faq-item:first-child { padding-top: 0; }
+.slv-faq-item h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: var(--text, #0b0c0f);
+}
+.slv-faq-item p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-soft, #5b5f66);
+  line-height: 1.6;
+}
+
+/* Related Equipment */
+.slv-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.slv-related-card {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--border, #e6e8eb);
+  border-radius: 12px;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+}
+.slv-related-card:hover {
+  border-color: var(--brand);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+.slv-related-card strong {
+  font-size: 16px;
+  color: var(--text, #0b0c0f);
+}
+
+/* Final CTA / Quote */
+.slv-quote-cta {
+  text-align: center;
+  padding: 48px 20px;
+  background: linear-gradient(180deg, rgba(10,132,255,0.08), rgba(10,132,255,0.03));
+  border: 1px solid rgba(10,132,255,0.12);
+  border-radius: 20px;
+}
+.slv-quote-cta h3 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 12px;
+  color: var(--text, #0b0c0f);
+}
+.slv-quote-cta p { margin: 0 0 20px; color: var(--text-soft, #5b5f66); }
+.slv-quote-bullets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: var(--text-soft, #5b5f66);
+}
+
+@media (max-width: 900px) {
+  .slv-hero .container { grid-template-columns: 1fr; }
+  .slv-hero-media { order: -1; }
+  .slv-outputs-grid { grid-template-columns: 1fr; }
+  .slv-cta-group .btn { width: 100%; justify-content: center; }
+}
+@media (max-width: 640px) {
+  .slv-hero { padding: 80px 0 40px; }
+  .slv-bestfor-grid { grid-template-columns: 1fr 1fr; }
+  .slv-config-grid { grid-template-columns: 1fr; }
+  .slv-related-grid { grid-template-columns: 1fr; }
+}

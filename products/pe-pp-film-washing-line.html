@@ -1,0 +1,1894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>PP / PE Film Washing Line | Gangsu Machinery – Plastic Recycling</title>
+  <meta name="description" content="Efficient PP PE film washing line for post-consumer and post-industrial agricultural film, greenhouse film recycling. Complete cleaning and dewatering system." />
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css" />  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css" />
+  
+  <!-- Page Specific Styles -->
+  <style>
+    /* ========== Film Washing Line Page Styles ========== */
+    html { scroll-behavior: smooth; }
+    
+    /* Hero Section */
+    .fw-hero {
+      padding: 100px 0 60px;
+      background: #fff;
+    }
+    .fw-hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .fw-hero-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .fw-hero-main {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #f8f9fa;
+      aspect-ratio: 4/3;
+    }
+    .fw-hero-main img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .fw-hero-main img.active {
+      opacity: 1;
+    }
+    .fw-hero-main img:first-child {
+      position: relative;
+    }
+    .fw-hero-dots {
+      display: none;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .fw-hero-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #cbd5e1;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .fw-hero-dot.active {
+      background: var(--brand);
+      width: 24px;
+      border-radius: 4px;
+    }
+    .fw-hero-thumbs {
+      display: flex;
+      gap: 10px;
+    }
+    .fw-hero-thumb {
+      width: 80px;
+      height: 60px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .fw-hero-thumb:hover,
+    .fw-hero-thumb.active {
+      border-color: var(--brand);
+    }
+    .fw-hero-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .fw-hero-content {
+      padding-top: 10px;
+    }
+    .fw-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 12px;
+    }
+    .fw-breadcrumb a {
+      color: #64748b;
+      text-decoration: none;
+    }
+    .fw-breadcrumb a:hover {
+      color: var(--brand);
+    }
+    .fw-title {
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 800;
+      line-height: 1.2;
+      color: #0f172a;
+      margin: 0 0 16px;
+      letter-spacing: -0.02em;
+    }
+    .fw-desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #475569;
+      margin: 0 0 20px;
+    }
+    .fw-features {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .fw-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: #334155;
+    }
+    .fw-feature svg {
+      width: 18px;
+      height: 18px;
+      color: var(--brand);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .fw-cta-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .fw-hero-video-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      color: #64748b;
+      transition: color 0.2s;
+    }
+    .fw-hero-video-link:hover {
+      color: var(--brand);
+    }
+    .fw-hero-video-link:hover .fw-hero-video-icon {
+      background: var(--brand);
+      color: #fff;
+    }
+    .fw-hero-video-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: #e2e8f0;
+      border-radius: 50%;
+      font-size: 10px;
+      color: #475569;
+      transition: all 0.2s;
+    }
+    .fw-hero-video-text {
+      color: inherit;
+    }
+    .fw-hero-video-badge {
+      display: inline-block;
+      padding: 2px 7px;
+      background: #f1f5f9;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #64748b;
+    }
+    .fw-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+    .fw-cta-primary {
+      background: var(--brand);
+      color: #fff;
+    }
+    .fw-cta-primary:hover {
+      background: var(--brand-dark);
+    }
+    .fw-cta-secondary {
+      background: #fff;
+      color: var(--brand);
+      border: 1.5px solid var(--brand);
+    }
+    .fw-cta-secondary:hover {
+      background: rgba(10,132,255,0.06);
+    }
+
+    /* WhatsApp Floating CTA */
+    .fw-wa-float {
+      position: fixed;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+      border-radius: 999px;
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.35), 0 0 0 0 rgba(37,211,102,0.4);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      animation: fw-wa-pulse 2.5s ease-in-out infinite;
+      max-width: 145px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    @keyframes fw-wa-pulse {
+      0%, 100% {
+        box-shadow: 0 4px 20px rgba(37,211,102,0.35), 0 0 0 0 rgba(37,211,102,0.4);
+      }
+      50% {
+        box-shadow: 0 4px 24px rgba(37,211,102,0.45), 0 0 0 8px rgba(37,211,102,0);
+      }
+    }
+    .fw-wa-float:hover {
+      max-width: 280px;
+      padding-right: 22px;
+      box-shadow: 0 6px 32px rgba(37,211,102,0.5);
+      animation: none;
+    }
+    .fw-wa-float__icon {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+    }
+    .fw-wa-float__icon svg {
+      width: 26px;
+      height: 26px;
+    }
+    .fw-wa-float__icon::after {
+      content: '';
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      width: 9px;
+      height: 9px;
+      background: #4ade80;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 6px rgba(74,222,128,0.8);
+    }
+    .fw-wa-float__content {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      opacity: 1;
+      min-width: 72px;
+      transition: opacity 0.25s 0.05s, min-width 0.3s;
+    }
+    .fw-wa-float:hover .fw-wa-float__content {
+      opacity: 1;
+      min-width: 135px;
+    }
+    .fw-wa-float__title {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .fw-wa-float__subtitle {
+      font-size: 11px;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      font-weight: 500;
+      transition: opacity 0.2s, max-height 0.2s;
+    }
+    .fw-wa-float:hover .fw-wa-float__subtitle {
+      opacity: 0.92;
+      max-height: 20px;
+    }
+    .fw-wa-float__arrow {
+      opacity: 0;
+      transform: translateX(-6px);
+      transition: all 0.25s 0.05s;
+      flex-shrink: 0;
+      margin-left: -4px;
+    }
+    .fw-wa-float:hover .fw-wa-float__arrow {
+      opacity: 1;
+      transform: translateX(0);
+      margin-left: 0;
+    }
+    .fw-wa-float__arrow svg {
+      width: 16px;
+      height: 16px;
+    }
+    @media (max-width: 768px) {
+      .fw-wa-float {
+        display: none;
+      }
+    }
+
+    /* Materials Section */
+    .fw-materials-section {
+      padding: 60px 0;
+      background: #f8fafc;
+    }
+    .fw-section-title {
+      text-align: center;
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 40px;
+    }
+    .fw-materials-flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .fw-material-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      width: 230px;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .fw-material-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      display: block;
+    }
+    .fw-material-card span {
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+      text-align: center;
+      line-height: 1.2;
+    }
+    .fw-flow-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      align-self: center;
+      background: var(--brand);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .fw-output-card {
+      background: linear-gradient(180deg, #f1f8e9 0%, #e8f5e9 50%, #c8e6c9 100%);
+      border-color: #81c784;
+      box-shadow: 0 10px 32px rgba(56, 142, 60, 0.2);
+    }
+    .fw-output-card span {
+      color: #1b5e20;
+      font-weight: 700;
+    }
+
+    /* Parameter Section */
+    .fw-params-section {
+      padding: 60px 0;
+      background: #fff;
+    }
+    .fw-params-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .fw-param-tab {
+      padding: 10px 20px;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      color: #64748b;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .fw-param-tab:hover,
+    .fw-param-tab.active {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: #fff;
+    }
+    .fw-params-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .fw-params-table thead {
+      background: var(--brand);
+      color: #fff;
+    }
+    .fw-params-table th {
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .fw-params-table td {
+      padding: 12px 16px;
+      font-size: 13px;
+      color: #334155;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .fw-params-table tbody tr:hover {
+      background: #f8fafc;
+    }
+    .fw-params-note {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 12px;
+      color: #64748b;
+    }
+    .fw-params-cta {
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    /* Process Section */
+    .fw-process-section {
+      padding: 60px 0;
+      background: #f8fafc;
+    }
+    .fw-tag-flow {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      row-gap: 16px;
+    }
+    .fw-tag-step {
+      display: flex;
+      align-items: center;
+    }
+    .fw-tag {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px;
+      background: #fff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #334155;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      cursor: default;
+    }
+    .fw-tag:hover {
+      background: #f0fdf4;
+      border-color: var(--brand);
+      color: var(--brand);
+      box-shadow: 0 4px 12px rgba(22,163,74,0.12);
+    }
+    .fw-tag-key {
+      display: inline-block;
+      padding: 2px 6px;
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .fw-tag-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 10px;
+      color: #94a3b8;
+      font-size: 16px;
+    }
+    .fw-tag-arrow svg {
+      width: 18px;
+      height: 18px;
+    }
+    @media (max-width: 860px) {
+      .fw-tag-flow {
+        row-gap: 12px;
+      }
+      .fw-tag {
+        padding: 8px 14px;
+        font-size: 13px;
+      }
+      .fw-tag-arrow {
+        padding: 0 6px;
+      }
+      .fw-tag-arrow svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+    /* Machine Modules Section */
+    .fw-modules-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+      color: #fff;
+    }
+    .fw-modules-section .fw-section-title {
+      color: #fff;
+    }
+    .fw-modules-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .fw-module-tab {
+      padding: 8px 16px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .fw-module-tab:hover,
+    .fw-module-tab.active {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: #fff;
+    }
+    .fw-modules-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .fw-module-card {
+      display: flex;
+      flex-direction: column;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: all 0.2s;
+    }
+    .fw-module-card:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-4px);
+    }
+    .fw-module-img {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+    .fw-module-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .fw-module-body {
+      padding: 14px;
+    }
+    .fw-module-body--top {
+      order: -1;
+    }
+    .fw-module-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 4px;
+    }
+    .fw-module-desc {
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Video Section */
+    .fw-video-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #1e293b 0%, #334155 100%);
+    }
+    .fw-video-wrapper {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .fw-video-frame {
+      position: relative;
+      aspect-ratio: 16/9;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #0f172a;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+    }
+    .fw-video-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .fw-video-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 70px;
+      background: rgba(255,255,255,0.95);
+      border: 0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .fw-video-play:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    .fw-video-play svg {
+      width: 28px;
+      height: 28px;
+      color: var(--brand);
+      margin-left: 4px;
+    }
+    .fw-video-content {
+      color: #fff;
+    }
+    .fw-video-label {
+      display: inline-block;
+      padding: 5px 10px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+    .fw-video-title {
+      font-size: clamp(22px, 2.5vw, 32px);
+      font-weight: 800;
+      line-height: 1.25;
+      margin: 0 0 14px;
+    }
+    .fw-video-desc {
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.75);
+      margin: 0 0 20px;
+    }
+
+    /* Quote Form Section */
+    .fw-quote-section {
+      padding: 80px 0;
+      background: #fff;
+    }
+    .fw-quote-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .fw-quote-info h2 {
+      font-size: clamp(26px, 3vw, 36px);
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 12px;
+    }
+    .fw-quote-info > p {
+      font-size: 15px;
+      color: #64748b;
+      margin: 0 0 24px;
+      line-height: 1.6;
+    }
+    .fw-quote-features {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .fw-quote-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .fw-quote-feature-icon {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e3f2fd;
+      border-radius: 10px;
+      color: var(--brand);
+      flex-shrink: 0;
+    }
+    .fw-quote-feature-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+    .fw-quote-feature-text h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 2px;
+    }
+    .fw-quote-feature-text p {
+      font-size: 13px;
+      color: #64748b;
+      margin: 0;
+    }
+    .fw-quote-form-card {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 32px;
+      border: 1px solid #e2e8f0;
+    }
+    .fw-quote-form-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 6px;
+    }
+    .fw-quote-form-card > p {
+      font-size: 14px;
+      color: #64748b;
+      margin: 0 0 24px;
+    }
+    .fw-quote-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .fw-form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .fw-form-group.full-width {
+      grid-column: 1 / -1;
+    }
+    .fw-form-group label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .fw-form-group input,
+    .fw-form-group select,
+    .fw-form-group textarea {
+      padding: 12px 14px;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #0f172a;
+      background: #fff;
+      transition: all 0.2s;
+    }
+    .fw-form-group input:focus,
+    .fw-form-group select:focus,
+    .fw-form-group textarea:focus {
+      outline: none;
+      border-color: var(--brand);
+      box-shadow: 0 0 0 3px rgba(10,132,255,0.1);
+    }
+    .fw-form-group textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    .fw-form-submit {
+      grid-column: 1 / -1;
+      margin-top: 8px;
+    }
+    .fw-form-submit button {
+      width: 100%;
+      padding: 14px 24px;
+      background: var(--brand);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .fw-form-submit button:hover {
+      background: var(--brand-dark);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .fw-hero .container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .fw-modules-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .fw-video-wrapper {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .fw-quote-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+    /* Mobile-only utility (hidden on desktop) */
+    .mobile-only {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .mobile-only {
+        display: inline-block;
+      }
+      .fw-hero {
+        padding: 90px 0 40px;
+      }
+      .fw-hero-main {
+        touch-action: pan-y pinch-zoom;
+      }
+      .fw-hero-thumbs {
+        display: none;
+      }
+      .fw-hero-dots {
+        display: flex;
+      }
+      /* Hero info density: line-clamp desc, compact bullets */
+      .fw-desc {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .fw-read-more {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--brand);
+        text-decoration: none;
+        margin: -8px 0 16px;
+        transition: color 0.2s;
+      }
+      .fw-read-more:hover {
+        color: #15803d;
+      }
+      .fw-features {
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+      .fw-feature {
+        font-size: 13px;
+      }
+      /* Hide WhatsApp CTA in Hero (floating bar handles it) */
+      .fw-cta-wa-desktop {
+        display: none !important;
+      }
+      .fw-materials-flow {
+        flex-direction: column;
+        align-items: center;
+      }
+      .fw-material-card {
+        width: 100%;
+        max-width: 280px;
+      }
+      .fw-material-card img {
+        height: 140px;
+      }
+      .fw-flow-arrow {
+        transform: rotate(90deg);
+      }
+      .fw-modules-grid {
+        grid-template-columns: 1fr;
+      }
+      .fw-quote-form {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body class="fw-film-page">
+
+<!-- HEADER -->
+<header class="header" id="site-header">
+  <div class="container nav">
+    <a href="/" class="logo" aria-label="WEPLAS Home">
+      <div class="logo-mark"></div>
+      <span>WEPLAS</span>
+    </a>
+    <nav class="nav-links">
+      <div class="nav-item has-mega" data-mega="products">
+        <a class="nav-link nav-mega-trigger" href="/products/" aria-expanded="false">Products</a>
+        <div class="mega-menu" id="mega-products" role="region" aria-label="Products Mega Menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <button class="mega-tab active" data-target="shredding"><span class="mega-tab-title">Shredding &amp; Crushing</span><span class="mega-tab-desc">Primary size reduction for rigid and soft plastics</span></button>
+              <button class="mega-tab" data-target="washing"><span class="mega-tab-title">Washing Lines</span><span class="mega-tab-desc">High-efficiency cleaning and separation systems</span></button>
+              <button class="mega-tab" data-target="pelletizing"><span class="mega-tab-title">Pelletizing Lines</span><span class="mega-tab-desc">Stable granulation for downstream processing</span></button>
+            </div>
+            <div class="mega-right">
+              <div class="mega-panel active" data-panel="shredding">
+                <div class="mega-intro"><h3 class="mega-intro-title"><a href="/products/shredding-crushing.html" class="mega-intro-title-link"><span>Shredding&Crushing Solutions</span><svg class="mega-intro-title-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></h3><p class="mega-intro-desc">From waste plastics to reusable industrial value</p></div>
+                <a href="/products/double-shaft-shredder.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/products/shredding-crushing/hero/double-shaft shredder1.webp" alt="Double Shaft Shredder"></div><div class="mega-card-body"><div class="mega-card-title">Double Shaft Shredder</div><div class="mega-card-desc">Heavy-duty shredding for bulky and rigid plastics</div></div></a>
+                <a href="/products/single-shaft-shredder.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/products/shredding-crushing/single-shaft shredder/hero/single-shaft shredder.webp" alt="Single Shaft Shredder"></div><div class="mega-card-body"><div class="mega-card-title">Single Shaft Shredder</div><div class="mega-card-desc">Flexible size reduction with precise control</div></div></a>
+                <a href="/products/pipe-shredder.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/products/shredding-crushing/pipe-shredder/hero/52281770363058_.pic_hd.webp" alt="Pipe & Profile Shredder"></div><div class="mega-card-body"><div class="mega-card-title">Pipe &amp; Profile Shredder</div><div class="mega-card-desc">Specialized shredding for long-length plastics</div></div></a>
+              </div>
+              <div class="mega-panel" data-panel="washing">
+                <div class="mega-intro"><h3 class="mega-intro-title"><a href="/products/washing-lines.html" class="mega-intro-title-link"><span>Plastic Washing Lines</span><svg class="mega-intro-title-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></h3><p class="mega-intro-desc">From waste plastics to reusable industrial value</p></div>
+                <a href="/products/pet-bottle-washing-line.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/mega-menu/PET-bottle-washing-line.jpg" alt="PET Bottle Washing Line"></div><div class="mega-card-body"><div class="mega-card-title">PET Bottle Washing Line</div><div class="mega-card-desc">Complete cleaning and label removal for PET recycling</div></div></a>
+                <a href="/products/pe-pp-film-washing-line.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/mega-menu/PE-film-washing-line.jpg" alt="PP PE Film Washing Line"></div><div class="mega-card-body"><div class="mega-card-title">PP / PE Film Washing Line</div><div class="mega-card-desc">Efficient washing for post-consumer films</div></div></a>
+                <a href="/products/hdpe-hard-plastic-washing-line.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/mega-menu/Rigid-PP-washing-line.jpg" alt="Rigid Plastic Washing Line"></div><div class="mega-card-body"><div class="mega-card-title">Rigid Plastic Washing Line</div><div class="mega-card-desc">Intensive cleaning for hard plastic waste</div></div></a>
+              </div>
+              <div class="mega-panel mega-panel--pelletizing" data-panel="pelletizing">
+                <div class="mega-intro"><h3 class="mega-intro-title"><a href="/products/pelletizing-lines.html" class="mega-intro-title-link"><span>Plastic Pelletizing Lines</span><svg class="mega-intro-title-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></h3><p class="mega-intro-desc">From waste plastics to reusable industrial value</p></div>
+                <div class="mega-cards mega-cards--pelletizing">
+                  <a href="/products/cutter-compactor-single-stage-pelletizing-line.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/products/pelletizing%20line/Cutter%20compactor%20single-stage%20pelletizing%20line/hero/Cutter%20compactor%20single-stage%20pelletizing%20line.webp" alt="Cutter-Compactor Single-Stage Pelletizing Line"></div><div class="mega-card-body"><div class="mega-card-title">Cutter-Compactor Single-Stage Pelletizing Line</div><div class="mega-card-desc">For plastic film recycling (e.g., PE/PP)</div></div></a>
+                  <a href="/products/cutter-compactor-double-stage-pelletizing-line.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/products/pelletizing%20line/Double-Stage%20Cutter-Compactor%20Pelletizing%20Line/hero/Double%20stage%20Cutter%20compactor%20%20pelletizing%20line.webp" alt="Cutter-Compactor Double-Stage Pelletizing Line"></div><div class="mega-card-body"><div class="mega-card-title">Cutter-Compactor Double-Stage Pelletizing Line</div><div class="mega-card-desc">Specifically for Polyethylene Terephthalate</div></div></a>
+                  <a href="/products/rigid-plastic-single-stage-pelletizing-line.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/products/pelletizing%20line/Rigid%20Plastic%20Single-Stage%20Pelletizing%20Line/hero/Rigid%20plastic%20single%20stage%20pelletizing%20line.webp" alt="Rigid Plastic Single-Stage Pelletizing Line"></div><div class="mega-card-body"><div class="mega-card-title">Rigid Plastic Single-Stage Pelletizing Line</div><div class="mega-card-desc">For bulk rigid plastics</div></div></a>
+                  <a href="/products/rigid-plastic-double-stage-pelletizing-line.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/products/pelletizing%20line/Rigid%20Plastic%20Double-Stage%20Pelletizing%20Line/hero/Rigid%20plastic%20double%20stage%20pelletizing%20line.webp" alt="Rigid Plastic Double-Stage Pelletizing Line"></div><div class="mega-card-body"><div class="mega-card-title">Rigid Plastic Double-Stage Pelletizing Line</div><div class="mega-card-desc">For challenging &amp; mixed plastics (PVC, ABS, PS) or materials with fillers/impurities/high moisture</div></div></a>
+                  <a href="/products/shredding-in-plant-recycling-pelletizing-line.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/products/pelletizing%20line/Shredding%20%26%20In-Plant%20Recycling%20Pelletizing%20Line/hero/shredding%26In-plant%20recycling%20pelletizing%20line.webp" alt="Shredding & In-Plant Recycling Pelletizing Line"></div><div class="mega-card-body"><div class="mega-card-title">Shredding &amp; In-Plant Recycling Pelletizing Line</div><div class="mega-card-desc">Strand cutting for clean, uniform pellets</div></div></a>
+                  <a href="/products/pet-flakes-dedicated-pelletizing-line.html" class="mega-card"><div class="mega-card-img"><img src="/assets/images/products/pelletizing%20line/PET%20Flakes%20Dedicated%20Pelletizing%20Line/hero/PET%20pelletizing%20line.webp" alt="PET Flakes Dedicated Pelletizing Line"></div><div class="mega-card-body"><div class="mega-card-title">PET Flakes Dedicated Pelletizing Line</div><div class="mega-card-desc">Underwater die-face cutting, high-output granulation</div></div></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item has-mega" data-mega="solutions">
+        <a class="nav-link nav-mega-trigger" href="/solutions/" aria-expanded="false">Solutions</a>
+        <div class="mega-menu" id="mega-solutions" role="region" aria-label="Solutions Mega Menu">
+          <div class="mega-inner mega-solutions-inner">
+            <div class="mega-solutions-table">
+              <div class="mega-map-head"><div class="mega-map-head-cell">Waste Material</div><div class="mega-map-head-cell">Process Solution</div><div class="mega-map-head-cell">Target Output</div><div class="mega-map-head-cell"></div></div>
+              <div class="mega-solutions-rows">
+                <div class="mega-row"><div class="mega-row-cell"><div class="mega-waste"><a href="/solutions/pet-bottle-recycling.html" class="mega-waste-name">Plastic Bottles</a></div></div><div class="mega-row-cell cell-line"><div class="mega-process"><span class="mega-chip">De-label</span><span class="mega-chip">Hot Wash</span><span class="mega-chip">Flake Purify</span></div></div><div class="mega-row-cell cell-out"><div class="mega-out"><span class="mega-out-name">Food-grade rPET</span></div></div><div class="mega-row-cta"><a href="/solutions/pet-bottle-recycling.html" class="mega-cta">View Solution</a></div></div>
+                <div class="mega-row"><div class="mega-row-cell"><div class="mega-waste"><a href="/solutions/film-to-granules.html" class="mega-waste-name">Plastic Films</a></div></div><div class="mega-row-cell cell-line"><div class="mega-process"><span class="mega-chip">Shred</span><span class="mega-chip">Wash</span><span class="mega-chip">Pelletize</span></div></div><div class="mega-row-cell cell-out"><div class="mega-out"><span class="mega-out-name">Stable PE/PP Pellets</span></div></div><div class="mega-row-cta"><a href="/solutions/film-to-granules.html" class="mega-cta">View Solution</a></div></div>
+                <div class="mega-row"><div class="mega-row-cell"><div class="mega-waste"><a href="/solutions/hdpe-container-recycling.html" class="mega-waste-name">Rigid Plastics</a></div></div><div class="mega-row-cell cell-line"><div class="mega-process"><span class="mega-chip">Crush</span><span class="mega-chip">Wash</span><span class="mega-chip">Pelletize</span></div></div><div class="mega-row-cell cell-out"><div class="mega-out"><span class="mega-out-name">Regranulates</span></div></div><div class="mega-row-cta"><a href="/solutions/hdpe-container-recycling.html" class="mega-cta">View Solution</a></div></div>
+                <div class="mega-row"><div class="mega-row-cell"><div class="mega-waste"><a href="/solutions/mixed-plastic-recycling.html" class="mega-waste-name">Mixed Plastic Waste</a></div></div><div class="mega-row-cell cell-line"><div class="mega-process"><span class="mega-chip">Sort</span><span class="mega-chip">Wash</span><span class="mega-chip">Pelletize</span></div></div><div class="mega-row-cell cell-out"><div class="mega-out"><span class="mega-out-name">Customized Output</span></div></div><div class="mega-row-cta"><a href="/solutions/mixed-plastic-recycling.html" class="mega-cta">View Solution</a></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="/projects/" class="nav-link">Projects</a>
+      <a href="/about-us/" class="nav-link">About</a>
+      <a href="/contact/" class="nav-cta">Contact Sales</a>
+    </nav>
+    <button class="mnav-toggle" aria-label="Toggle menu" aria-controls="mnav" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>    
+
+<main>
+  <!-- Hero Section -->
+  <section class="fw-hero">
+    <div class="container">
+      <div class="fw-hero-gallery">
+        <div class="fw-hero-main" id="fwHeroCarousel">
+          <img class="active" src="/assets/images/products/washing%20line/Film%20washing%20line/hero%20pictures/PE%20washing%20line1.webp" alt="PP PE Film Washing Line 1" loading="eager">
+          <img src="/assets/images/products/washing%20line/Film%20washing%20line/hero%20pictures/PE%20washing%20line2.webp" alt="PP PE Film Washing Line 2" loading="lazy">
+          <img src="/assets/images/products/washing%20line/Film%20washing%20line/hero%20pictures/PE%20washing%20line3.webp" alt="PP PE Film Washing Line 3" loading="lazy">
+          <img src="/assets/images/products/washing%20line/Film%20washing%20line/hero%20pictures/PEwashing%20line4.webp" alt="PP PE Film Washing Line 4" loading="lazy">
+        </div>
+        <div class="fw-hero-thumbs">
+          <div class="fw-hero-thumb active" data-fw-index="0">
+            <img src="/assets/images/products/washing%20line/Film%20washing%20line/hero%20pictures/PE%20washing%20line1.webp" alt="PE Film Washing Line 1">
+          </div>
+          <div class="fw-hero-thumb" data-fw-index="1">
+            <img src="/assets/images/products/washing%20line/Film%20washing%20line/hero%20pictures/PE%20washing%20line2.webp" alt="PE Film Washing Line 2">
+          </div>
+          <div class="fw-hero-thumb" data-fw-index="2">
+            <img src="/assets/images/products/washing%20line/Film%20washing%20line/hero%20pictures/PE%20washing%20line3.webp" alt="PE Film Washing Line 3">
+          </div>
+          <div class="fw-hero-thumb" data-fw-index="3">
+            <img src="/assets/images/products/washing%20line/Film%20washing%20line/hero%20pictures/PEwashing%20line4.webp" alt="PE Film Washing Line 4">
+          </div>
+        </div>
+        <div class="fw-hero-dots">
+          <span class="fw-hero-dot active" data-fw-index="0"></span>
+          <span class="fw-hero-dot" data-fw-index="1"></span>
+          <span class="fw-hero-dot" data-fw-index="2"></span>
+          <span class="fw-hero-dot" data-fw-index="3"></span>
+        </div>
+      </div>
+      <div class="fw-hero-content">
+        <nav class="fw-breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <a href="/products/">Products</a>
+          <span>/</span>
+          <span>PE PP Film Washing Line</span>
+        </nav>
+        <h1 class="fw-title">Plastic Agricultural Film Greenhouse Film Washing Line</h1>
+        <p class="fw-desc" id="fw-desc">
+          Our plastic agricultural film washing line is specifically designed for cleaning heavily contaminated post-agricultural PE films, greenhouse films, and mulch films. The complete system handles all critical stages from shredding to final drying, producing clean flakes ready for pelletizing.
+        </p>
+        <a href="#fw-features" class="fw-read-more mobile-only">View details</a>
+        <div class="fw-features" id="fw-features">
+          <div class="fw-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>
+            <span>Capacity range: 300–2000 kg/h for different scale operations</span>
+          </div>
+          <div class="fw-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>
+            <span>Advanced friction washers and hot wash tanks for deep cleaning</span>
+          </div>
+          <div class="fw-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>
+            <span>Multi-stage dewatering system for ≤5% moisture content</span>
+          </div>
+          <div class="fw-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>
+            <span>Optimized water recycling to minimize consumption</span>
+          </div>
+        </div>
+        <div class="fw-cta-group">
+          <button type="button" class="fw-cta fw-cta-primary" data-open="quote-modal">Get Free Quote</button>
+          <a href="https://wa.me/8618913609266?text=Hello%2C%20I%27m%20interested%20in%20your%20film%20washing%20line." class="fw-cta fw-cta-secondary fw-cta-wa-desktop" target="_blank" rel="noopener">WhatsApp Us</a>
+        </div>
+        <button type="button" class="fw-hero-video-link" id="fwHeroVideoTrigger" data-video="https://www.youtube.com/embed/dZkjTI6oOBA?autoplay=1&rel=0&modestbranding=1" aria-label="Watch Process Video">
+          <span class="fw-hero-video-icon">▶</span>
+          <span class="fw-hero-video-text">Watch Process Video</span>
+          <span class="fw-hero-video-badge">2:30</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Floating CTA -->
+  <a href="https://wa.me/8618913609266?text=Hello%2C%20I%27m%20interested%20in%20your%20film%20washing%20line." class="fw-wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <span class="fw-wa-float__icon">
+      <svg viewBox="0 0 32 32" fill="currentColor">
+        <path d="M19.11 17.2c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.31-.74-1.79-.2-.48-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.11.15 1.52.09.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/>
+        <path d="M16.02 1C8.65 1 2.66 6.99 2.66 14.36c0 2.35.61 4.64 1.78 6.66L3 31l10.22-1.35a13.3 13.3 0 0 0 6.8 1.85c7.37 0 13.36-5.99 13.36-13.36C33.38 10.57 27.39 1 16.02 1zm0 24.41a11.1 11.1 0 0 1-5.67-1.55l-.41-.24-6.07.8.81-5.92-.27-.43a11.1 11.1 0 1 1 11.61 7.34z"/>
+      </svg>
+    </span>
+    <span class="fw-wa-float__content">
+      <span class="fw-wa-float__title">WhatsApp Quote</span>
+      <span class="fw-wa-float__subtitle">Reply in minutes</span>
+    </span>
+    <span class="fw-wa-float__arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </span>
+  </a>
+
+  <!-- Materials Section -->
+  <section class="fw-materials-section">
+    <div class="container">
+      <h2 class="fw-section-title">Materials Available for Processing</h2>
+      <div class="fw-materials-flow">
+        <div class="fw-material-card">
+          <img src="/assets/images/products/washing%20line/Film%20washing%20line/Processing/PE%20film.webp" alt="PE Films" loading="lazy">
+          <span>PE Films</span>
+        </div>
+        <div class="fw-material-card">
+          <img src="/assets/images/products/washing%20line/Film%20washing%20line/Processing/PP%20film.webp" alt="PP Films" loading="lazy">
+          <span>PP Films</span>
+        </div>
+        <div class="fw-material-card">
+          <img src="/assets/images/products/washing%20line/Film%20washing%20line/Processing/agriculture%20film.webp" alt="PP Agriculture Film" loading="lazy">
+          <span>PP Agriculture Film</span>
+        </div>
+        <div class="fw-flow-arrow">→</div>
+        <div class="fw-material-card fw-output-card">
+          <img src="/assets/images/products/washing%20line/Film%20washing%20line/Processing/Film%20flakes.webp" alt="PE Flakes" loading="lazy">
+          <span>PE Flakes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parameter Section -->
+  <section class="fw-params-section">
+    <div class="container">
+      <h2 class="fw-section-title">Parameter Overview</h2>
+      <div class="fw-params-tabs">
+        <button class="fw-param-tab active">Washing line 300 kg/h</button>
+        <button class="fw-param-tab">Washing line 500 kg/h</button>
+        <button class="fw-param-tab">Washing line 1000 kg/h</button>
+        <button class="fw-param-tab">Customized ≥1500 kg/h</button>
+      </div>
+      <table class="fw-params-table">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Capacity</th>
+            <th>Power</th>
+            <th>Water</th>
+            <th>Manpower</th>
+            <th>Area</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>FW-300</td>
+            <td>300 kg/h</td>
+            <td>80 kW</td>
+            <td>5 t/h</td>
+            <td>3–4 persons</td>
+            <td>400 m²</td>
+          </tr>
+          <tr>
+            <td>FW-500</td>
+            <td>500 kg/h</td>
+            <td>120 kW</td>
+            <td>8 t/h</td>
+            <td>4–5 persons</td>
+            <td>600 m²</td>
+          </tr>
+          <tr>
+            <td>FW-1000</td>
+            <td>1000 kg/h</td>
+            <td>200 kW</td>
+            <td>15 t/h</td>
+            <td>6–8 persons</td>
+            <td>900 m²</td>
+          </tr>
+          <tr>
+            <td>FW-1500</td>
+            <td>1500 kg/h</td>
+            <td>280 kW</td>
+            <td>22 t/h</td>
+            <td>8–10 persons</td>
+            <td>1200 m²</td>
+          </tr>
+          <tr>
+            <td>FW-2000</td>
+            <td>2000 kg/h</td>
+            <td>350 kW</td>
+            <td>28 t/h</td>
+            <td>10–12 persons</td>
+            <td>1500 m²</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="fw-params-note">* Specifications may vary based on raw material condition and customer requirements.</p>
+      <div class="fw-params-cta">
+        <a href="#quote-form" class="fw-cta fw-cta-primary">Get Detailed Quotation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="fw-process-section">
+    <div class="container">
+      <h2 class="fw-section-title">Brief Description of Cleaning Process</h2>
+      <div class="fw-tag-flow">
+        <div class="fw-tag-step">
+          <span class="fw-tag">Belt Conveyor</span>
+          <span class="fw-tag-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+        <div class="fw-tag-step">
+          <span class="fw-tag">Crusher</span>
+          <span class="fw-tag-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+        <div class="fw-tag-step">
+          <span class="fw-tag">Floating Washer</span>
+          <span class="fw-tag-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+        <div class="fw-tag-step">
+          <span class="fw-tag">Friction Washer <span class="fw-tag-key">Key</span></span>
+          <span class="fw-tag-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+        <div class="fw-tag-step">
+          <span class="fw-tag">Dehydrator</span>
+          <span class="fw-tag-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+        <div class="fw-tag-step">
+          <span class="fw-tag">Squeezer <span class="fw-tag-key">Key</span></span>
+          <span class="fw-tag-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+        <div class="fw-tag-step">
+          <span class="fw-tag">Hot Air Dryer</span>
+          <span class="fw-tag-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+        <div class="fw-tag-step">
+          <span class="fw-tag">Packing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Machine Modules Section -->
+  <section class="fw-modules-section">
+    <div class="container">
+      <h2 class="fw-section-title">Cleaning Line Detail Photos</h2>
+      <div class="fw-modules-tabs">
+        <button class="fw-module-tab active">Show All</button>
+      </div>
+      <div class="fw-modules-grid">
+        <div class="fw-module-card">
+          <div class="fw-module-body fw-module-body--top">
+            <h4 class="fw-module-title">Belt Conveyor</h4>
+          </div>
+          <div class="fw-module-img">
+            <img src="/assets/images/products/washing%20line/Film%20washing%20line/detailed%20photos/Belt%20conveyor.webp" alt="Belt Conveyor" loading="lazy">
+          </div>
+        </div>
+        <div class="fw-module-card">
+          <div class="fw-module-body fw-module-body--top">
+            <h4 class="fw-module-title">Screw Feeder</h4>
+          </div>
+          <div class="fw-module-img">
+            <img src="/assets/images/products/washing%20line/Film%20washing%20line/detailed%20photos/Screw%20feeder.webp" alt="Screw Feeder" loading="lazy">
+          </div>
+        </div>
+        <div class="fw-module-card">
+          <div class="fw-module-body fw-module-body--top">
+            <h4 class="fw-module-title">Crusher</h4>
+          </div>
+          <div class="fw-module-img">
+            <img src="/assets/images/products/washing%20line/Film%20washing%20line/detailed%20photos/Crusher.webp" alt="Crusher" loading="lazy">
+          </div>
+        </div>
+        <div class="fw-module-card">
+          <div class="fw-module-body fw-module-body--top">
+            <h4 class="fw-module-title">Friction Washer</h4>
+          </div>
+          <div class="fw-module-img">
+            <img src="/assets/images/products/washing%20line/Film%20washing%20line/detailed%20photos/Friction-Washer.webp" alt="Friction Washer" loading="lazy">
+          </div>
+        </div>
+        <div class="fw-module-card">
+          <div class="fw-module-body fw-module-body--top">
+            <h4 class="fw-module-title">Floating Washer</h4>
+          </div>
+          <div class="fw-module-img">
+            <img src="/assets/images/products/washing%20line/Film%20washing%20line/detailed%20photos/Floating%20washer.webp" alt="Floating Washer" loading="lazy">
+          </div>
+        </div>
+        <div class="fw-module-card">
+          <div class="fw-module-body fw-module-body--top">
+            <h4 class="fw-module-title">Squeezer</h4>
+          </div>
+          <div class="fw-module-img">
+            <img src="/assets/images/products/washing%20line/Film%20washing%20line/detailed%20photos/Squeezer.webp" alt="Squeezer" loading="lazy">
+          </div>
+        </div>
+        <div class="fw-module-card">
+          <div class="fw-module-body fw-module-body--top">
+            <h4 class="fw-module-title">Storage Hopper</h4>
+          </div>
+          <div class="fw-module-img">
+            <img src="/assets/images/products/washing%20line/Film%20washing%20line/detailed%20photos/Storage%20hopper.webp" alt="Storage Hopper" loading="lazy">
+          </div>
+        </div>
+        <div class="fw-module-card">
+          <div class="fw-module-body fw-module-body--top">
+            <h4 class="fw-module-title">Control Cabinet</h4>
+          </div>
+          <div class="fw-module-img">
+            <img src="/assets/images/products/washing%20line/Film%20washing%20line/detailed%20photos/Control-Cabinet.webp" alt="Control Cabinet" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="fw-video-section">
+    <div class="container">
+      <div class="fw-video-wrapper">
+        <div class="fw-video-frame">
+          <img src="/assets/images/mega-menu/PE-film-washing-line.jpg" alt="Film Washing Line Video">
+          <button type="button" class="fw-video-play" id="fwVideoTrigger" data-video="https://www.youtube.com/embed/dZkjTI6oOBA?autoplay=1&rel=0&modestbranding=1" aria-label="Play video">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+          </button>
+        </div>
+        <div class="fw-video-content">
+          <span class="fw-video-label">Factory Tour</span>
+          <h3 class="fw-video-title">Complete PE/PP Film Washing Line in Operation</h3>
+          <p class="fw-video-desc">
+            Watch our agricultural film washing line running at full capacity. See how we process contaminated PE/PP films into clean, ready-to-pelletize flakes for your recycling business.
+          </p>
+          <a href="https://wa.me/8618913609266?text=Hello%2C%20I%27d%20like%20to%20discuss%20film%20washing%20line%20specifications." class="fw-cta fw-cta-primary" target="_blank" rel="noopener">Talk to Engineer</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section class="fw-quote-section" id="quote-form">
+    <div class="container">
+      <div class="fw-quote-wrapper">
+        <div class="fw-quote-info">
+          <h2>Request A Free Quote</h2>
+          <p>We'd Like To Work With You. Get a customized solution for your film recycling project.</p>
+          <div class="fw-quote-features">
+            <div class="fw-quote-feature">
+              <div class="fw-quote-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>
+              </div>
+              <div class="fw-quote-feature-text">
+                <h4>15+ Years Experience</h4>
+                <p>Professional plastic recycling solutions</p>
+              </div>
+            </div>
+            <div class="fw-quote-feature">
+              <div class="fw-quote-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>
+              </div>
+              <div class="fw-quote-feature-text">
+                <h4>50+ Countries Served</h4>
+                <p>Global installation and support</p>
+              </div>
+            </div>
+            <div class="fw-quote-feature">
+              <div class="fw-quote-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <div class="fw-quote-feature-text">
+                <h4>24–48h Response</h4>
+                <p>Fast engineering support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fw-quote-form-card">
+          <h3>Get Your Free Quote</h3>
+          <p>Fill in the form below and we'll get back to you soon.</p>
+          <form class="fw-quote-form" action="#" method="post" onsubmit="return handleQuoteSubmit(event)">
+            <div class="fw-form-group">
+              <label>Name *</label>
+              <input type="text" name="name" placeholder="Your name" required>
+            </div>
+            <div class="fw-form-group">
+              <label>Email *</label>
+              <input type="email" name="email" placeholder="Your email" required>
+            </div>
+            <div class="fw-form-group">
+              <label>Phone / WhatsApp</label>
+              <div class="phone-field">
+                <input type="tel" id="quote-phone" name="phone" placeholder="Phone number">
+              </div>
+            </div>
+            <div class="fw-form-group">
+              <label>Target Capacity</label>
+              <select name="capacity">
+                <option value="">Select capacity</option>
+                <option value="300">300 kg/h</option>
+                <option value="500">500 kg/h</option>
+                <option value="1000">1000 kg/h</option>
+                <option value="1500+">1500+ kg/h</option>
+              </select>
+            </div>
+            <div class="fw-form-group full-width">
+              <label>Project Details</label>
+              <textarea name="message" placeholder="Tell us about your project..."></textarea>
+            </div>
+            <div class="fw-form-submit">
+              <button type="submit">Submit Request</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><h4>Gangsu Machinery</h4><p>Professional plastic recycling machinery manufacturer.<br />Designing and delivering complete recycling lines for PET, PP and PE materials.</p></div>
+      <div><h4>Products</h4><a href="/products/shredding-crushing.html">Shredding &amp; Crushing</a><br /><a href="/products/washing-lines.html">Washing Lines</a><br /><a href="/products/pelletizing-lines.html">Pelletizing Lines</a></div>
+      <div><h4>Solutions</h4><a href="/solutions/pet-bottle-recycling.html">PET Recycling</a><br /><a href="/solutions/film-to-granules.html">Film Recycling</a><br /><a href="/solutions/hdpe-container-recycling.html">Rigid Plastic Recycling</a><br /><a href="/solutions/mixed-plastic-recycling.html">Mixed Plastic Recycling</a></div>
+      <div><h4>Company</h4><a href="/projects/">Projects</a><br /><a href="/about-us/">About Us</a><br /><a href="/news/">News</a></div>
+      <div><h4>Contact</h4><a href="javascript:void(0)" data-open-form>Get Solution</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 Gangsu Machinery. All rights reserved.</span><span><a href="/legal/">Privacy &amp; Legal</a></span></div>
+  </div>
+</footer>
+
+<!-- Contact Form Modal -->
+<div class="form-modal" id="contactForm"><div class="form-modal-overlay"></div><div class="form-modal-box"><button class="form-close" aria-label="Close">&times;</button><h3>Get Engineering Proposal</h3><p class="form-modal-desc">Tell us your material, capacity and project needs.</p><form id="contactFormElement"><input type="text" name="name" placeholder="Name *" required><input type="text" name="company" placeholder="Company"><input type="email" name="email" placeholder="Email *" required><div class="phone-field"><input type="tel" id="phone" name="phone" placeholder="WhatsApp / Phone"></div><select name="material" required><option value="">Material Type *</option><option value="PET">PET</option><option value="PP">PP</option><option value="PE">PE</option><option value="Other">Other</option></select><select name="capacity" required><option value="">Target Capacity *</option><option value="<500">Less than 500 kg/h</option><option value="500-1000">500 - 1000 kg/h</option><option value="1000-2000">1000 - 2000 kg/h</option><option value="2000-5000">2000 - 5000 kg/h</option><option value=">5000">More than 5000 kg/h</option></select><textarea name="message" placeholder="Message / Project Description" rows="4"></textarea><button type="submit">Submit Request</button></form></div></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/assets/js/thankyou-redirect.js"></script>
+
+<script>
+// Quote Form Handler
+function handleQuoteSubmit(e) {
+  e.preventDefault();
+  var form = e.target;
+  var phoneInput = form.querySelector('input[name="phone"]');
+  if (phoneInput && window.intlTelInputGlobals) {
+    var iti = window.intlTelInputGlobals.getInstance(phoneInput);
+    if (iti) phoneInput.value = iti.getNumber() || phoneInput.value;
+  }
+  var inModal = form.closest('.quote-modal');
+  if (inModal) {
+    document.getElementById('quote-modal').setAttribute('hidden', '');
+    document.documentElement.style.overflow = '';
+  }
+  var ty = document.getElementById('thankYouModal');
+  if (ty) ty.classList.add('active');
+  form.reset();
+  if (phoneInput && window.quotePhoneIti) {
+    var inst = window.quotePhoneIti[phoneInput.id];
+    if (inst) inst.setNumber('');
+  }
+  if (typeof gsRedirectToThankYou === 'function') gsRedirectToThankYou(form);
+  return false;
+}
+
+// Init intl-tel-input for quote forms (country flag)
+function initQuotePhoneInputs() {
+  if (!window.intlTelInput) return;
+  var opts = {
+    initialCountry: 'auto',
+    geoIpLookup: function(cb) {
+      fetch('https://ipapi.co/json/').then(function(r){ return r.json(); })
+        .then(function(d){ cb(d.country_code || 'us'); })
+        .catch(function(){ cb('us'); });
+    },
+    preferredCountries: ['cn', 'us', 'in', 'de', 'br', 'id', 'mx'],
+    separateDialCode: true,
+    utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js'
+  };
+  window.quotePhoneIti = {};
+  var q1 = document.getElementById('quote-phone');
+  var q2 = document.getElementById('quote-modal-phone');
+  if (q1) window.quotePhoneIti['quote-phone'] = window.intlTelInput(q1, opts);
+  if (q2) window.quotePhoneIti['quote-modal-phone'] = window.intlTelInput(q2, opts);
+}
+
+// Quote Modal
+function initQuoteModal() {
+  var modal = document.getElementById('quote-modal');
+  if (!modal) return;
+  var triggers = document.querySelectorAll('[data-open="quote-modal"]');
+  var lastFocus = null;
+  function openModal(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    lastFocus = document.activeElement;
+    modal.removeAttribute('hidden');
+    document.documentElement.style.overflow = 'hidden';
+    var closeBtn = modal.querySelector('[data-close]');
+    if (closeBtn) closeBtn.focus();
+  }
+  function closeModal() {
+    modal.setAttribute('hidden', '');
+    document.documentElement.style.overflow = '';
+    if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+  }
+  triggers.forEach(function(t) { t.addEventListener('click', openModal); });
+  modal.addEventListener('click', function(e) {
+    if (e.target.hasAttribute('data-close') || e.target.classList.contains('quote-modal__backdrop')) closeModal();
+  });
+  window.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !modal.hasAttribute('hidden')) closeModal();
+  });
+}
+function onReady() {
+  initQuoteModal();
+  initQuotePhoneInputs();
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', onReady);
+} else {
+  onReady();
+}
+
+// Hero Carousel with Auto-play
+(function(){
+  var carousel = document.getElementById('fwHeroCarousel');
+  if(!carousel) return;
+  
+  var images = carousel.querySelectorAll('img');
+  var thumbs = document.querySelectorAll('.fw-hero-thumb');
+  var dots = document.querySelectorAll('.fw-hero-dot');
+  var currentIndex = 0;
+  var autoplayInterval = null;
+  var isPaused = false;
+  var isMobile = window.innerWidth <= 768;
+  
+  // Touch support for mobile
+  var touchStartX = 0;
+  var touchEndX = 0;
+  
+  function goToSlide(index){
+    if(index < 0) index = images.length - 1;
+    if(index >= images.length) index = 0;
+    
+    images.forEach(function(img, i){
+      img.classList.toggle('active', i === index);
+    });
+    thumbs.forEach(function(thumb, i){
+      thumb.classList.toggle('active', i === index);
+    });
+    dots.forEach(function(dot, i){
+      dot.classList.toggle('active', i === index);
+    });
+    
+    currentIndex = index;
+  }
+  
+  function nextSlide(){
+    goToSlide(currentIndex + 1);
+  }
+  
+  function startAutoplay(){
+    if(autoplayInterval) clearInterval(autoplayInterval);
+    autoplayInterval = setInterval(function(){
+      if(!isPaused) nextSlide();
+    }, 3500);
+  }
+  
+  function stopAutoplay(){
+    if(autoplayInterval){
+      clearInterval(autoplayInterval);
+      autoplayInterval = null;
+    }
+  }
+  
+  // Thumbnail click
+  thumbs.forEach(function(thumb){
+    thumb.addEventListener('click', function(){
+      var index = parseInt(this.getAttribute('data-fw-index'));
+      goToSlide(index);
+      stopAutoplay();
+      setTimeout(startAutoplay, 5000); // Resume after 5s
+    });
+  });
+  
+  // Dot click (mobile)
+  dots.forEach(function(dot){
+    dot.addEventListener('click', function(){
+      var index = parseInt(this.getAttribute('data-fw-index'));
+      goToSlide(index);
+      stopAutoplay();
+      setTimeout(startAutoplay, 5000);
+    });
+  });
+  
+  // Hover pause (desktop only)
+  if(!isMobile){
+    carousel.addEventListener('mouseenter', function(){
+      isPaused = true;
+    });
+    carousel.addEventListener('mouseleave', function(){
+      isPaused = false;
+    });
+  }
+  
+  // Touch swipe (mobile)
+  carousel.addEventListener('touchstart', function(e){
+    touchStartX = e.changedTouches[0].screenX;
+  });
+  carousel.addEventListener('touchend', function(e){
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+  
+  function handleSwipe(){
+    var diff = touchStartX - touchEndX;
+    if(Math.abs(diff) > 50){
+      if(diff > 0){
+        goToSlide(currentIndex + 1);
+      } else {
+        goToSlide(currentIndex - 1);
+      }
+      stopAutoplay();
+      // Don't resume on mobile after manual swipe
+    }
+  }
+  
+  // Start autoplay
+  startAutoplay();
+})();
+</script>
+
+<!-- Thank You Modal -->
+<div id="thankYouModal" class="thankyou-modal"><div class="thankyou-box"><h2>Thank You!</h2><p>Your inquiry has been sent successfully.<br>Our engineering team will contact you shortly.</p><button id="thankYouClose">OK</button></div></div>
+
+<!-- Mobile Drawer Navigation -->
+<div class="mnav-backdrop" aria-hidden="true"></div>
+<aside id="mnav" class="mnav" aria-hidden="true" aria-label="Mobile navigation"><div class="mnav-shell" role="dialog" aria-modal="true"><div class="mnav-topbar"><a class="mnav-brand" href="/"><span class="mnav-brand-mark"></span><span class="mnav-brand-text">WEPLAS</span></a><button class="mnav-close" type="button" aria-label="Close menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div><nav class="mnav-views"><div class="mnav-view is-active" data-view="root"><ul class="mnav-list"><li><button class="mnav-item-btn" type="button" data-mnav-go="products"><span>Products</span><span class="mnav-arrow">›</span></button></li><li><button class="mnav-item-btn" type="button" data-mnav-go="solutions"><span>Solutions</span><span class="mnav-arrow">›</span></button></li><li><a class="mnav-item-link" href="/projects/">Projects</a></li><li><a class="mnav-item-link" href="/about-us/">About</a></li><li><a class="mnav-item-link" href="/contact/">Contact</a></li></ul></div><div class="mnav-view" data-view="products" aria-hidden="true"><div class="mnav-subhead"><button class="mnav-back" type="button" data-mnav-back><span class="mnav-back-arrow">‹</span> Back</button><div class="mnav-subtitle">Products</div></div><ul class="mnav-sublist"><li><a class="mnav-sub-link mnav-sub-strong" href="/products/">View All Products</a></li><li class="mnav-sub-sep"></li><li><a class="mnav-sub-link" href="/products/shredding-crushing.html">Shredding &amp; Crushing</a></li><li><a class="mnav-sub-link" href="/products/washing-lines.html">Washing Lines</a></li><li><a class="mnav-sub-link" href="/products/pelletizing-lines.html">Pelletizing Lines</a></li></ul></div><div class="mnav-view" data-view="solutions" aria-hidden="true"><div class="mnav-subhead"><button class="mnav-back" type="button" data-mnav-back><span class="mnav-back-arrow">‹</span> Back</button><div class="mnav-subtitle">Solutions</div></div><ul class="mnav-sublist"><li><a class="mnav-sub-link mnav-sub-strong" href="/solutions/">View All Solutions</a></li><li class="mnav-sub-sep"></li><li><a class="mnav-sub-link" href="/solutions/pet-bottle-recycling.html">PET Bottle Recycling</a></li><li><a class="mnav-sub-link" href="/solutions/film-to-granules.html">Film to Granules</a></li><li><a class="mnav-sub-link" href="/solutions/hdpe-container-recycling.html">HDPE Container Recycling</a></li><li><a class="mnav-sub-link" href="/solutions/mixed-plastic-recycling.html">Mixed Plastic Recycling</a></li></ul></div></nav><div class="mnav-bottom"><a class="mnav-cta mnav-cta-primary" href="/contact/">Contact Sales</a><a class="mnav-cta mnav-cta-secondary" href="javascript:void(0)" data-open-form>Get Proposal</a></div></div></aside>
+
+<!-- Quote Modal -->
+<div class="quote-modal" id="quote-modal" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title" hidden>
+  <div class="quote-modal__backdrop" data-close></div>
+  <div class="quote-modal__panel">
+    <button class="quote-modal__close" type="button" data-close aria-label="Close">✕</button>
+    <div class="quote-modal__body">
+      <h3 class="quote-modal__title" id="quote-modal-title">Get Your Free Quote</h3>
+      <p class="quote-modal__desc">Fill in the form below and we'll get back to you soon.</p>
+      <form class="fw-quote-form quote-modal__form" id="quote-modal-form" action="#" method="post" onsubmit="return handleQuoteSubmit(event)">
+        <div class="fw-form-group">
+          <label>Name *</label>
+          <input type="text" name="name" placeholder="Your name" required>
+        </div>
+        <div class="fw-form-group">
+          <label>Email *</label>
+          <input type="email" name="email" placeholder="Your email" required>
+        </div>
+        <div class="fw-form-group">
+          <label>Phone / WhatsApp</label>
+          <div class="phone-field">
+            <input type="tel" id="quote-modal-phone" name="phone" placeholder="Phone number">
+          </div>
+        </div>
+        <div class="fw-form-group">
+          <label>Target Capacity</label>
+          <select name="capacity">
+            <option value="">Select capacity</option>
+            <option value="300">300 kg/h</option>
+            <option value="500">500 kg/h</option>
+            <option value="1000">1000 kg/h</option>
+            <option value="1500+">1500+ kg/h</option>
+          </select>
+        </div>
+        <div class="fw-form-group full-width">
+          <label>Project Details</label>
+          <textarea name="message" placeholder="Tell us about your project..."></textarea>
+        </div>
+        <div class="fw-form-submit">
+          <button type="submit">Submit Request</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Video Modal -->
+<div class="fw-vmodal" id="fwVideoModal" role="dialog" aria-modal="true" aria-label="Video player" hidden>
+  <div class="fw-vmodal__backdrop" data-close></div>
+  <div class="fw-vmodal__panel">
+    <button class="fw-vmodal__close" type="button" data-close aria-label="Close video">✕</button>
+    <div class="fw-vmodal__frame">
+      <iframe id="fwVideoFrame" title="PE/PP Film Washing Line Video" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+<style>
+.fw-vmodal[hidden] { display: none !important; }
+.fw-vmodal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.fw-vmodal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15,23,42,0.75);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+}
+.fw-vmodal__panel {
+  position: relative;
+  width: min(980px, 100%);
+  border-radius: 16px;
+  background: #0b1220;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+.fw-vmodal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  z-index: 2;
+  transition: background 0.2s;
+}
+.fw-vmodal__close:hover { background: rgba(255,255,255,0.15); }
+.fw-vmodal__frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+.fw-vmodal__frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Quote Modal */
+.quote-modal[hidden] { display: none !important; }
+.quote-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.quote-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15,23,42,0.6);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+}
+.quote-modal__panel {
+  position: relative;
+  width: min(720px, 100%);
+  max-height: calc(100vh - 40px);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+  overflow-y: auto;
+}
+.quote-modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  z-index: 2;
+  transition: background 0.2s, color 0.2s;
+}
+.quote-modal__close:hover { background: #e2e8f0; color: #334155; }
+.quote-modal__body {
+  padding: 32px 28px;
+}
+.quote-modal__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px;
+}
+.quote-modal__desc {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0 0 24px;
+}
+.quote-modal__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.quote-modal__form .fw-form-group.full-width { grid-column: 1 / -1; }
+@media (max-width: 640px) {
+  .quote-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-y: auto;
+  }
+  .quote-modal__panel {
+    width: 100%;
+    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
+    margin: auto;
+    flex-shrink: 0;
+  }
+  .quote-modal__body { padding: 24px 20px; }
+  .quote-modal__form { grid-template-columns: 1fr; }
+}
+</style>
+<script>
+(function(){
+  var modal = document.getElementById('fwVideoModal');
+  var frame = document.getElementById('fwVideoFrame');
+  if(!modal || !frame) return;
+  var triggers = document.querySelectorAll('#fwVideoTrigger, #fwHeroVideoTrigger');
+  var lastFocus = null;
+  function openModal(e){
+    e.preventDefault();
+    e.stopPropagation();
+    lastFocus = document.activeElement;
+    var src = this.getAttribute('data-video');
+    frame.src = src;
+    modal.hidden = false;
+    document.documentElement.style.overflow = 'hidden';
+    var closeBtn = modal.querySelector('[data-close]');
+    if(closeBtn) closeBtn.focus();
+  }
+  function closeModal(){
+    modal.hidden = true;
+    frame.src = '';
+    document.documentElement.style.overflow = '';
+    if(lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+  }
+  triggers.forEach(function(t){ t.addEventListener('click', openModal); });
+  modal.addEventListener('click', function(e){
+    if(e.target.hasAttribute('data-close') || e.target.classList.contains('fw-vmodal__backdrop')) closeModal();
+  });
+  window.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+})();
+</script>
+
+<!-- Mobile Bottom CTA Bar (same structure as homepage for consistent styling) -->
+<div class="mobcta-bar" id="mobcta-bar" aria-hidden="false">
+  <a href="https://wa.me/8618913609266?text=Hello%2C%20I%27m%20interested%20in%20your%20film%20washing%20line."
+     class="mobcta-btn mobcta-btn-primary"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contact us on WhatsApp">
+    <span class="mobcta-ico" aria-hidden="true">
+      <svg class="wa-icon" viewBox="0 0 32 32" focusable="false" aria-hidden="true">
+        <path d="M19.11 17.53c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35z"/>
+        <path d="M26.67 5.33C24 2.66 20.45 1.2 16.67 1.2 8.9 1.2 2.6 7.5 2.6 15.27c0 2.48.65 4.91 1.88 7.05L2.4 30.8l8.67-2.02c2.08 1.14 4.42 1.74 5.6 1.74h.01c7.77 0 14.07-6.3 14.07-14.07 0-3.78-1.46-7.33-4.08-10.02zM16.67 28.05h-.01c-2.03 0-4.03-.55-5.79-1.58l-.41-.24-5.14 1.2 1.14-5.01-.27-.43c-1.14-1.81-1.74-3.9-1.74-6.05 0-6.39 5.2-11.59 11.6-11.59 3.09 0 5.99 1.2 8.17 3.39 2.19 2.19 3.39 5.1 3.39 8.2 0 6.39-5.2 11.59-11.54 11.59z"/>
+      </svg>
+    </span>
+    <span class="mobcta-text">WhatsApp</span>
+  </a>
+  <button type="button" class="mobcta-btn mobcta-btn-secondary" data-mobcta-quote aria-label="Get a quote">
+    <span>Get Quote</span>
+  </button>
+</div>
+
+</body>
+</html>

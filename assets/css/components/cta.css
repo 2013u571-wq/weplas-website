@@ -1,0 +1,23 @@
+   /* =========================
+      8) CTA BLOCK (big gradient)
+      ========================= */
+      .cta{
+        background: linear-gradient(135deg, var(--brand, #0a84ff), var(--brand-dark, #0558a6));
+        color:#fff;
+        border-radius: var(--radius-lg);
+        padding: 40px;
+        text-align:center;
+      }
+      
+      .cta h2{
+        margin: 0;
+        font-size: 34px;
+        font-weight: 900;
+      }
+      
+      .cta p{
+        margin: 10px 0 0;
+        opacity:.9;
+      }
+      
+      .cta .btn{ margin-top: 18px; }

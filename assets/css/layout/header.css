@@ -1,0 +1,2460 @@
+:root{ --header-h: 72px; }
+
+/* =========================
+   Mobile Drawer - Base Hide (Desktop)
+   ========================= */
+.mnav-toggle,
+.mnav-backdrop,
+.mnav {
+  display: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  z-index: 1000;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  border-bottom: 0 !important;
+  overflow: visible;
+}
+
+/* 关键：不要让 header/nav 裁切 mega */
+.header, .container.nav { overflow: visible; }
+  
+  .nav{
+    min-height: 72px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    overflow: visible;
+  }
+
+  .header .container.nav {
+    background: transparent;
+  }
+  
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:800;
+    font-size:18px;
+    color: #fff;
+    transition: color .3s ease;
+    text-decoration: none;
+  }
+  
+  .logo:hover,
+  .logo:focus {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .header.scrolled .logo{ 
+    color: var(--text); 
+  }
+  
+  .logo-mark{
+    width:32px;
+    height:32px;
+    border-radius:10px;
+    background: linear-gradient(135deg,#ffffff,#e8f5e9);
+    box-shadow: 0 2px 8px rgba(255,255,255,.3);
+    transition: all .3s ease;
+  }
+  
+  .header.scrolled .logo-mark{
+    background: linear-gradient(135deg, var(--brand, #0a84ff), var(--brand-dark, #0558a6));
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  }
+
+  /* Mega open: logo high contrast */
+  .header.mega-open .logo{
+    color: rgba(0,0,0,.92);
+    background: rgba(255,255,255,.7);
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,.08);
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+    transition: all .25s ease;
+  }
+
+  .header.mega-open .logo-mark{
+    background: linear-gradient(135deg, rgba(0,0,0,.85), rgba(0,0,0,.70));
+    box-shadow: 0 2px 10px rgba(0,0,0,.15);
+  }
+  
+  .nav-links{
+    display:flex;
+    gap:28px;
+    align-items:center;
+  }
+  
+  /* ✅ 顶层导航链接：只影响 header 的第一层，不要影响 mega 内部 */
+  .header .nav-links > a:not(.nav-cta),
+  .header .nav-links > .nav-item > a:not(.nav-cta) {
+    color: #fff;
+    font-weight:500;
+    font-size:15px;
+    position: relative;
+    transition: color .2s ease;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: none;
+  }
+  
+  .header .nav-links > a:not(.nav-cta)::after,
+  .header .nav-links > .nav-item > a:not(.nav-cta)::after {
+    content:'';
+    position:absolute;
+    bottom:-4px;
+    left:0;
+    width:0;
+    height:2px;
+    background: rgba(255,255,255,.8);
+    transition: width .25s ease;
+  }
+  
+  .header .nav-links > a:not(.nav-cta):hover,
+  .header .nav-links > .nav-item > a:not(.nav-cta):hover { 
+    color: #fff; 
+  }
+  
+  .header .nav-links > a:not(.nav-cta):hover::after,
+  .header .nav-links > .nav-item > a:not(.nav-cta):hover::after { 
+    width:100%; 
+  }
+  
+  .header.scrolled {
+    background: rgba(255,255,255,.92) !important;
+    backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(0,0,0,.06) !important;
+  }
+  
+  .header.scrolled .nav-links > a:not(.nav-cta),
+  .header.scrolled .nav-links > .nav-item > a:not(.nav-cta) { 
+    color: #111; 
+  }
+  
+  .header.scrolled .nav-links > a:not(.nav-cta)::after,
+  .header.scrolled .nav-links > .nav-item > a:not(.nav-cta)::after { 
+    background: var(--brand); 
+  }
+  
+  .header.scrolled .nav-links > a:not(.nav-cta):hover,
+  .header.scrolled .nav-links > .nav-item > a:not(.nav-cta):hover { 
+    color: var(--text); 
+  }
+  
+  .nav-cta{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .2px;
+    color: #0b3d1f;
+    background: linear-gradient(135deg, #6ee787, #4ade80);
+    box-shadow:
+      0 0 0 0 rgba(74, 222, 128, 0),
+      0 8px 30px rgba(74, 222, 128, .45);
+    transition:
+      transform .18s ease,
+      box-shadow .18s ease,
+      filter .18s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav-cta:hover{
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+    box-shadow:
+      0 0 0 6px rgba(74, 222, 128, .15),
+      0 14px 40px rgba(74, 222, 128, .55);
+  }
+  
+  .nav-cta:active{ 
+    transform: translateY(0); 
+  }
+  
+  /* Legacy mobile menu - completely removed */
+  
+  .nav-item.has-mega{
+    position: relative;
+  }
+  
+  /* 让 mega menu 不受父级布局影响：用 fixed 最稳（不会被 overflow hidden 裁切） */
+  /* 已移至文件末尾的 HARD LOCK 规则，此处注释保留结构参考 */
+  /*
+  .mega-menu{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: var(--header-h);
+    width: 100%;
+    min-height: 320px;
+    background: #fff;
+    border-top: 1px solid rgba(0,0,0,.06);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+    z-index: 999;
+  }
+  
+  .nav-item.has-mega.is-open > .mega-menu{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  */
+  
+  /* 防止点击 mega 内部时触发外部关闭 */
+  .mega-menu *{ pointer-events: auto; }
+  
+  .mega-menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0,0,0,.02), transparent);
+  }
+  .mega-inner {
+    position: relative;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 22px 20px;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 22px;
+    align-items: start;
+    width: 100%;
+  }
+  
+  .mega-left{
+    position: relative;
+    border-right: 1px solid rgba(0,0,0,.08);
+    padding-right: 18px;
+  }
+  
+  .mega-tab{
+    appearance:none;
+    -webkit-appearance:none;
+    border:0;
+    background: transparent;
+    width:100%;
+    text-align:left;
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-soft);
+    cursor:pointer;
+    transition: background .18s ease, color .18s ease;
+  }
+  
+  .mega-tab:hover{
+    background: rgba(0,0,0,.04);
+    color: var(--text);
+  }
+  
+  .mega-tab.active{
+    background: rgba(0,0,0,.06);
+    color: var(--text);
+  }
+  
+  .mega-right{
+    min-height: 260px;
+  }
+  
+  .mega-panel{
+    display: none;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity .22s ease, transform .22s ease;
+  }
+  
+  .mega-panel.active{
+    display: grid;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  .mega-card{
+    display:block;
+    border-radius: 14px;
+    overflow:hidden;
+    border: 1px solid rgba(0,0,0,.08);
+    background:#fff;
+    text-decoration:none;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  
+  .mega-card:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 14px 40px rgba(0,0,0,.12);
+    border-color: rgba(0,0,0,.12);
+  }
+  
+  .mega-card span{
+    display:block;
+    padding: 12px 12px;
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--text);
+  }
+  
+  .mega-card-title {
+    padding: 12px;
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--text);
+  }
+  
+  @media (max-width: 768px){
+    :root{ --header-h:56px; }
+  
+    .header{
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(0,0,0,.08);
+    }
+  
+    .nav{ 
+      padding: 0 16px; 
+    }
+  
+    .logo{
+      color: var(--text);
+      font-size:16px;
+    }
+  
+    .logo-mark{
+      width:28px;
+      height:28px;
+      background: linear-gradient(135deg, var(--brand, #0a84ff), var(--brand-dark, #0558a6));
+      box-shadow:none;
+    }
+  
+    .nav-links{ 
+      display: none; 
+    }
+  
+    .mnav-toggle{ 
+      display: flex; 
+    }
+  
+    /* Hide mega menus on mobile */
+    .mega-menu{
+      display: none !important;
+    }
+  }
+
+/* =================================================
+   Mega Menu – Hierarchy & Premium Feel
+   ================================================= */
+
+/* ----- Intro ----- */
+.mega-intro {
+  grid-column: 1 / -1;
+  margin-bottom: 22px;
+}
+
+.mega-intro-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.mega-intro-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.mega-intro-title-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.mega-intro-title-link:hover {
+  color: var(--brand, #0a84ff);
+  text-decoration: underline;
+}
+
+.mega-intro-title-icon {
+  opacity: 0.5;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.mega-intro-title-link:hover .mega-intro-title-icon {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
+.mega-intro-desc {
+  font-size: 13px;
+  color: var(--text-soft);
+  line-height: 1.4;
+}
+
+/* ----- Left Tabs ----- */
+.mega-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+}
+
+.mega-tab-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.mega-tab-desc {
+  font-size: 12px;
+  color: var(--text-soft);
+  line-height: 1.4;
+}
+
+/* Active tab accent */
+.mega-tab.active {
+  background: rgba(0,0,0,.04);
+}
+
+/* ----- Cards ----- */
+.mega-card-body {
+  padding: 14px 16px 16px;
+}
+
+.mega-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.mega-card-desc {
+  font-size: 12px;
+  color: var(--text-soft);
+  line-height: 1.4;
+}
+
+/* Card hover refinement */
+.mega-card:hover .mega-card-title {
+  color: var(--brand);
+}
+
+/* =================================================
+   Mega Menu – Spatial Layering
+   ================================================= */
+
+/* Overall background refinement */
+/* REMOVED: .mega-menu { background: rgba(255,255,255,.96); } */
+
+/* Left navigation panel */
+.mega-left {
+  position: relative;
+  background: #fafafa;
+  border-right: 1px solid rgba(0,0,0,.06);
+  padding: 18px 16px;
+  border-radius: 12px;
+}
+
+/* Right content area breathing space */
+.mega-right {
+  padding-left: 24px;
+}
+
+/* Subtle panel separation (no hard lines) */
+.mega-left::after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  right: 0;
+  width: 1px;
+  height: calc(100% - 48px);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0,0,0,.08),
+    transparent
+  );
+}
+
+/* Card grid air */
+.mega-panel {
+  row-gap: 22px;
+}
+
+/* Card elevation refinement */
+.mega-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+.mega-card:hover {
+  border-color: rgba(0,0,0,.1);
+}
+
+/* =================================================
+   Mega Menu – Subtle Micro Interactions
+   ================================================= */
+
+
+/* Left tab hover intent */
+.mega-tab {
+  transition:
+    background .18s ease,
+    transform .18s ease;
+}
+
+.mega-tab:hover {
+  transform: translateX(4px);
+}
+
+/* Active tab emphasis */
+.mega-tab.active {
+  transform: translateX(2px);
+}
+
+/* Card motion – restrained lift */
+.mega-card {
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    border-color .2s ease;
+}
+
+.mega-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Image container - 固定宽高比，避免底部被裁切 */
+.mega-card-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  min-height: 100px;
+  overflow: hidden;
+  background: linear-gradient(180deg,#f4f6f8,#eef2f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Shredding & Crushing: 固定宽高比，避免图片被裁切，完整展示在卡片内 */
+.mega-panel[data-panel="shredding"] .mega-card-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  min-height: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg,#f4f6f8,#eef2f6);
+}
+
+.mega-panel[data-panel="shredding"] .mega-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform .35s ease;
+}
+
+/* Image micro zoom (default - Washing/Pelletizing) */
+.mega-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .35s ease;
+}
+
+.mega-card:hover .mega-card-img img {
+  transform: scale(1.04);
+}
+
+/* Text color reaction */
+.mega-card-desc {
+  transition: color .18s ease;
+}
+
+.mega-card:hover .mega-card-desc {
+  color: rgba(0,0,0,.7);
+}
+
+/* =================================================
+   Mega Menu – Brand Accent (Single Use)
+   ================================================= */
+
+/* Active category indicator */
+.mega-tab.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--brand);
+}
+
+/* Ensure positioning context */
+.mega-tab {
+  position: relative;
+}
+
+/* =================================================
+   Mega Menu – Left Panel Visual Centering
+   ================================================= */
+
+.mega-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* =================================================
+   Mega Menu – Left Panel Final Optical Alignment
+   ================================================= */
+
+/* Overall visual lowering */
+.mega-left {
+  padding-top: 48px;
+}
+
+/* Increase vertical rhythm between items */
+.mega-tab {
+  margin-bottom: 14px;
+}
+
+.mega-tab:last-child {
+  margin-bottom: 0;
+}
+
+/* =================================================
+   Mega Menu – Solutions (Strategic / Editorial Style)
+   ================================================= */
+
+.mega-solutions {
+  min-height: 420px;
+}
+
+/* Solutions：表格布局 - 覆盖通用 mega-inner 的 grid 布局 */
+#mega-solutions .mega-solutions-inner{
+  display: block !important;
+  padding: 0;
+  width: 100%;
+}
+
+/* 隐藏 Solutions mega 中可能存在的 left/right 栏 */
+#mega-solutions .mega-left,
+#mega-solutions .mega-right{
+  display: none !important;
+}
+
+/* Solutions mega: 高度自适应，由外层 .mega-menu 的 max-height + 滚动控制 */
+#mega-solutions{
+  height: auto !important;
+  min-height: 0;
+  max-height: none !important;
+  overflow: visible !important;
+  background: rgba(255,255,255,.28);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  z-index: 999;
+}
+
+/* Solutions 表格容器：轻玻璃面板（弱化白板贴底感） */
+#mega-solutions .mega-solutions-table{
+  width: 100%;
+  max-width: 1120px;
+  margin: 18px auto 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: rgba(255,255,255,.62);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 12px;
+  box-shadow: 0 24px 70px rgba(0,0,0,.10);
+  overflow: hidden;
+}
+
+/* Table Header - Enhanced Apple Style */
+#mega-solutions .mega-map-head{
+  display: grid;
+  grid-template-columns: 220px 1.4fr 220px 140px;
+  gap: 20px;
+  padding: 12px 20px;
+  border-bottom: 0.5px solid rgba(0,0,0,.04);
+  background: rgba(255,255,255,.35);
+}
+
+#mega-solutions .mega-map-head-cell{
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,.4);
+}
+
+/* Table Rows */
+#mega-solutions .mega-solutions-rows{
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+#mega-solutions .mega-row{
+  display: grid;
+  grid-template-columns: 220px 1.4fr 220px 140px;
+  gap: 20px;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  align-items: center;
+  position: relative;
+  transition: 
+    background .2s ease,
+    transform .2s ease,
+    box-shadow .2s ease;
+  background: transparent;
+}
+
+#mega-solutions .mega-row::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 60%;
+  background: rgba(0,0,0,.15);
+  border-radius: 1px;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+#mega-solutions .mega-row:last-child{
+  border-bottom: none;
+}
+
+/* 行的"导航感" - 轻微浮起 */
+#mega-solutions .mega-row{
+  transition: background .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+
+#mega-solutions .mega-row:hover{
+  background: rgba(255,255,255,.40);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+}
+
+#mega-solutions .mega-row:hover::before{
+  opacity: 1;
+  background: rgba(0,0,0,.25);
+}
+
+/* Focus-visible state for keyboard users */
+#mega-solutions .mega-row:focus-within{
+  background: rgba(255,255,255,.40);
+  outline: 2px solid rgba(10,132,255,.2);
+  outline-offset: -2px;
+  border-radius: 8px;
+}
+
+/* Row Cells */
+#mega-solutions .mega-row-cell{
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(0,0,0,.85);
+}
+
+#mega-solutions .mega-row-cell a{
+  color: rgba(0,0,0,.85);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .18s ease;
+}
+
+#mega-solutions .mega-row-cell a:hover{
+  color: rgba(0,0,0,.95);
+}
+
+/* Process Column - Enhanced Flow Style */
+#mega-solutions .mega-row-cell.cell-line{
+  color: rgba(0,0,0,.65);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7;
+  word-spacing: 0.15em;
+  letter-spacing: 0.01em;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+/* Process flow underline - subtle gradient */
+#mega-solutions .mega-row-cell.cell-line::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    rgba(0,0,0,.08) 0%, 
+    rgba(0,0,0,.12) 50%, 
+    rgba(0,0,0,.08) 100%);
+  opacity: 0.6;
+}
+
+/* Make dot separators more subtle */
+#mega-solutions .mega-row-cell.cell-line{
+  color: rgba(0,0,0,.65);
+}
+
+/* Dot separators styling via CSS (if using • character) */
+#mega-solutions .mega-row-cell.cell-line{
+  /* The • character will inherit the color but we can make it slightly lighter */
+}
+
+#mega-solutions .mega-row-cell.cell-out{
+  color: rgba(0,0,0,.88);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* CTA Column */
+#mega-solutions .mega-row-cta{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+#mega-solutions a{ text-decoration: none; }
+
+/* Solutions mega CTA — Apple Style with SVG Arrow */
+#mega-solutions .mega-cta,
+#mega-solutions a.mega-cta{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: rgba(0,0,0,.78);
+  text-decoration: none;
+  transition: color .2s ease;
+  font-size: 14px;
+  white-space: nowrap;
+  position: relative;
+  padding: 6px 20px 6px 8px;
+  border-radius: 6px;
+}
+
+
+/* SVG Arrow using ::after pseudo-element - Apple thin line style */
+#mega-solutions .mega-cta::after{
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3 8h8' stroke='currentColor' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M9 4l4 4-4 4' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.65;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+/* CTA Hint Text - 更弱 */
+#mega-solutions .mega-cta-hint{
+  font-size: 11px;
+  color: rgba(0,0,0,.42);
+  line-height: 1.4;
+  text-align: right;
+  max-width: 200px;
+}
+
+/* Hover: darker + arrow shifts right 2px */
+#mega-solutions .mega-row:hover .mega-cta{
+  color: rgba(0,0,0,.92);
+  background: rgba(0,0,0,.02);
+}
+
+#mega-solutions .mega-row:hover .mega-cta::after{
+  transform: translateY(-50%) translateX(2px);
+  opacity: 0.85;
+}
+
+/* Keyboard accessibility */
+#mega-solutions .mega-cta:focus-visible{
+  outline: 2px solid rgba(10,132,255,.35);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+/* Active mega menu link styling - Solutions only */
+.nav-item.has-mega.is-open > a.nav-link.is-mega-open{
+  color: rgba(0,0,0,.92) !important;
+  font-weight: 600;
+}
+
+/* Solutions nav item: chevron rotation when open */
+.nav-item.has-mega.is-open > a.nav-link.is-mega-open .nav-chev{
+  transform: rotate(180deg) translateY(-1px);
+}
+
+/* =================================================
+   Solutions Mega Menu - Apple Navigation Table Style
+   ================================================= */
+
+/* Icon Layout */
+#mega-solutions .mega-waste,
+#mega-solutions .mega-output{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+#mega-solutions .mega-ico{
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0,0,0,.55);
+  background: rgba(0,0,0,.04);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 10px;
+  flex: 0 0 auto;
+}
+
+#mega-solutions .mega-ico svg{
+  width: 16px;
+  height: 16px;
+}
+
+#mega-solutions .mega-waste-text,
+#mega-solutions .mega-output-text{
+  flex: 1;
+  min-width: 0;
+}
+
+#mega-solutions .mega-waste-text{
+  color: rgba(0,0,0,.85);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .18s ease;
+}
+
+#mega-solutions .mega-waste-text:hover{
+  color: rgba(0,0,0,.95);
+}
+
+/* Process Chips */
+#mega-solutions .mega-process{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#mega-solutions .mega-chip{
+  font-size: 12px;
+  line-height: 1;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.04);
+  border: 1px solid rgba(0,0,0,.06);
+  color: rgba(0,0,0,.68);
+  white-space: nowrap;
+}
+
+/* Target Output 强调但更克制 */
+#mega-solutions .mega-output-text{
+  font-weight: 650;
+  color: rgba(0,0,0,.82);
+}
+
+/* CTA 文案与 hint（更高级一点） */
+#mega-solutions .mega-cta{
+  font-weight: 600;
+}
+
+#mega-solutions .mega-cta-hint{
+  font-size: 11px;
+  color: rgba(0,0,0,.42);
+}
+
+/* Responsive: <=980px 堆叠卡片时 */
+@media (max-width: 980px){
+  #mega-solutions .mega-waste,
+  #mega-solutions .mega-output{
+    /* 仍水平对齐 */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #mega-solutions .mega-process{
+    /* chips 换行自然 */
+    flex-wrap: wrap;
+  }
+  
+  #mega-solutions .mega-row-cta{
+    /* CTA 依旧左对齐 */
+    align-items: flex-start;
+  }
+  
+  #mega-solutions .mega-cta-hint{
+    text-align: left;
+  }
+}
+
+/* Responsive: Solutions mega menu - 单列卡片布局 */
+@media (max-width: 980px){
+  #mega-solutions .mega-map-head{
+    display: none;
+  }
+  
+  #mega-solutions .mega-row{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 14px;
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 14px;
+    background: rgba(255,255,255,.50);
+    margin-bottom: 8px;
+  }
+  
+  #mega-solutions .mega-row:last-child{
+    margin-bottom: 0;
+  }
+  
+  #mega-solutions .mega-row-cell{
+    padding: 4px 0;
+  }
+  
+  #mega-solutions .mega-row-cell:first-child{
+    font-weight: 600;
+    font-size: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+    margin-bottom: 4px;
+  }
+  
+  #mega-solutions .mega-row-cell.cell-line::before{
+    content: "Process: ";
+    font-weight: 600;
+    color: rgba(0,0,0,.65);
+  }
+  
+  #mega-solutions .mega-row-cell.cell-out::before{
+    content: "Output: ";
+    font-weight: 600;
+    color: rgba(0,0,0,.65);
+  }
+  
+  #mega-solutions .mega-row-cta{
+    align-items: flex-start;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(0,0,0,.08);
+  }
+  
+  #mega-solutions .mega-row .mega-cta{
+    justify-self: start;
+  }
+  
+  #mega-solutions .mega-cta-hint{
+    text-align: left;
+  }
+}
+
+
+/* =================================================
+   顶层导航链接：只影响 header 的第一层，不要影响 mega 内部
+   ================================================= */
+.header .nav-links > a.nav-link:not(.nav-cta),
+.header .nav-links > .nav-item > a.nav-link:not(.nav-cta){
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  color: #fff;
+}
+
+.header .nav-links > a.nav-link:not(.nav-cta)::after,
+.header .nav-links > .nav-item > a.nav-link:not(.nav-cta)::after {
+  background: rgba(255,255,255,.8);
+}
+
+.header.scrolled .nav-links > a.nav-link:not(.nav-cta),
+.header.scrolled .nav-links > .nav-item > a.nav-link:not(.nav-cta) {
+  color: #111;
+}
+
+.header.scrolled .nav-links > a.nav-link:not(.nav-cta)::after,
+.header.scrolled .nav-links > .nav-item > a.nav-link:not(.nav-cta)::after {
+  background: var(--brand);
+}
+
+/* =================================================
+   Nav CTA - Ensure color not overridden by scroll state
+   ================================================= */
+.header.scrolled .nav-cta {
+  color: #0b3d1f;
+}
+
+/* =================================================
+   Ultra Apple Nav Affordance — SVG Chevron & States
+   ================================================= */
+
+/* Thin SVG chevron styles */
+.nav-chev{
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  flex: 0 0 auto;
+  opacity: .66;
+  transform: translateY(-1px);
+  transition: transform .18s ease, opacity .18s ease;
+}
+
+.nav-chev svg{ 
+  display: block; 
+  width: 12px; 
+  height: 12px; 
+}
+
+.nav-chev path{
+  stroke: currentColor;
+  stroke-width: 1.6;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Hover hint (subtle) */
+.nav-item.has-mega > a.nav-link:hover .nav-chev{
+  opacity: .92;
+  transform: translateY(0px);
+}
+
+/* Open state (Ultra Apple) */
+.nav-item.has-mega.is-open > a.nav-link{
+  font-weight: 600;
+}
+
+.nav-item.has-mega.is-open > a.nav-link::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--underline);
+  opacity: .9;
+}
+
+.nav-item.has-mega.is-open > a.nav-link .nav-chev{
+  opacity: .95;
+  transform: rotate(90deg) translateX(1px) translateY(1px);
+}
+
+/* When mega sheet is open (light), make top nav dark and dim non-active */
+.header.mega-open .nav-links > a.nav-link:not(.nav-cta),
+.header.mega-open .nav-links > .nav-item > a.nav-link:not(.nav-cta){
+  color: var(--nav-open);
+}
+
+.header.mega-open .nav-links > .nav-item.has-mega:not(.is-open) > a.nav-link{
+  color: var(--nav-open-dim);
+  font-weight: 500;
+}
+
+.header.mega-open .nav-links > a.nav-link:not(.nav-cta){
+  color: var(--nav-open-dim);
+  font-weight: 500;
+}
+
+/* Keep CTA readable on light sheet */
+.header.mega-open .nav-cta{
+  color: rgba(0,0,0,.88);
+}
+
+/* Optional: boost logo visibility when mega is open */
+.header.mega-open .logo span{ 
+  color: rgba(0,0,0,.92); 
+}
+
+.header.mega-open .logo-mark{ 
+  filter: saturate(1.1) contrast(1.15); 
+}
+
+/* =========================================================
+   Mega Menu — Fixed Sheet (NO header height expansion)
+   ========================================================= */
+
+:root{
+  --header-h: 72px;
+  --mega-h: clamp(420px, calc(100vh - var(--header-h, 72px) - 24px), 760px);
+  --sheet-bg: rgba(255,255,255,.92);
+  --sheet-border: rgba(0,0,0,.08);
+  --nav-open: rgba(0,0,0,.88);
+  --nav-open-dim: rgba(0,0,0,.64);
+  --nav-dark: rgba(255,255,255,.92);
+  --nav-dark-dim: rgba(255,255,255,.78);
+  --underline: rgba(0,0,0,.42);
+}
+
+/* Lock page scroll when mega menu is open */
+body.mega-active{
+  overflow: hidden;
+}
+
+/* Header stays 72px (do NOT change layout height) */
+.header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--header-h);
+  z-index: 1000;
+  overflow: visible;
+}
+
+/* Default: fully transparent, no blur (immersive over hero) */
+.header::before{
+  content:"";
+  position: absolute;
+  inset: 0;
+  height: var(--header-h);
+  z-index: 0;
+  pointer-events: none;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+  transition: height .25s ease, background .25s ease, backdrop-filter .25s ease, box-shadow .25s ease;
+}
+
+/* Scrolled or mega-open: enable glass sheet */
+.header.is-scrolled::before,
+.header.mega-open::before{
+  background: rgba(18,18,20,.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Mega open: sheet from header top (Google-style), header + mega height */
+.header.mega-open::before{
+  top: 0;
+  height: calc(var(--header-h, 72px) + var(--mega-h));
+  max-height: calc(100vh - 8px);
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  pointer-events: none;
+  box-shadow: 0 22px 60px rgba(0,0,0,.18);
+  border-bottom: 1px solid var(--sheet-border);
+}
+
+/* Keep nav above sheet */
+.header .nav{
+  position: relative;
+  z-index: 1;
+}
+
+.header .container.nav{
+  position: relative;
+  height: var(--header-h);
+  z-index: 1;
+}
+
+/* Make sure mega positioning is NOT based on nav-item width */
+.nav-item.has-mega{
+  position: static !important;
+}
+
+/* Mega panel: fixed so it overlays hero and is never clipped */
+.nav-item.has-mega > .mega-menu{
+  position: fixed;
+  top: var(--header-h, 72px);
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-height: var(--mega-h);
+  height: auto;
+  display: none;
+  z-index: 2000;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  visibility: hidden;
+  transition:
+    opacity .18s ease,
+    transform .28s cubic-bezier(.2,.8,.2,1),
+    visibility 0s linear .28s;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  background: rgba(255,255,255,.98);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+/* Open state */
+.nav-item.has-mega.is-open > .mega-menu{
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+
+/* Inner container */
+.mega-inner{
+  width: min(var(--container, 1200px), 92vw);
+  margin: 0 auto;
+  min-height: 0;
+  padding: 26px 0 34px;
+}
+
+/* Force mega content readable (fix your Solutions "文字看不见") */
+.mega-menu,
+.mega-menu *{
+  color: rgba(0,0,0,.86);
+}
+.mega-menu a{ color: inherit; }
+
+/* 顶部导航文字：默认白色 */
+.header .nav-links > a:not(.nav-cta),
+.header .nav-links > .nav-item > a:not(.nav-cta){
+  color: rgba(255,255,255,.92);
+}
+
+/* =========================
+   Solutions Mega – Glass Final Override (must be last)
+   ========================= */
+#mega-solutions{
+  /* 让父级别太白，否则玻璃看不出来 */
+  background: rgba(255,255,255,.28) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+}
+
+#mega-solutions .mega-solutions-table{
+  background: rgba(255,255,255,.62) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(0,0,0,.06) !important;
+  box-shadow: 0 24px 70px rgba(0,0,0,.10) !important;
+}
+
+#mega-solutions .mega-map-head{
+  background: rgba(255,255,255,.35) !important;
+}
+
+#mega-solutions .mega-row{
+  background: transparent !important;
+  border-top: 1px solid rgba(0,0,0,.05) !important;
+}
+
+#mega-solutions .mega-row:hover{
+  background: rgba(255,255,255,.40) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+}
+
+/* =========================
+   Solutions Mega – Flow Card Rows (Premium)
+   ========================= */
+#mega-solutions .mega-solutions-table{
+  padding: 10px 10px 14px;
+}
+
+#mega-solutions .mega-map-head{
+  border-radius: 16px 16px 0 0;
+}
+
+#mega-solutions .mega-solutions-rows{
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+}
+
+#mega-solutions .mega-row{
+  border-top: none !important;
+  border: 1px solid rgba(0,0,0,.05);
+  border-radius: 16px;
+  background: rgba(255,255,255,.46);
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+  padding: 18px 18px;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+#mega-solutions .mega-row:hover,
+#mega-solutions .mega-row:focus-within{
+  background: rgba(255,255,255,.60);
+  transform: translateY(-1px);
+  box-shadow: 0 18px 46px rgba(0,0,0,.10);
+}
+
+#mega-solutions .mega-waste,
+#mega-solutions .mega-out{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#mega-solutions .mega-waste-name{
+  color: rgba(0,0,0,.85);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .18s ease;
+}
+
+#mega-solutions .mega-waste-name:hover{
+  color: rgba(0,0,0,.95);
+}
+
+#mega-solutions .mega-out-name{
+  font-weight: 650;
+  color: rgba(0,0,0,.82);
+}
+
+#mega-solutions .mega-ic{
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.04);
+  color: rgba(0,0,0,.78);
+}
+
+#mega-solutions .mega-ic svg{
+  display: block;
+}
+
+#mega-solutions .cell-line{
+  /* 让 chips 更像 Apple 的轻组件 */
+  opacity: .95;
+}
+
+#mega-solutions .mega-cta-hint{
+  display: none;
+}
+
+#mega-solutions .mega-row:hover .mega-cta-hint,
+#mega-solutions .mega-row:focus-within .mega-cta-hint{
+  display: block;
+}
+
+/* CTA 更像 Apple 的 text button */
+#mega-solutions .mega-cta{
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* <= 980px：保持单列卡片，不要"表格感" */
+@media (max-width: 980px){
+  #mega-solutions .mega-solutions-rows{
+    padding: 8px;
+    gap: 12px;
+  }
+  #mega-solutions .mega-row{
+    padding: 14px 14px;
+    background: rgba(255,255,255,.56);
+  }
+  #mega-solutions .mega-cta-hint{
+    display: block;
+  }
+}
+
+/* =========================
+   Mobile Drawer Navigation (<=980px)
+   ========================= */
+@media (max-width: 980px){
+  /* Hide desktop nav links, show mobile toggle */
+  .header .nav-links{
+    display: none;
+  }
+  
+  /* Show drawer elements on mobile */
+  .mnav-toggle{
+    display: flex;
+  }
+  
+  .mnav-backdrop{
+    display: block;
+  }
+  
+  .mnav{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+  }
+  
+  .mnav-toggle span{
+    width: 22px;
+    height: 2px;
+    background: rgba(255,255,255,.92);
+    border-radius: 2px;
+    transition: all .2s ease;
+  }
+  
+  .mnav-toggle[aria-expanded="true"] span:nth-child(1){
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  
+  .mnav-toggle[aria-expanded="true"] span:nth-child(2){
+    opacity: 0;
+  }
+  
+  .mnav-toggle[aria-expanded="true"] span:nth-child(3){
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  
+  /* Backdrop */
+  .mnav-backdrop{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .25s ease, visibility .25s ease;
+    pointer-events: none;
+  }
+  
+  .mnav-backdrop[aria-hidden="false"]{
+    pointer-events: auto;
+  }
+  
+  .mnav-backdrop[aria-hidden="false"]{
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Drawer */
+  .mnav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(92vw, 420px);
+    background: rgba(255,255,255,.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: -4px 0 40px rgba(0,0,0,.15);
+    z-index: 9999;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform .3s cubic-bezier(.2,.8,.2,1), opacity .3s ease;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .mnav[aria-hidden="false"]{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  .mnav[aria-hidden="true"]{
+    pointer-events: none;
+  }
+  
+  /* Drawer Header */
+  .mnav-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(0,0,0,.06);
+  }
+  
+  .mnav-header .logo{
+    color: rgba(0,0,0,.92);
+    font-size: 20px;
+    font-weight: 800;
+  }
+  
+  .mnav-close{
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: rgba(0,0,0,.65);
+    cursor: pointer;
+    transition: background .18s ease, color .18s ease;
+  }
+  
+  .mnav-close:hover,
+  .mnav-close:focus{
+    background: rgba(0,0,0,.06);
+    color: rgba(0,0,0,.85);
+  }
+  
+  /* Drawer Content */
+  .mnav-content{
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 8px 0;
+  }
+  
+  .mnav-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .mnav-item{
+    border-bottom: 1px solid rgba(0,0,0,.05);
+  }
+  
+  .mnav-item > a{
+    display: block;
+    padding: 16px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0,0,0,.85);
+    text-decoration: none;
+    transition: background .18s ease, color .18s ease;
+  }
+  
+  .mnav-item > a:hover,
+  .mnav-item > a:focus{
+    background: rgba(0,0,0,.04);
+    color: rgba(0,0,0,.95);
+  }
+  
+  /* Accordion Button */
+  .mnav-acc-btn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0,0,0,.85);
+    text-align: left;
+    cursor: pointer;
+    transition: background .18s ease, color .18s ease;
+  }
+  
+  .mnav-acc-btn:hover,
+  .mnav-acc-btn:focus{
+    background: rgba(0,0,0,.04);
+    color: rgba(0,0,0,.95);
+  }
+  
+  .mnav-chev{
+    width: 16px;
+    height: 16px;
+    color: rgba(0,0,0,.55);
+    transition: transform .2s ease, color .18s ease;
+    flex-shrink: 0;
+  }
+  
+  .mnav-acc-btn[aria-expanded="true"] .mnav-chev{
+    transform: rotate(180deg);
+    color: rgba(0,0,0,.75);
+  }
+  
+  /* Accordion Panel */
+  .mnav-acc-panel{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s cubic-bezier(.2,.8,.2,1);
+  }
+  
+  .mnav-acc-panel[aria-hidden="false"]{
+    max-height: 800px;
+  }
+  
+  .mnav-sublist{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: rgba(0,0,0,.02);
+  }
+  
+  .mnav-sublist a{
+    display: block;
+    padding: 12px 20px 12px 40px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0,0,0,.65);
+    text-decoration: none;
+    transition: background .18s ease, color .18s ease;
+  }
+  
+  .mnav-sublist a:hover,
+  .mnav-sublist a:focus{
+    background: rgba(0,0,0,.04);
+    color: rgba(0,0,0,.85);
+  }
+  
+  .mnav-subtitle{
+    padding: 10px 20px 8px 40px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(0,0,0,.55);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin-top: 8px;
+  }
+  
+  /* Drawer Footer CTA */
+  .mnav-cta{
+    padding: 20px;
+    border-top: 1px solid rgba(0,0,0,.06);
+    background: rgba(255,255,255,.8);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .mnav-cta .btn{
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  /* Body lock when drawer open */
+  body.is-locked,
+  html.is-locked{
+    overflow: hidden;
+  }
+}
+
+/* =========================
+   Mobile Drawer - Final Override (must be last)
+   ========================= */
+@media (max-width: 980px){
+  /* 彻底禁用旧移动菜单，避免两套系统打架 */
+  .mobile-menu,
+  .mobile-menu-toggle{
+    display: none !important;
+  }
+
+  /* drawer 打开时，只显示 backdrop + drawer，不要把整页做 blur */
+  html.mnav-open,
+  html.mnav-open body{
+    filter: none !important;
+  }
+
+  /* 防止 toggle 在浅色背景看不见：默认深色；在 header 未滚动且 hero 很暗时再用白色 */
+  .mnav-toggle span{
+    background: rgba(0,0,0,.78) !important;
+  }
+  .header:not(.scrolled) .mnav-toggle span{
+    background: rgba(255,255,255,.92) !important;
+  }
+
+  /* 层级：backdrop < drawer < header按钮 */
+  .mnav-backdrop{ z-index: 9998 !important; }
+  .mnav{ z-index: 9999 !important; }
+  .mnav-toggle{ z-index: 10001 !important; }
+}
+
+/* =========================
+   MOBILE NAV HARD OVERRIDE (must be last)
+   ========================= */
+@media (max-width: 980px){
+
+  /* 1) Kill legacy mobile menu completely */
+  .mobile-menu,
+  .mobile-menu-toggle,
+  .mobile-nav,
+  .nav-mobile,
+  .nav-panel,
+  .nav-drawer-legacy{
+    display: none !important;
+  }
+
+  /* 2) Hide desktop links, keep only toggle */
+  .header .nav-links{
+    display: none !important;
+  }
+
+  .mnav-toggle{
+    display: flex !important;
+    flex-direction: column;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10001; /* above header */
+  }
+
+  .mnav-toggle span{
+    width: 22px;
+    height: 2px;
+    border-radius: 2px;
+    background: rgba(0,0,0,.75); /* on light header */
+    transition: transform .2s ease, opacity .2s ease;
+  }
+
+  .mnav-toggle[aria-expanded="true"] span:nth-child(1){
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  .mnav-toggle[aria-expanded="true"] span:nth-child(2){
+    opacity: 0;
+  }
+  .mnav-toggle[aria-expanded="true"] span:nth-child(3){
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  /* 3) Backdrop + Drawer fixed to viewport */
+  .mnav-backdrop{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .25s ease, visibility .25s ease;
+  }
+  .mnav-backdrop[aria-hidden="false"],
+  .mnav-backdrop.is-open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .mnav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(92vw, 420px);
+    background: rgba(255,255,255,.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: -4px 0 40px rgba(0,0,0,.18);
+    z-index: 9999;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform .3s cubic-bezier(.2,.8,.2,1), opacity .3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .mnav[aria-hidden="false"],
+  .mnav.is-open{
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  /* 4) Lock scroll */
+  html.is-locked,
+  body.is-locked{
+    overflow: hidden !important;
+    height: 100%;
+  }
+}
+
+/* =========================
+   MOBILE NAV — FINAL VISIBILITY & ZINDEX FIX (must be last)
+   ========================= */
+@media (max-width: 980px){
+  /* ensure layer order: toggle > drawer > backdrop */
+  .mnav-toggle{ z-index: 10001 !important; }
+  #mnav.mnav{ z-index: 10000 !important; }
+  .mnav-backdrop{ z-index: 9998 !important; }
+
+  /* baseline state */
+  #mnav.mnav{
+    display: flex !important;
+    transform: translateX(100%) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    height: 100dvh !important;
+  }
+  .mnav-backdrop{
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+
+  /* open state controlled by html.mnav-open */
+  html.mnav-open #mnav.mnav{
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+  html.mnav-open .mnav-backdrop{
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+/* =========================
+   Mobile Drawer — Optimized Content Blocks
+   ========================= */
+@media (max-width: 980px){
+  /* Content Blocks */
+  .mnav-block{
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+  }
+  
+  .mnav-block:first-child{
+    padding-top: 16px;
+  }
+  
+  .mnav-block:last-child{
+    border-bottom: none;
+  }
+  
+  .mnav-block-title{
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: rgba(0,0,0,.5);
+    margin-bottom: 10px;
+  }
+  
+  /* Links */
+  .mnav-link{
+    display: block;
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(0,0,0,.75);
+    text-decoration: none;
+    transition: color .18s ease, transform .18s ease;
+  }
+  
+  .mnav-link:hover,
+  .mnav-link:focus{
+    color: rgba(0,0,0,.95);
+    transform: translateX(2px);
+  }
+  
+  .mnav-link-primary{
+    font-weight: 600;
+    color: rgba(0,0,0,.9);
+    font-size: 16px;
+    padding: 12px 0;
+  }
+  
+  .mnav-link-cta{
+    font-weight: 600;
+    color: rgba(0,0,0,.9);
+    background: rgba(0,0,0,.04);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 8px;
+    text-align: center;
+    display: block;
+  }
+  
+  .mnav-link-cta:hover,
+  .mnav-link-cta:focus{
+    background: rgba(0,0,0,.08);
+    transform: translateX(0) scale(1.02);
+  }
+  
+  /* Mini CTA Block */
+  .mnav-mini-cta{
+    padding: 16px 20px;
+    background: rgba(0,0,0,.02);
+    border-top: 1px solid rgba(0,0,0,.05);
+    margin-top: 8px;
+  }
+  
+  /* Accordion Panel Adjustments */
+  .mnav-acc-panel{
+    background: rgba(255,255,255,.5);
+  }
+  
+  .mnav-acc-panel[aria-hidden="false"]{
+    background: rgba(255,255,255,.98);
+  }
+}
+
+/* =========================
+   Mobile Nav — Apple-style Layered Menu (Plan B)
+   ========================= */
+@media (max-width: 980px){
+  /* Toggle color on hero vs scrolled header */
+  .header:not(.scrolled) .mnav-toggle span{ background: rgba(255,255,255,.92) !important; }
+  .header.scrolled .mnav-toggle span{ background: rgba(0,0,0,.75) !important; }
+
+  /* Fullscreen Apple-like menu */
+  .mnav{
+    width: 100vw !important;
+    max-width: 100vw !important;
+    left: 0 !important;
+    right: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  .mnav-shell{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255,255,255,.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .mnav-topbar{
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+    border-bottom: 1px solid rgba(0,0,0,.06);
+  }
+
+  .mnav-brand{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: rgba(0,0,0,.92);
+    font-weight: 800;
+    font-size: 18px;
+  }
+  .mnav-brand-mark{
+    width: 36px; height: 36px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2b7cff, #11c5a7);
+    display: inline-block;
+  }
+
+  .mnav-views{
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .mnav-view{
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 14px 0 18px;
+    display: none;
+  }
+  .mnav-view.is-active{ display: block; }
+
+  /* ROOT list */
+  .mnav-list{ list-style: none; margin: 0; padding: 6px 0; }
+  .mnav-item-btn,
+  .mnav-item-link{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    border: 0;
+    background: transparent;
+    text-decoration: none;
+    color: rgba(0,0,0,.92);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  .mnav-item-link{ justify-content: flex-start; }
+  .mnav-item-btn:active,
+  .mnav-item-link:active{ background: rgba(0,0,0,.05); }
+
+  .mnav-arrow{
+    font-size: 26px;
+    line-height: 1;
+    color: rgba(0,0,0,.35);
+    transform: translateY(-1px);
+  }
+
+  /* Sub view header */
+  .mnav-subhead{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 18px 12px;
+  }
+  .mnav-back{
+    border: 0;
+    background: transparent;
+    padding: 10px 6px;
+    font-size: 16px;
+    font-weight: 650;
+    color: rgba(0,0,0,.75);
+  }
+  .mnav-back-arrow{ font-size: 20px; margin-right: 6px; color: rgba(0,0,0,.45); }
+  .mnav-subtitle{
+    font-size: 18px;
+    font-weight: 800;
+    color: rgba(0,0,0,.92);
+  }
+
+  .mnav-sublist{ list-style: none; margin: 0; padding: 6px 0 0; }
+  .mnav-sub-link{
+    display: block;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: rgba(0,0,0,.88);
+    font-size: 18px;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+  }
+  .mnav-sub-link:active{ background: rgba(0,0,0,.05); }
+  .mnav-sub-strong{ font-weight: 850; }
+  .mnav-sub-sep{
+    height: 1px;
+    background: rgba(0,0,0,.06);
+    margin: 10px 0;
+  }
+
+  /* Bottom CTA */
+  .mnav-bottom{
+    padding: 14px 18px 18px;
+    border-top: 1px solid rgba(0,0,0,.06);
+    background: rgba(255,255,255,.9);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .mnav-cta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 800;
+  }
+  .mnav-cta-primary{
+    background: #2b7cff;
+    color: #fff;
+  }
+  .mnav-cta-secondary{
+    background: #fff;
+    color: rgba(0,0,0,.88);
+    border: 1px solid rgba(0,0,0,.10);
+  }
+}
+
+/* ✅ iPhone 小屏：全宽（不要嵌套 @media，否则无效） */
+@media (max-width: 520px){
+  .mnav{
+    width: 100vw !important;
+    max-width: none !important;
+    left: 0 !important;
+    right: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+  .mnav-shell,
+  .mnav-inner{
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
+
+/* ================================
+   Mega Menu – max-height + scroll (no fixed height truncation)
+   ================================ */
+.nav-item.has-mega > .mega-menu{
+  max-height: var(--mega-h);
+  height: auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mega-inner{
+  min-height: 0;
+}
+
+.mega-right{
+  min-height: 0;
+  overflow: visible;
+}
+
+/* ================================
+   Pelletizing panel – 2x2 compact cards (scoped)
+   ================================ */
+.mega-panel--pelletizing{
+  display: block; /* 保持面板定位逻辑，不要对 panel 本身做 grid */
+}
+
+.mega-panel--pelletizing .mega-cards--pelletizing{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  align-items: stretch;
+}
+
+@media (max-width: 1023px){
+  .mega-panel--pelletizing .mega-cards--pelletizing{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 把 pelletizing 卡片改成横向紧凑结构，显著降低高度 */
+.mega-panel--pelletizing .mega-card{
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 14px;
+}
+
+.mega-panel--pelletizing .mega-card-img{
+  height: 64px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(0,163,255,.18), rgba(0,0,0,0));
+}
+
+/* 破图时隐藏 img，用背景兜底 */
+.mega-panel--pelletizing .mega-card-img.no-img{
+  background: linear-gradient(135deg, rgba(37,211,102,.18), rgba(0,0,0,0));
+}
+
+.mega-panel--pelletizing .mega-card-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mega-panel--pelletizing .mega-card-body{
+  padding: 0;
+}
+
+.mega-panel--pelletizing .mega-card-title{
+  margin: 0 0 6px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.mega-panel--pelletizing .mega-card-desc{
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--text-soft, #5b5f66);
+}
+
+/* ================================
+   Pelletizing Panel – HARD OVERRIDE (stop inheriting 3-col grid)
+   ================================ */
+.mega-right .mega-panel--pelletizing{
+  display: block !important;          /* 关闭父级 3 列 grid */
+  grid-template-columns: none !important;
+  gap: 0 !important;
+
+  /* 兼容父级可能是 flex/grid 带来的居中 */
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  align-content: flex-start !important;
+}
+
+.mega-right .mega-panel--pelletizing > .mega-cards--pelletizing{
+  width: 100%;
+  min-width: 0;
+}
+
+/* 继续沿用之前的 2x2 紧凑卡布局（如果已存在可保留，不冲突） */
+.mega-right .mega-panel--pelletizing > .mega-cards--pelletizing{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 1023px){
+  .mega-right .mega-panel--pelletizing > .mega-cards--pelletizing{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================
+   Mega Menu Background Harmony Patch
+   ================================ */
+
+/* 1) 页面底色：加非常轻的渐变，提升层次（如果已有 body 背景，这里会覆盖） */
+body{
+  background:
+    radial-gradient(1200px 600px at 70% 10%, rgba(0,0,0,.035), transparent 60%),
+    radial-gradient(900px 500px at 10% 0%, rgba(0,163,255,.05), transparent 55%),
+    #f6f7f9;
+}
+
+/* 2) mega menu 外层容器：轻玻璃拟态 + 柔边界 */
+.nav-item.has-mega > .mega-menu{
+  background: rgba(255,255,255,.72) !important;
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow:
+    0 24px 80px rgba(0,0,0,.10),
+    0 8px 24px rgba(0,0,0,.06);
+}
+
+/* 3) mega 内部大白底容器（如果你有 mega-inner 的白底）也做轻透明 */
+.mega-inner{
+  background: rgba(255,255,255,.78);
+  border: 1px solid rgba(0,0,0,.05);
+}
+
+/* 4) 卡片阴影更细腻一点（可选：如果你觉得卡片太"浮"） */
+.mega-card{
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+}
+
+/* ================================
+   Mega Menu – Bottom Safe Area (fix bottom spill look)
+   ================================ */
+.mega-right{
+  box-sizing: border-box;
+  padding-bottom: 22px; /* 关键：给最后一行 hover/shadow 留空间 */
+}
+
+/* 如果 Solutions 的右侧内容还有自己的容器（例如 .solutions-table / .solutions-rows / .mega-solutions-list），也加一层兜底 */
+.mega-right .solutions-table,
+.mega-right .solutions-rows,
+.mega-right .mega-solutions,
+.mega-right [data-panel="solutions"]{
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   Mega Menu – Container-level bottom safe area
+   (prevents visual spill to hero)
+   ========================================= */
+.nav-item.has-mega > .mega-menu{
+  box-sizing: border-box;
+  padding-bottom: 22px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* inner 高度由内容决定，不裁切 */
+.nav-item.has-mega > .mega-menu .mega-inner{
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+/* 兜底：Solutions 面板自身再留一点底部呼吸空间 */
+.mega-panel[data-panel="solutions"]{
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   FINAL PATCH – Mega Menu bottom spill visual fix
+   - Root cause: inner solutions board shadow bleeds onto hero
+   - Fix: (1) keep scroll safe area (2) reduce/contain inner board shadow
+   ========================================================= */
+
+/* 1) 给右侧滚动区域留更明显的底部呼吸空间（用于 hover/阴影/焦点态） */
+.nav-item.has-mega > .mega-menu .mega-right{
+  box-sizing: border-box;
+  padding-bottom: 40px !important; /* 比 22px 更明显，直接解决"贴底"观感 */
+}
+
+/* 2) Solutions 面板：把"内层大白卡/表格容器"的阴影收敛（避免阴影压到 hero，造成超出背景的错觉）
+   说明：你项目里这个容器类名可能不同，所以用多选择器兜底匹配 */
+.mega-panel[data-panel="solutions"] .solutions-table,
+.mega-panel[data-panel="solutions"] .solutions-rows,
+.mega-panel[data-panel="solutions"] .mega-solutions,
+.mega-panel[data-panel="solutions"] .mega-solutions-list,
+.mega-panel[data-panel="solutions"] .solutions-board,
+.mega-panel[data-panel="solutions"] .solutions-wrap{
+  /* 关键：减小阴影的"扩散范围" */
+  box-shadow: 0 10px 24px rgba(0,0,0,.06) !important;
+  /* 轻微描边，让层次仍然高级 */
+  border: 1px solid rgba(0,0,0,.05);
+  /* 避免阴影显脏 */
+  background-clip: padding-box;
+}
+
+/* 3) 如果你的 hover 行本身也带阴影/位移，限制一下不要"下沉" */
+.mega-panel[data-panel="solutions"] a:hover,
+.mega-panel[data-panel="solutions"] .row:hover{
+  transform: translateY(0) !important;
+}
+
+/* 4) 最后一行额外留一点 margin（防止最后一行 hover 时贴边） */
+.mega-panel[data-panel="solutions"] > *:last-child{
+  margin-bottom: 14px;
+}
+
+

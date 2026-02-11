@@ -1,0 +1,850 @@
+/* ==================================================
+   Shredder Product Detail Layout (sd- prefix)
+   Reference: aceretech-style product page layout
+   Used by: single-shaft-shredder, double-shaft-shredder, pipe-shredder
+   ================================================== */
+
+html { scroll-behavior: smooth; }
+
+/* ---------- 1. Hero Section (centered: image, dots, title, CTA) ---------- */
+.sd-hero {
+  padding: 100px 0 48px;
+  background: #fff;
+}
+.sd-hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.sd-hero-main {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f8f9fa;
+}
+.sd-hero-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sd-hero-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.sd-hero-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.sd-hero-dot.active {
+  background: var(--brand);
+  width: 24px;
+  border-radius: 4px;
+}
+.sd-hero-title {
+  font-size: clamp(24px, 3.2vw, 34px);
+  font-weight: 800;
+  line-height: 1.25;
+  color: #0f172a;
+  margin: 24px 0 20px;
+  letter-spacing: -0.02em;
+}
+.sd-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  background: #0f172a;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.sd-hero-cta:hover {
+  background: #1e293b;
+}
+
+/* Hero breadcrumb, tags, CTA group, video link (PET-style layout) */
+.sd-hero-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+.sd-hero-breadcrumb a {
+  color: #64748b;
+  text-decoration: none;
+}
+.sd-hero-breadcrumb a:hover {
+  color: var(--brand);
+}
+.sd-hero-breadcrumb span:last-child {
+  color: #94a3b8;
+}
+.sd-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.sd-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: #f1f5f9;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+.sd-hero-tag svg {
+  width: 16px;
+  height: 16px;
+  color: var(--brand);
+  flex-shrink: 0;
+}
+.sd-hero-cta-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.sd-hero-cta-group .sd-hero-cta {
+  gap: 8px;
+}
+.sd-hero-cta-group .sd-hero-cta svg {
+  width: 18px;
+  height: 18px;
+}
+.sd-hero-cta-primary {
+  background: var(--brand) !important;
+}
+.sd-hero-cta-primary:hover {
+  background: var(--brand-dark, #0066cc) !important;
+  transform: translateY(-1px);
+}
+.sd-hero-cta-secondary {
+  background: #fff !important;
+  color: var(--brand) !important;
+  border: 1.5px solid var(--brand) !important;
+}
+.sd-hero-cta-secondary:hover {
+  background: rgba(10, 132, 255, 0.06) !important;
+}
+.sd-hero-video-wrap {
+  margin-top: 0;
+}
+.sd-hero-video-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 0;
+  color: var(--brand);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.sd-hero-video-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+.sd-hero-video-icon {
+  font-size: 13px;
+  transform: translateY(-0.5px);
+}
+.sd-hero-video-duration {
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Hero split layout: left image, right title & description */
+.sd-hero--split .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  max-width: 1100px;
+  text-align: left;
+}
+.sd-hero--split .sd-hero-media {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.sd-hero--split .sd-hero-dots {
+  justify-content: flex-start;
+}
+.sd-hero--split .sd-hero-title {
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 0 0 20px;
+}
+.sd-hero--split .sd-hero-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0 0 24px;
+}
+.sd-hero--split .sd-hero-content .sd-hero-breadcrumb {
+  margin-bottom: 12px;
+}
+@media (max-width: 768px) {
+  .sd-hero--split .container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .sd-hero--split .sd-hero-dots {
+    justify-content: center;
+  }
+  .sd-hero--split .sd-hero-content {
+    text-align: center;
+  }
+  .sd-hero--split .sd-hero-breadcrumb {
+    justify-content: center;
+  }
+  .sd-hero--split .sd-hero-tags {
+    justify-content: center;
+  }
+  .sd-hero--split .sd-hero-cta-group {
+    justify-content: center;
+  }
+}
+
+/* Hero carousel (multiple slides) */
+.sd-hero--carousel .sd-hero-main {
+  position: relative;
+}
+.sd-hero--carousel .sd-hero-slides {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.sd-hero--carousel .sd-hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.sd-hero--carousel .sd-hero-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+.sd-hero--carousel .sd-hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sd-hero--carousel .sd-hero-dot {
+  border: none;
+  padding: 0;
+}
+.sd-hero--carousel .sd-hero-dot:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+/* ---------- 2. Product Overview & Video (two columns) ---------- */
+.sd-overview-section {
+  padding: 60px 0;
+  background: #f8fafc;
+}
+.sd-overview-section .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.sd-overview h2 {
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.sd-overview p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #475569;
+  margin: 0 0 14px;
+}
+.sd-overview p:last-child { margin-bottom: 0; }
+.sd-video-wrap {
+  position: relative;
+  aspect-ratio: 16/9;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0f172a;
+}
+.sd-video-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sd-video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 0;
+  transition: transform 0.2s;
+}
+.sd-video-play:hover { transform: translate(-50%, -50%) scale(1.08); }
+.sd-video-play svg {
+  width: 28px;
+  height: 28px;
+  color: var(--brand);
+  margin-left: 4px;
+}
+
+/* ---------- 3. Application & Raw Materials (2x2 grid) ---------- */
+.sd-materials-section {
+  padding: 60px 0;
+  background: #fff;
+}
+.sd-section-title {
+  text-align: center;
+  font-size: clamp(22px, 2.8vw, 30px);
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 36px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.sd-materials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+/* Four images in one row (double-shaft-shredder) */
+.sd-materials-section--row4 .sd-materials-grid {
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1100px;
+}
+.sd-material-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.sd-material-card:hover {
+  border-color: var(--brand);
+  box-shadow: 0 8px 24px rgba(10,132,255,0.1);
+}
+.sd-material-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.sd-material-card span {
+  padding: 14px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  text-align: center;
+}
+
+/* ---------- 4. Key Features (image left, 6 feature blocks right) ---------- */
+.sd-features-section {
+  padding: 60px 0;
+  background: #f8fafc;
+}
+.sd-features-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+.sd-features-img {
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: #e2e8f0;
+}
+.sd-features-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sd-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.sd-feature-block {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.sd-feature-block:hover {
+  border-color: var(--brand);
+  box-shadow: 0 4px 16px rgba(10,132,255,0.08);
+}
+.sd-feature-block h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 8px;
+}
+.sd-feature-block p {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ---------- 5. Technical Parameters (table) ---------- */
+.sd-params-section {
+  padding: 60px 0;
+  background: #fff;
+}
+.sd-table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.sd-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  min-width: 600px;
+}
+.sd-table thead { background: var(--brand); color: #fff; }
+.sd-table th {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+}
+.sd-table td {
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #334155;
+  border-bottom: 1px solid #e2e8f0;
+}
+.sd-table tbody tr:hover { background: #f8fafc; }
+.sd-table-note {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* ---------- 6. Machine Components/Details (list: image left, title+desc right) ---------- */
+.sd-components-section {
+  padding: 60px 0;
+  background: #f8fafc;
+}
+.sd-components-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.sd-component-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  align-items: start;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.sd-component-item:hover {
+  border-color: var(--brand);
+  box-shadow: 0 4px 16px rgba(10,132,255,0.08);
+}
+.sd-component-img {
+  width: 120px;
+  height: 90px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f1f5f9;
+  flex-shrink: 0;
+}
+.sd-component-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sd-component-body h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 8px;
+}
+.sd-component-body p {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------- 7. FAQ Section ---------- */
+.sd-faq-section {
+  padding: 60px 0;
+  background: #fff;
+}
+.sd-faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.sd-faq-item {
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #e2e8f0;
+}
+.sd-faq-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.sd-faq-item h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 10px;
+}
+.sd-faq-item p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ---------- 8a. Info Cards (About Us, Why Us, Our Service, Get a Quote) ---------- */
+.sd-info-section {
+  padding: 60px 0;
+  background: #f8fafc;
+}
+.sd-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.sd-info-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.sd-info-card:hover {
+  border-color: var(--brand);
+  box-shadow: 0 4px 16px rgba(10,132,255,0.08);
+}
+.sd-info-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 12px;
+}
+.sd-info-card p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ---------- 8b. Customer Case (6 images) ---------- */
+.sd-customer-section {
+  padding: 60px 0;
+  background: #fff;
+}
+.sd-customer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.sd-customer-item {
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.sd-customer-item:hover {
+  border-color: var(--brand);
+  box-shadow: 0 4px 16px rgba(10,132,255,0.08);
+}
+.sd-customer-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- 8c. Workshop & Certification Banners ---------- */
+.sd-banners-section {
+  padding: 0 0 60px;
+}
+.sd-banners-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.sd-banner {
+  position: relative;
+  aspect-ratio: 16/9;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #1e293b;
+}
+.sd-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sd-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.75) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+}
+.sd-banner-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 4px;
+}
+.sd-banner-sub {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+}
+.sd-banner-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 24px auto 0;
+}
+.sd-banner-info-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+}
+.sd-banner-info-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 8px;
+}
+.sd-banner-info-card p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ---------- 9. Related Products (3 cards) ---------- */
+.sd-related-section {
+  padding: 60px 0;
+  background: #f8fafc;
+}
+.sd-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.sd-related-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: all 0.2s;
+}
+.sd-related-card:hover {
+  border-color: var(--brand);
+  box-shadow: 0 8px 24px rgba(10,132,255,0.12);
+}
+.sd-related-card-img {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.sd-related-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sd-related-card-body {
+  padding: 16px;
+  text-align: center;
+}
+.sd-related-card-body h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 8px;
+}
+.sd-related-card-body p {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ---------- 10. Contact Section (two columns) ---------- */
+.sd-contact-section {
+  padding: 60px 0;
+  background: #fff;
+}
+.sd-contact-section .container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+.sd-contact-info h2 {
+  font-size: clamp(22px, 2.5vw, 28px);
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 16px;
+}
+.sd-contact-info p,
+.sd-contact-info a {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 8px;
+  margin-bottom: 8px;
+  display: block;
+}
+.sd-contact-info a {
+  color: var(--brand);
+  text-decoration: none;
+}
+.sd-contact-info a:hover { text-decoration: underline; }
+.sd-contact-form {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px;
+}
+.sd-contact-form h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 20px;
+}
+.sd-contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.sd-contact-form .full-width { grid-column: 1 / -1; }
+.sd-contact-form input,
+.sd-contact-form textarea {
+  padding: 12px 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #0f172a;
+  background: #fff;
+  font-family: inherit;
+}
+.sd-contact-form input:focus,
+.sd-contact-form textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+}
+.sd-contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.sd-contact-form button[type="submit"] {
+  grid-column: 1 / -1;
+  padding: 14px 24px;
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sd-contact-form button[type="submit"]:hover {
+  background: var(--brand-dark);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .sd-overview-section .container { grid-template-columns: 1fr; }
+  .sd-features-inner { grid-template-columns: 1fr; }
+  .sd-features-img { max-width: 500px; margin: 0 auto; }
+  .sd-banners-grid { grid-template-columns: 1fr; }
+  .sd-banner-info { grid-template-columns: 1fr; }
+  .sd-related-grid { grid-template-columns: repeat(2, 1fr); }
+  .sd-contact-section .container { grid-template-columns: 1fr; }
+  .sd-materials-section--row4 .sd-materials-grid { grid-template-columns: repeat(2, 1fr); }
+  .sd-info-grid { grid-template-columns: repeat(2, 1fr); }
+  .sd-customer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .sd-hero { padding: 90px 0 40px; }
+  .sd-materials-grid { grid-template-columns: 1fr; }
+  .sd-materials-section--row4 .sd-materials-grid { grid-template-columns: 1fr; }
+  .sd-features-grid { grid-template-columns: 1fr; }
+  .sd-info-grid { grid-template-columns: 1fr; }
+  .sd-customer-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .sd-component-item { grid-template-columns: 1fr; }
+  .sd-component-img { width: 100%; height: 100%; aspect-ratio: 4/3; }
+  .sd-related-grid { grid-template-columns: 1fr; }
+  .sd-contact-form form { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "weplas-website",
+  "private": true,
+  "scripts": {
+    "check:links": "node scripts/check-links.mjs"
+  }
+}

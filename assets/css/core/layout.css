@@ -1,0 +1,120 @@
+/* =========================================================
+   Core Layout & Section Rhythm
+   ========================================================= */
+
+/* ---------- Container ---------- */
+.container{
+  width: min(1240px, 92vw);
+  margin-inline: auto;
+  max-width: 1240px;
+}
+
+/* ---------- Section Rhythm (Single Source of Truth) ---------- */
+/* 
+ * This is the ONLY place that controls section vertical spacing.
+ * DO NOT add padding-block, padding-top, padding-bottom, margin-top, 
+ * or margin-bottom to page-level or component-level section selectors.
+ * 
+ * Rhythm system:
+ * - .section: Primary sections (96px desktop, 64px mobile)
+ * - .section-secondary: Secondary sections (72px desktop, 56px mobile)
+ * - .section-tight: Reduced spacing (64px all screens)
+ * - .section-loose: Large sections (120px desktop, 80px mobile)
+ */
+
+.section{
+  padding-block: 96px;
+}
+
+.section-secondary{
+  padding-block: 72px;
+}
+
+.section-tight{
+  padding-block: 64px;
+}
+
+.section-loose{
+  padding-block: 120px;
+}
+
+/* Mobile rhythm (768px and below) */
+@media (max-width: 768px){
+  .section{
+    padding-block: 64px;
+  }
+  .section-secondary{
+    padding-block: 56px;
+  }
+  .section-tight{
+    padding-block: 48px;
+  }
+  .section-loose{
+    padding-block: 80px;
+  }
+}
+
+/* ---------- Visual Variants ---------- */
+.section.alt{
+  background: var(--bg-soft);
+  border-block: 1px solid var(--border);
+}
+
+/* ---------- Section Headings ---------- */
+.section h1,
+.section h2{
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.section h2{
+  font-size: clamp(28px, 3vw, 40px);
+  margin: 0 0 12px;
+}
+
+.section-desc{
+  color: var(--text-soft);
+  max-width: 720px;
+  margin: 0;
+}
+
+/* ---------- Grid System ---------- */
+.grid{
+  display: grid;
+  gap: var(--gap);
+}
+
+.grid-3{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4{
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 900px){
+  .grid-3,
+  .grid-4{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Base Card ---------- */
+.card{
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: var(--shadow);
+}
+
+.card h3{
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.card p{
+  margin: 0;
+  color: var(--text-soft);
+}
+  
