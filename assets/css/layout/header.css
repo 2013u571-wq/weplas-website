@@ -434,6 +434,18 @@
   padding: 12px 14px;
 }
 
+/* Category block as link: full-area clickable, same look */
+.mega-side-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.mega-side-link:focus-visible {
+  outline: 2px solid var(--brand, #1a73e8);
+  outline-offset: 2px;
+}
+
 .mega-tab-title {
   font-size: 15px;
   font-weight: 600;

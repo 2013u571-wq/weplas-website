@@ -210,8 +210,9 @@ document.addEventListener('DOMContentLoaded', () => {
       // Keyboard: focus to switch
       tab.addEventListener('focusin', () => switchPanel(tab));
 
-      // Desktop: click prevents default (no navigation), but still switches
+      // Desktop: if category link, allow navigation; else switch panel only
       tab.addEventListener('click', (e) => {
+        if (tab.classList.contains('mega-side-link')) return;
         e.preventDefault();
         e.stopPropagation();
         switchPanel(tab);
@@ -230,6 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     tab.addEventListener('click', (e) => {
+      if (tab.classList.contains('mega-side-link')) return;
       e.preventDefault();
       e.stopPropagation();
 
